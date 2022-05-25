@@ -1,777 +1,777 @@
 {
-  "collections": [
-    {
-      "id": 1,
-      "title": "Коллекция лето 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 2,
-      "title": "Коллекция зима 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 3,
-      "title": "Коллекция весна 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 4,
-      "title": "Коллекция осень 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 5,
-      "title": "Коллекция хит 2021",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 6,
-      "title": "Коллекция зима 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 7,
-      "title": "Коллекция весна 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    },
-    {
-      "id": 8,
-      "title": "Коллекция осень 2020",
-      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-    }
-  ],
-  "products": [
-    {
-      "id": 1,
-      "collection": "Коллекция лето 2020",
-      "collectionId": 2,
-      "title": "Летнее платье 1",
-      "article": "платье01",
-      "status": "Хит продаж",
-      "bestseller": true,
-      "newproducts": false,
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 3,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 4,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 5,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 6,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "2300",
-      "previousPrice": "2500",
-      "sale": true,
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-45",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 2,
-      "collection": "Коллекция лето 2020",
-      "title": "Летнее платье 2",
-      "article": "платье02",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "5400",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 3,
-      "collection": "Коллекция лето 2020",
-      "title": "Летнее платье 3",
-      "article": "платье03",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "5400",
-      "previousPrice": "6100",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 4,
-      "collection": "Коллекция лето 2020",
-      "title": "Летнее платье 4",
-      "article": "платье04",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "3200",
-      "previousPrice": "4300",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 5,
-      "collection": "Коллекция весна 2020",
-      "title": "Весеннее платье 1",
-      "article": "платье05",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "2300",
-      "previousPrice": "2500",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-45",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 6,
-      "collection": "Коллекция весна 2020",
-      "title": "Весеннее платье 2",
-      "article": "платьe06",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "5400",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 7,
-      "collection": "Коллекция весна 2020",
-      "title": "Весеннее платье 3",
-      "article": "платье07",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "5400",
-      "previousPrice": "6100",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 8,
-      "collection": "Коллекция весна 2020",
-      "title": "Весеннее платье 4",
-      "article": "платье08",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "3200",
-      "previousPrice": "4300",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 9,
-      "collection": "Коллекция осень 2020",
-      "title": "Осенняя платье 1",
-      "article": "платье09",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "2300",
-      "previousPrice": "2500",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-45",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 10,
-      "collection": "Коллекция осень 2020",
-      "title": "Осенняя платье 2",
-      "article": "платье10",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "5400",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 11,
-      "collection": "Коллекция осень 2020",
-      "title": "Осенняя платье 3",
-      "article": "платье11",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "10000",
-      "previousPrice": "14200",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 12,
-      "collection": "Коллекция осень 2020",
-      "title": "Осенняя платье 4",
-      "article": "платье12",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "3200",
-      "previousPrice": "4300",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 13,
-      "collection": "Коллекция зима 2020",
-      "title": "Зимнее платье 1",
-      "article": "платье13",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "6500",
-      "previousPrice": "7000",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-45",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 14,
-      "collection": "Коллекция зима 2020",
-      "title": "Зимнее платье 2",
-      "article": "платье14",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "1999",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 15,
-      "collection": "Коллекция зима 2020",
-      "title": "Зимнее платье 3",
-      "article": "платье15",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "10000",
-      "previousPrice": "14200",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 16,
-      "collection": "Коллекция зима 2020",
-      "title": "Зимнее платье 4",
-      "article": "платье16",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "4300",
-      "previousPrice": "4600",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 17,
-      "collection": "Коллекция хит 2021",
-      "title": "Хит платье 1",
-      "article": "платье17",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "4766",
-      "previousPrice": "5000",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 18,
-      "collection": "Коллекция хит 2021",
-      "title": "Хит платье 2",
-      "article": "платье18",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        },
-        {
-          "id": 3,
-          "color": "rgba(39, 140, 245, 1)"
-        },
-        {
-          "id": 4,
-          "color": "rgba(0, 0, 0, 1)"
-        }
-      ],
-      "currentPrice": "1999",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 19,
-      "collection": "Коллекция хит 2021",
-      "title": "Хит платье 3",
-      "article": "платье19",
-      "status": "Хит продаж",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 1,
-          "color": "rgba(93, 245, 39, 1)"
-        },
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "1200",
-      "previousPrice": "1500",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    },
-    {
-      "id": 20,
-      "collection": "Коллекция хит 2021",
-      "title": "Хит платье 4",
-      "article": "платье20",
-      "status": "Новинки",
-      "productImages": [
-        {
-          "id": 1,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        },
-        {
-          "id": 2,
-          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-        }
-      ],
-      "colors": [
-        {
-          "id": 2,
-          "color": "rgba(245, 46, 39, 1)"
-        }
-      ],
-      "currentPrice": "4300",
-      "previousPrice": "4600",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
-      "sizeRage": "42-50",
-      "amountOfLines": 5,
-      "structure": "Полиэстер",
-      "material": "Полиэстер"
-    }
-  ],
-  "commerce": [
-    {
+  "zeon": {
+    "collections": [
+      {
+        "id": 1,
+        "title": "Коллекция лето 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 2,
+        "title": "Коллекция зима 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 3,
+        "title": "Коллекция весна 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 4,
+        "title": "Коллекция осень 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 5,
+        "title": "Коллекция хит 2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 6,
+        "title": "Коллекция зима 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 7,
+        "title": "Коллекция весна 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 8,
+        "title": "Коллекция осень 2020",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "collection": "Коллекция лето 2020",
+        "collectionId": 2,
+        "title": "Летнее платье 1",
+        "article": "платье01",
+        "status": "Хит продаж",
+        "bestseller": true,
+        "newproducts": false,
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 3,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 4,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 5,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 6,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "2300",
+        "previousPrice": "2500",
+        "sale": true,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-45",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 2,
+        "collection": "Коллекция лето 2020",
+        "title": "Летнее платье 2",
+        "article": "платье02",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "5400",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 3,
+        "collection": "Коллекция лето 2020",
+        "title": "Летнее платье 3",
+        "article": "платье03",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "5400",
+        "previousPrice": "6100",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 4,
+        "collection": "Коллекция лето 2020",
+        "title": "Летнее платье 4",
+        "article": "платье04",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "3200",
+        "previousPrice": "4300",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 5,
+        "collection": "Коллекция весна 2020",
+        "title": "Весеннее платье 1",
+        "article": "платье05",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "2300",
+        "previousPrice": "2500",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-45",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 6,
+        "collection": "Коллекция весна 2020",
+        "title": "Весеннее платье 2",
+        "article": "платьe06",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "5400",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 7,
+        "collection": "Коллекция весна 2020",
+        "title": "Весеннее платье 3",
+        "article": "платье07",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "5400",
+        "previousPrice": "6100",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 8,
+        "collection": "Коллекция весна 2020",
+        "title": "Весеннее платье 4",
+        "article": "платье08",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "3200",
+        "previousPrice": "4300",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 9,
+        "collection": "Коллекция осень 2020",
+        "title": "Осенняя платье 1",
+        "article": "платье09",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "2300",
+        "previousPrice": "2500",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-45",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 10,
+        "collection": "Коллекция осень 2020",
+        "title": "Осенняя платье 2",
+        "article": "платье10",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "5400",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 11,
+        "collection": "Коллекция осень 2020",
+        "title": "Осенняя платье 3",
+        "article": "платье11",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "10000",
+        "previousPrice": "14200",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 12,
+        "collection": "Коллекция осень 2020",
+        "title": "Осенняя платье 4",
+        "article": "платье12",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "3200",
+        "previousPrice": "4300",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 13,
+        "collection": "Коллекция зима 2020",
+        "title": "Зимнее платье 1",
+        "article": "платье13",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "6500",
+        "previousPrice": "7000",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-45",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 14,
+        "collection": "Коллекция зима 2020",
+        "title": "Зимнее платье 2",
+        "article": "платье14",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "1999",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 15,
+        "collection": "Коллекция зима 2020",
+        "title": "Зимнее платье 3",
+        "article": "платье15",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "10000",
+        "previousPrice": "14200",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 16,
+        "collection": "Коллекция зима 2020",
+        "title": "Зимнее платье 4",
+        "article": "платье16",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "4300",
+        "previousPrice": "4600",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 17,
+        "collection": "Коллекция хит 2021",
+        "title": "Хит платье 1",
+        "article": "платье17",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "4766",
+        "previousPrice": "5000",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 18,
+        "collection": "Коллекция хит 2021",
+        "title": "Хит платье 2",
+        "article": "платье18",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(39, 140, 245, 1)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(0, 0, 0, 1)"
+          }
+        ],
+        "currentPrice": "1999",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 19,
+        "collection": "Коллекция хит 2021",
+        "title": "Хит платье 3",
+        "article": "платье19",
+        "status": "Хит продаж",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 1,
+            "color": "rgba(93, 245, 39, 1)"
+          },
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "1200",
+        "previousPrice": "1500",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      },
+      {
+        "id": 20,
+        "collection": "Коллекция хит 2021",
+        "title": "Хит платье 4",
+        "article": "платье20",
+        "status": "Новинки",
+        "productImages": [
+          {
+            "id": 1,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          },
+          {
+            "id": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+          }
+        ],
+        "colors": [
+          {
+            "id": 2,
+            "color": "rgba(245, 46, 39, 1)"
+          }
+        ],
+        "currentPrice": "4300",
+        "previousPrice": "4600",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+        "sizeRage": "42-50",
+        "amountOfLines": 5,
+        "structure": "Полиэстер",
+        "material": "Полиэстер"
+      }
+    ],
+    "commerce": {
       "headerLogo": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/zeonLogo.svg?alt=media&token=f2c63bd0-b996-4910-ba9c-f4fe50e93b77",
       "footerLogo": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/footerLogo.svg?alt=media&token=f6a10d93-31d7-46f0-9714-48d2172e7055",
       "contacts": {
@@ -788,43 +788,62 @@
         }
       },
       "aboutUs": {
-        "image1": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/AboutUs1.png?alt=media&token=2bee536c-d949-4a49-b9a6-c8aef995308f",
-        "image2": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/AboutUs1.png?alt=media&token=2bee536c-d949-4a49-b9a6-c8aef995308f",
-        "image3": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/AboutUs1.png?alt=media&token=2bee536c-d949-4a49-b9a6-c8aef995308f",
+        "image1": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/AboutUs1.png?alt=media&token=6fea15ff-e4de-4d25-9c07-1f164dc6f825",
+        "image2": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/AboutUs2.png?alt=media&token=34b50f91-ebf5-425a-bff8-27ff2c46fc4a",
+        "image3": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/AboutUs3.png?alt=media&token=f1bae9d6-aac8-40bd-b1a1-b5307efba348",
+        "title": "О нас",
         "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой."
       },
       "news": [
         {
           "id": 1,
           "title": "Lorem ipsum dolor sit amet",
-          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
         },
         {
           "id": 2,
           "title": "Lorem ipsum dolor sit amet",
-          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
         },
         {
           "id": 3,
           "title": "Lorem ipsum dolor sit amet",
-          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
         },
         {
           "id": 4,
           "title": "Lorem ipsum dolor sit amet",
-          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
         },
         {
           "id": 5,
           "title": "Lorem ipsum dolor sit amet",
-          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+        },
+        {
+          "id": 6,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+        },
+        {
+          "id": 7,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+        },
+        {
+          "id": 8,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
         }
       ]
     }
-  ]
+  }
 }

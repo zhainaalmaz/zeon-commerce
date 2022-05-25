@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Input from '../../ui/CustomInput';
 import styled from 'styled-components';
 import { Divider } from '@mui/material';
-import { ReactComponent as ZeonLogo } from './../../assets/icons/zeonLogo.svg';
+// import { ReactComponent as ZeonLogo } from './../../assets/icons/zeonLogo.svg';
 import { ReactComponent as BasketLogo } from './../../assets/icons/basket.svg';
 import { ReactComponent as FavoriteLogo } from './../../assets/icons/favorite.svg';
 import AboutUs from '../../pages/AboutUs';
@@ -14,6 +14,7 @@ import Cart from '../../pages/Cart';
 import Favorite from '../../pages/Favorite';
 import MuiDrawer from './Drawer';
 import { useNavigate } from 'react-router-dom';
+import { getLogoRequest } from '../../api/service';
 
 const StyledLayout = styled.div`
   width: 90%;
@@ -46,6 +47,20 @@ const StyledContact = styled.div`
 
 const Header = () => {
   let navigate = useNavigate();
+  const [logo, setLogo] = useState();
+
+  const getLogo = async () => {
+    try {
+      const logoResponse = await getLogoRequest();
+      setLogo(logoResponse.data.headerLogo);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getLogo();
+  }, []);
+
   return (
     <>
       <StyledLayout>
@@ -64,7 +79,7 @@ const Header = () => {
       <StyledContent>
         <MuiDrawer navigate={navigate} />
         <Link to="/main">
-          <ZeonLogo />
+          <img href="/" alt="logo" src={logo} />
         </Link>
 
         <Input width="50%" placeholder="Поиск" />
