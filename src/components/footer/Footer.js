@@ -3,8 +3,6 @@ import { getLogoRequest, getNumberRequest } from '../../api/service';
 import { Routes, Route, Link } from 'react-router-dom';
 import Help from '../../pages/Help';
 import styled from 'styled-components';
-import { ReactComponent as EmailSvg } from './../../assets/icons/email.svg';
-import { ReactComponent as PhoneSvg } from './../../assets/icons/phone.svg';
 import { ReactComponent as TelegramSvg } from './../../assets/icons/telegram.svg';
 import { ReactComponent as WhatsappSvg } from './../../assets/icons/whatsapp.svg';
 import { ReactComponent as InstagramSvg } from './../../assets/icons/instagram.svg';
@@ -42,7 +40,7 @@ const StyledSpan = styled.span`
 
 const Footer = () => {
   const [logo, setLogo] = useState();
-  const [number, setNumber] = useState({});
+  const [number, setNumber] = useState([]);
 
   useEffect(() => {
     const getLogo = async () => {
@@ -60,7 +58,8 @@ const Footer = () => {
     const getNumber = async () => {
       try {
         const numberResponse = await getNumberRequest();
-        setNumber(numberResponse.data.contacts);
+        setNumber(numberResponse.data.contacts.mobile);
+        console.log(numberResponse.data.contacts.mobile);
       } catch (error) {
         console.log(error);
       }
@@ -99,18 +98,14 @@ const Footer = () => {
           </div>
           <div>
             <StyledSpan>Контакты</StyledSpan>
-            <StyledP>
-              <PhoneSvg />
-              {number.phoneNumber}
-            </StyledP>
-            <StyledP>
-              <PhoneSvg />
-              {number.officeNumber}
-            </StyledP>
-            <StyledP>
-              <EmailSvg />
-              {number.email}
-            </StyledP>
+            {number.map((item) => (
+              <StyledP>
+                <img src={item.image} alt="svg" />
+                <a style={{ color: 'white' }} href={item.title}>
+                  {item.data}
+                </a>
+              </StyledP>
+            ))}
           </div>
           <div>
             <StyledSpan>Мы в социальных сетях:</StyledSpan>

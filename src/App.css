@@ -1,6 +1,7 @@
 .App {
   max-width: 1168px;
   margin: 0 auto;
+  background: #ececec;
 }
 
 @media all and (max-width: 1200px) {

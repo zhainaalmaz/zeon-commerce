@@ -46,54 +46,49 @@
       {
         "id": 1,
         "collection": "Коллекция лето 2020",
-        "collectionId": 2,
-        "title": "Летнее платье 1",
+        "collectionId": 1,
+        "title": "Вечернее платье",
         "article": "платье01",
-        "status": "Хит продаж",
         "bestseller": true,
         "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 3,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 4,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 5,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 6,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491.png?alt=media&token=43982d2b-dbd0-46f9-b29f-df583950a336"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "2300",
@@ -110,33 +105,46 @@
         "collection": "Коллекция лето 2020",
         "title": "Летнее платье 2",
         "article": "платье02",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
             "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "5400",
@@ -151,7 +159,8 @@
         "collection": "Коллекция лето 2020",
         "title": "Летнее платье 3",
         "article": "платье03",
-        "status": "Новинки",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -161,11 +170,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "5400",
@@ -179,19 +212,48 @@
       {
         "id": 4,
         "collection": "Коллекция лето 2020",
-        "title": "Летнее платье 4",
+        "title": "Вечернее платье",
         "article": "платье04",
-        "status": "Новинки",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/hit2.png?alt=media&token=4fd3e50e-a86a-42d9-9bbb-85190d95f2ea"
           }
         ],
         "colors": [
           {
+            "id": 1,
+            "color": "rgba(139,0,0)"
+          },
+          {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "3200",
@@ -207,7 +269,8 @@
         "collection": "Коллекция весна 2020",
         "title": "Весеннее платье 1",
         "article": "платье05",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -221,19 +284,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "2300",
@@ -249,7 +328,8 @@
         "collection": "Коллекция весна 2020",
         "title": "Весеннее платье 2",
         "article": "платьe06",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -263,19 +343,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "5400",
@@ -290,7 +386,8 @@
         "collection": "Коллекция весна 2020",
         "title": "Весеннее платье 3",
         "article": "платье07",
-        "status": "Новинки",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -300,11 +397,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "5400",
@@ -318,23 +439,48 @@
       {
         "id": 8,
         "collection": "Коллекция весна 2020",
-        "title": "Весеннее платье 4",
+        "title": "Вечернее платье",
         "article": "платье08",
-        "status": "Новинки",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681.png?alt=media&token=b3ab804b-6513-4ff0-8802-ffb31de70e30"
           }
         ],
         "colors": [
           {
+            "id": 1,
+            "color": "rgba(139,0,0)"
+          },
+          {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "3200",
@@ -350,33 +496,46 @@
         "collection": "Коллекция осень 2020",
         "title": "Осенняя платье 1",
         "article": "платье09",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
             "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "2300",
@@ -390,35 +549,48 @@
       {
         "id": 10,
         "collection": "Коллекция осень 2020",
-        "title": "Осенняя платье 2",
+        "title": "Вечернее платье",
         "article": "платье10",
-        "status": "Хит продаж",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png?alt=media&token=7406455e-47b2-4546-9da4-90e50d3fd92e"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "5400",
@@ -433,7 +605,8 @@
         "collection": "Коллекция осень 2020",
         "title": "Осенняя платье 3",
         "article": "платье11",
-        "status": "Новинки",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -443,11 +616,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "10000",
@@ -461,19 +658,48 @@
       {
         "id": 12,
         "collection": "Коллекция осень 2020",
-        "title": "Осенняя платье 4",
+        "title": "Вечернее платье",
         "article": "платье12",
-        "status": "Новинки",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=c9d9dec9-b07a-4ecb-b019-b045892a813d"
           }
         ],
         "colors": [
           {
+            "id": 1,
+            "color": "rgba(139,0,0)"
+          },
+          {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "3200",
@@ -489,33 +715,46 @@
         "collection": "Коллекция зима 2020",
         "title": "Зимнее платье 1",
         "article": "платье13",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
             "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "6500",
@@ -529,35 +768,48 @@
       {
         "id": 14,
         "collection": "Коллекция зима 2020",
-        "title": "Зимнее платье 2",
+        "title": "Вечернее платье",
         "article": "платье14",
-        "status": "Хит продаж",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681.png?alt=media&token=df0788d0-fab5-4461-9cec-1bedd4ed8424"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "1999",
@@ -570,9 +822,10 @@
       {
         "id": 15,
         "collection": "Коллекция зима 2020",
-        "title": "Зимнее платье 3",
+        "title": "Вечернее платье",
         "article": "платье15",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -582,11 +835,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "10000",
@@ -600,23 +877,48 @@
       {
         "id": 16,
         "collection": "Коллекция зима 2020",
-        "title": "Зимнее платье 4",
+        "title": "Вечернее платье",
         "article": "платье16",
-        "status": "Новинки",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F%202.png?alt=media&token=83a9b668-5138-4abe-92e0-ba15dec4fe4b"
           }
         ],
         "colors": [
           {
+            "id": 1,
+            "color": "rgba(139,0,0)"
+          },
+          {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "4300",
@@ -632,33 +934,46 @@
         "collection": "Коллекция хит 2021",
         "title": "Хит платье 1",
         "article": "платье17",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
             "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "4766",
@@ -674,33 +989,46 @@
         "collection": "Коллекция хит 2021",
         "title": "Хит платье 2",
         "article": "платье18",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
             "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
           },
           {
             "id": 3,
-            "color": "rgba(39, 140, 245, 1)"
+            "color": "rgba(0,191,255)"
           },
           {
             "id": 4,
-            "color": "rgba(0, 0, 0, 1)"
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "1999",
@@ -715,7 +1043,8 @@
         "collection": "Коллекция хит 2021",
         "title": "Хит платье 3",
         "article": "платье19",
-        "status": "Хит продаж",
+        "bestseller": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
@@ -725,11 +1054,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(93, 245, 39, 1)"
+            "color": "rgba(139,0,0)"
           },
           {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "1200",
@@ -743,23 +1096,48 @@
       {
         "id": 20,
         "collection": "Коллекция хит 2021",
-        "title": "Хит платье 4",
+        "title": "Вечернее платье",
         "article": "платье20",
-        "status": "Новинки",
+        "bestseller": true,
+        "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
           }
         ],
         "colors": [
           {
+            "id": 1,
+            "color": "rgba(139,0,0)"
+          },
+          {
             "id": 2,
-            "color": "rgba(245, 46, 39, 1)"
+            "color": "rgba(34,139,34)"
+          },
+          {
+            "id": 3,
+            "color": "rgba(0,191,255)"
+          },
+          {
+            "id": 4,
+            "color": "rgba(255,192,203)"
+          },
+          {
+            "id": 5,
+            "color": "rgba(95,158,160)"
+          },
+          {
+            "id": 6,
+            "color": "rgba(219,112,147)"
+          },
+          {
+            "id": 7,
+            "color": "rgba(210,180,140)"
+          },
+          {
+            "id": 8,
+            "color": "rgba(176,196,222)"
           }
         ],
         "currentPrice": "4300",
@@ -775,9 +1153,27 @@
       "headerLogo": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/zeonLogo.svg?alt=media&token=f2c63bd0-b996-4910-ba9c-f4fe50e93b77",
       "footerLogo": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/footerLogo.svg?alt=media&token=f6a10d93-31d7-46f0-9714-48d2172e7055",
       "contacts": {
-        "phoneNumber": "+996 123 123 123",
-        "officeNumber": "+996 123 123 123",
-        "email": "email@gmail.com",
+        "mobile": [
+          {
+            "href": "phoneNumber",
+            "title": "tel:+996 123 123 123",
+            "data": "+996 123 123 123",
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202.svg?alt=media&token=9b39ddeb-1e47-4e57-b304-736debb8bbd7"
+          },
+          {
+            "href": "officeNumber",
+            "title": "tel:+996 123 133 123",
+            "data": "+996 123 133 123",
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202.svg?alt=media&token=9b39ddeb-1e47-4e57-b304-736debb8bbd7"
+          },
+          {
+            "href": "email",
+            "title": "mailto:email@gmail.com",
+            "data": "email@gmail.com",
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202%20(1).svg?alt=media&token=3451ee98-3457-41b0-b388-b29861b0d3a8"
+          }
+        ],
+
         "socialMedia": {
           "instagram": "https://www.instagram.com",
           "instagramTitle": "Instagram",
@@ -844,6 +1240,24 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
         }
       ]
-    }
+    },
+    "corusel": [
+      {
+        "id": 1,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+      },
+      {
+        "id": 2,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+      },
+      {
+        "id": 3,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+      },
+      {
+        "id": 4,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+      }
+    ]
   }
 }
