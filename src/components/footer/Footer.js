@@ -13,6 +13,7 @@ const StyledContainer = styled.div`
   background-color: black;
   display: flex;
   justify-content: space-between;
+  text-align: start;
 `;
 
 const StyledContent = styled.div`
@@ -59,7 +60,6 @@ const Footer = () => {
       try {
         const numberResponse = await getNumberRequest();
         setNumber(numberResponse.data.contacts.mobile);
-        console.log(numberResponse.data.contacts.mobile);
       } catch (error) {
         console.log(error);
       }
@@ -76,7 +76,9 @@ const Footer = () => {
         <StyledContent>
           <div>
             <img src={logo} alt="footerLogo" />
-            <p>Developed by Zeon 2022</p>
+            <p style={{ color: '#B9B9B9', marginTop: '32px' }}>
+              Developed by Zeon 2022
+            </p>
           </div>
           <div>
             <StyledSpan>Компания</StyledSpan>
@@ -99,7 +101,7 @@ const Footer = () => {
           <div>
             <StyledSpan>Контакты</StyledSpan>
             {number.map((item) => (
-              <StyledP>
+              <StyledP key={item.id}>
                 <img src={item.image} alt="svg" />
                 <a style={{ color: 'white' }} href={item.title}>
                   {item.data}

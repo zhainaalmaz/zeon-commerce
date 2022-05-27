@@ -60,35 +60,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "2300",
@@ -103,48 +103,48 @@
       {
         "id": 2,
         "collection": "Коллекция лето 2020",
-        "title": "Летнее платье 2",
+        "title": "Летнее платье",
         "article": "платье02",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": false,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct3.png?alt=media&token=e79bab60-112c-44b4-9228-dac84d677add"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "5400",
@@ -157,48 +157,48 @@
       {
         "id": 3,
         "collection": "Коллекция лето 2020",
-        "title": "Летнее платье 3",
+        "title": "Летнее платье ",
         "article": "платье03",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "5400",
@@ -219,41 +219,41 @@
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/hit2.png?alt=media&token=4fd3e50e-a86a-42d9-9bbb-85190d95f2ea"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/BestSelller3.png?alt=media&token=1afd6dac-39fe-4158-8210-0e46080dcea3"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "3200",
@@ -267,52 +267,48 @@
       {
         "id": 5,
         "collection": "Коллекция весна 2020",
-        "title": "Весеннее платье 1",
+        "title": "Весеннее платье ",
         "article": "платье05",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct2.png?alt=media&token=b90c3baf-baf3-4dd6-8fb2-94d5f297ecb0"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "2300",
@@ -326,54 +322,51 @@
       {
         "id": 6,
         "collection": "Коллекция весна 2020",
-        "title": "Весеннее платье 2",
+        "title": "Весеннее платье ",
         "article": "платьe06",
         "bestseller": false,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
-          },
-          {
-            "id": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct3.png?alt=media&token=e79bab60-112c-44b4-9228-dac84d677add"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
+        "previousPrice": "6100",
         "currentPrice": "5400",
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
         "sizeRage": "42-50",
@@ -384,48 +377,48 @@
       {
         "id": 7,
         "collection": "Коллекция весна 2020",
-        "title": "Весеннее платье 3",
+        "title": "Весеннее платье ",
         "article": "платье07",
         "bestseller": false,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct4.png?alt=media&token=ed76f53e-1a6f-42fe-9bc8-bf6e4f0e0c47"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "5400",
@@ -452,35 +445,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "3200",
@@ -494,48 +487,48 @@
       {
         "id": 9,
         "collection": "Коллекция осень 2020",
-        "title": "Осенняя платье 1",
+        "title": "Осеннее платье",
         "article": "платье09",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct4.png?alt=media&token=ed76f53e-1a6f-42fe-9bc8-bf6e4f0e0c47"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "2300",
@@ -552,45 +545,45 @@
         "title": "Вечернее платье",
         "article": "платье10",
         "bestseller": true,
-        "newproducts": false,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png?alt=media&token=7406455e-47b2-4546-9da4-90e50d3fd92e"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/bestSelller1.png?alt=media&token=e1ccd5a3-ab73-4538-a6c8-3756eacf6676"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "5400",
@@ -603,48 +596,48 @@
       {
         "id": 11,
         "collection": "Коллекция осень 2020",
-        "title": "Осенняя платье 3",
+        "title": "Осеннее платье ",
         "article": "платье11",
         "bestseller": false,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct3.png?alt=media&token=e79bab60-112c-44b4-9228-dac84d677add"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "10000",
@@ -671,35 +664,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "3200",
@@ -713,48 +706,48 @@
       {
         "id": 13,
         "collection": "Коллекция зима 2020",
-        "title": "Зимнее платье 1",
+        "title": "Зимнее платье ",
         "article": "платье13",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "6500",
@@ -781,37 +774,38 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
+        "previousPrice": "6100",
         "currentPrice": "1999",
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
         "sizeRage": "42-50",
@@ -824,46 +818,46 @@
         "collection": "Коллекция зима 2020",
         "title": "Вечернее платье",
         "article": "платье15",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "10000",
@@ -890,35 +884,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "4300",
@@ -932,48 +926,48 @@
       {
         "id": 17,
         "collection": "Коллекция хит 2021",
-        "title": "Хит платье 1",
+        "title": "Вечернее платье",
         "article": "платье17",
-        "bestseller": false,
+        "bestseller": true,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "4766",
@@ -987,50 +981,51 @@
       {
         "id": 18,
         "collection": "Коллекция хит 2021",
-        "title": "Хит платье 2",
+        "title": "Вечернее платье",
         "article": "платье18",
-        "bestseller": false,
-        "newproducts": false,
+        "bestseller": true,
+        "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681.png?alt=media&token=df0788d0-fab5-4461-9cec-1bedd4ed8424"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
+        "previousPrice": "6100",
         "currentPrice": "1999",
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
         "sizeRage": "42-50",
@@ -1041,48 +1036,48 @@
       {
         "id": 19,
         "collection": "Коллекция хит 2021",
-        "title": "Хит платье 3",
+        "title": "Вечернее платье",
         "article": "платье19",
         "bestseller": false,
         "newproducts": true,
         "productImages": [
           {
             "id": 1,
-            "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+            "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
           }
         ],
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "1200",
@@ -1109,35 +1104,35 @@
         "colors": [
           {
             "id": 1,
-            "color": "rgba(139,0,0)"
+            "color": "#73A39D"
           },
           {
             "id": 2,
-            "color": "rgba(34,139,34)"
+            "color": "#84CC4C"
           },
           {
             "id": 3,
-            "color": "rgba(0,191,255)"
+            "color": "#B5A8A1"
           },
           {
             "id": 4,
-            "color": "rgba(255,192,203)"
+            "color": "#AB844A"
           },
           {
             "id": 5,
-            "color": "rgba(95,158,160)"
+            "color": "#6977F0"
           },
           {
             "id": 6,
-            "color": "rgba(219,112,147)"
+            "color": "#FFFFFF"
           },
           {
             "id": 7,
-            "color": "rgba(210,180,140)"
+            "color": "#141414"
           },
           {
             "id": 8,
-            "color": "rgba(176,196,222)"
+            "color": "#FF0000"
           }
         ],
         "currentPrice": "4300",
@@ -1191,6 +1186,54 @@
         "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой."
       },
       "news": [
+        {
+          "id": 1,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+        },
+        {
+          "id": 2,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+        },
+        {
+          "id": 3,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+        },
+        {
+          "id": 4,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+        },
+        {
+          "id": 5,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+        },
+        {
+          "id": 6,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+        },
+        {
+          "id": 7,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+        },
+        {
+          "id": 8,
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+        },
         {
           "id": 1,
           "title": "Lorem ipsum dolor sit amet",

@@ -7,6 +7,7 @@ const StyledContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  text-align: start;
 `;
 
 const StyledSection = styled.div`
@@ -47,8 +48,9 @@ const AboutUs = () => {
   useEffect(() => {
     const getInfoAboutUs = async () => {
       try {
-        const logoResponse = await getInfoAboutUsRequest();
-        setAboutUs(logoResponse.data.aboutUs);
+        const aboutResponse = await getInfoAboutUsRequest();
+        console.log(aboutResponse.data);
+        setAboutUs(aboutResponse.data.aboutUs);
       } catch (error) {
         console.log(error);
       }
@@ -57,21 +59,25 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <StyledContainer>
-      <StyledSection>
-        <StyledDiv>
-          <img width={327} src={aboutUs.image1} alt="aboutUsImg1" />
-          <img width={327} src={aboutUs.image2} alt="aboutUsImg2" />
-        </StyledDiv>
-      </StyledSection>
-      <div>
-        <img width={327} src={aboutUs.image3} alt="aboutUsImg3" />
+    <div style={{ background: '#ECECEC' }}>
+      <div className="container">
+        <StyledContainer>
+          <StyledSection>
+            <StyledDiv>
+              <img width={327} src={aboutUs.image1} alt="aboutUsImg1" />
+              <img width={327} src={aboutUs.image2} alt="aboutUsImg2" />
+            </StyledDiv>
+          </StyledSection>
+          <div>
+            <img width={327} src={aboutUs.image3} alt="aboutUsImg3" />
+          </div>
+          <StyledText>
+            <StyledSpan>{aboutUs.title}</StyledSpan>
+            <StyledP>{aboutUs.text}</StyledP>
+          </StyledText>
+        </StyledContainer>
       </div>
-      <StyledText>
-        <StyledSpan>{aboutUs.title}</StyledSpan>
-        <StyledP>{aboutUs.text}</StyledP>
-      </StyledText>
-    </StyledContainer>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getNewsRequest } from '../api/service';
 import styled from 'styled-components';
+import Button from '../ui/Button';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -13,12 +14,12 @@ const StyledContainer = styled.div`
 
 const StyledDiv = styled.div`
   margin: 16px;
+  text-align: start;
 `;
 
 const StyledSpan = styled.span`
   font-weight: 500;
   font-size: 16px;
-  margin: 0;
   color: #393939;
 `;
 
@@ -28,8 +29,19 @@ const StyledP = styled.p`
   font-size: 14px;
   line-height: 165%;
 `;
+
+const StyledTitle = styled.p`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #393939;
+  margin-bottom: 21px;
+`;
 const News = () => {
   const [news, setNews] = useState([]);
+  const [count, setCount] = useState(8);
 
   useEffect(() => {
     const getNews = async () => {
@@ -44,19 +56,38 @@ const News = () => {
     getNews();
   }, []);
 
+  const countClickHandler = () => {
+    setCount((count) => count + 4);
+  };
+
   return (
-    <div>
-      {news.map((item) => {
-        return (
-          <StyledContainer key={item.id}>
-            <img width={226} src={item.image} alt="newsImg" />
-            <StyledDiv>
-              <StyledSpan>{item.title}</StyledSpan>
-              <StyledP>{item.description}</StyledP>
-            </StyledDiv>
-          </StyledContainer>
-        );
-      })}
+    <div style={{ background: '#ECECEC' }}>
+      <div className="container">
+        <StyledTitle>Новости </StyledTitle>
+        {news.map((item) => {
+          return (
+            <StyledContainer key={item.id}>
+              <img width={226} src={item.image} alt="newsImg" />
+              <StyledDiv>
+                <StyledSpan>{item.title}</StyledSpan>
+                <StyledP>{item.description}</StyledP>
+              </StyledDiv>
+            </StyledContainer>
+          );
+        })}
+        <Button
+          sx={{
+            background: 'black',
+            width: '107px',
+            height: '32px',
+            color: 'white',
+            marginTop: '16px',
+          }}
+          onClick={countClickHandler}
+        >
+          Еще
+        </Button>
+      </div>
     </div>
   );
 };

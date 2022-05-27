@@ -8,4 +8,5 @@ export const store = configureStore({
 });
 
 export const productsAction = productSlice.actions;
+
 export default store;

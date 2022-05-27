@@ -10,8 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { getLogoRequest } from '../../api/service';
 
 const StyledLayout = styled.div`
-  width: 90%;
-  margin: 22px 100px;
+  margin: 22px 0;
   display: flex;
   justify-content: space-between;
 `;
@@ -19,14 +18,13 @@ const StyledLayout = styled.div`
 const StyledContainer = styled.div`
   width: 274px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
 `;
 
 const StyledContent = styled.div`
-  width: 90%;
   margin: 10px;
   display: flex;
   justify-content: space-between;
@@ -55,7 +53,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div style={{ background: 'white' }}>
+    <div className="container">
       <StyledLayout>
         <StyledContainer>
           <Link to="/about">О нас</Link>
@@ -85,7 +83,6 @@ const Header = () => {
           Корзина
         </Link>
       </StyledContent>
-      <Divider />
     </div>
   );
 };
