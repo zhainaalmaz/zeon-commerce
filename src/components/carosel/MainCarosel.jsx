@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
-import { getCoruselImageRequest } from './../../api/service';
+import { getCoruselImageRequest } from '../../api/service';
 
 SwiperCore.use([Autoplay]);
 

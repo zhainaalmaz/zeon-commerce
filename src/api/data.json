@@ -1150,18 +1150,21 @@
       "contacts": {
         "mobile": [
           {
+            "id": 1,
             "href": "phoneNumber",
             "title": "tel:+996 123 123 123",
             "data": "+996 123 123 123",
             "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202.svg?alt=media&token=9b39ddeb-1e47-4e57-b304-736debb8bbd7"
           },
           {
+            "id": 2,
             "href": "officeNumber",
             "title": "tel:+996 123 133 123",
             "data": "+996 123 133 123",
             "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202.svg?alt=media&token=9b39ddeb-1e47-4e57-b304-736debb8bbd7"
           },
           {
+            "id": 3,
             "href": "email",
             "title": "mailto:email@gmail.com",
             "data": "email@gmail.com",

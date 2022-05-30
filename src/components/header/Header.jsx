@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Input from '../../ui/CustomInput';
 import styled from 'styled-components';
 import { Divider } from '@mui/material';
@@ -56,9 +56,15 @@ const Header = () => {
     <div className="container">
       <StyledLayout>
         <StyledContainer>
-          <Link to="/about">О нас</Link>
-          <Link to="/collection">Коллекции </Link>
-          <Link to="/news">Новости </Link>
+          <NavLink style={{ color: 'black' }} to="/about">
+            О нас
+          </NavLink>
+          <NavLink style={{ color: 'black' }} to="/collection">
+            Коллекции
+          </NavLink>
+          <NavLink style={{ color: 'black' }} to="/news">
+            Новости
+          </NavLink>
         </StyledContainer>
         <StyledContact>
           <span>
@@ -74,14 +80,14 @@ const Header = () => {
         </Link>
 
         <Input width="50%" placeholder="Поиск" />
-        <Link to="/favorite">
-          <FavoriteLogo style={{ marginRight: 5 }} />
+        <NavLink style={{ color: 'black' }} to="/favorite">
+          <FavoriteLogo style={{ marginRight: 10 }} />
           Избранное
-        </Link>
-        <Link to="/cart">
-          <BasketLogo style={{ marginRight: 5 }} />
+        </NavLink>
+        <NavLink style={{ color: 'black' }} to="/cart">
+          <BasketLogo style={{ marginRight: 10 }} />
           Корзина
-        </Link>
+        </NavLink>
       </StyledContent>
     </div>
   );
