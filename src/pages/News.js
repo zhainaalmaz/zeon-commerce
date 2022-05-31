@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getNewsRequest } from '../api/service';
 import styled from 'styled-components';
-import Button from '../ui/Button';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -41,13 +40,11 @@ const StyledTitle = styled.p`
 `;
 const News = () => {
   const [news, setNews] = useState([]);
-  const [count, setCount] = useState(8);
 
   useEffect(() => {
     const getNews = async () => {
       try {
         const newsResponse = await getNewsRequest();
-        console.log(newsResponse);
         setNews(newsResponse.data.news);
       } catch (error) {
         console.log(error);
@@ -55,10 +52,6 @@ const News = () => {
     };
     getNews();
   }, []);
-
-  const countClickHandler = () => {
-    setCount((count) => count + 4);
-  };
 
   return (
     <div style={{ background: '#ECECEC' }}>
@@ -75,18 +68,6 @@ const News = () => {
             </StyledContainer>
           );
         })}
-        <Button
-          sx={{
-            background: 'black',
-            width: '107px',
-            height: '32px',
-            color: 'white',
-            marginTop: '16px',
-          }}
-          onClick={countClickHandler}
-        >
-          Еще
-        </Button>
       </div>
     </div>
   );

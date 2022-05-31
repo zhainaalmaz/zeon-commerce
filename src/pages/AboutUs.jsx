@@ -49,7 +49,6 @@ const AboutUs = () => {
     const getInfoAboutUs = async () => {
       try {
         const aboutResponse = await getInfoAboutUsRequest();
-        console.log(aboutResponse.data);
         setAboutUs(aboutResponse.data.aboutUs);
       } catch (error) {
         console.log(error);

@@ -8,9 +8,6 @@ const StyledTextField = styled(TextField)(() => ({
   '&.MuiButtonBase-root:hover': {
     background: 'none',
   },
-  //   '& .MuiOutlinedInput-root': {
-  //     borderRadius: '10px',
-  //   },
 }));
 
 export default function Input({

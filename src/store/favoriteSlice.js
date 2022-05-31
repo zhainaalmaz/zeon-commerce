@@ -27,7 +27,6 @@ const favoriteSlice = createSlice({
         'favoriteItems',
         JSON.stringify(state.favoriteItems)
       );
-      return initialState;
     },
   },
 });

@@ -23,3 +23,7 @@ export const getCoruselImageRequest = () => {
 export const getProductsRequest = () => {
   return axiosInstance.get('products.json');
 };
+
+export const getCollectionsRequest = () => {
+  return axiosInstance.get('collections.json');
+};

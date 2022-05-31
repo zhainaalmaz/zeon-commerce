@@ -68,7 +68,7 @@ const Header = () => {
         </StyledContainer>
         <StyledContact>
           <span>
-            Тел:<a href="/"> +996 000 00 00 00</a>
+            Тел:<a href="tel"> +996 000 00 00 00</a>
           </span>
         </StyledContact>
       </StyledLayout>
@@ -76,7 +76,7 @@ const Header = () => {
       <StyledContent>
         <MuiDrawer navigate={navigate} />
         <Link to="/">
-          <img href="/" alt="logo" src={logo} />
+          <img alt="logo" src={logo} />
         </Link>
 
         <Input width="50%" placeholder="Поиск" />

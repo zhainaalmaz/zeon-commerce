@@ -4,7 +4,6 @@ import { getProductsRequest } from '../api/service';
 const initialState = {
   data: [],
   status: '',
-  news: [],
 };
 
 export const fetchAsyncProducts = createAsyncThunk('products', async () => {
@@ -15,14 +14,7 @@ export const fetchAsyncProducts = createAsyncThunk('products', async () => {
 const productsSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {
-    // getAllData: (state, action) => {
-    //   state.allData = action.payload;
-    // },
-    // getNews: (state, action) => {
-    //   state.news = state.allData.filter((item) => item.news);
-    // },
-  },
+  reducers: {},
 
   extraReducers: {
     [fetchAsyncProducts.pending]: (state, action) => {
@@ -40,6 +32,6 @@ const productsSlice = createSlice({
     },
   },
 });
-// export const { getAllData, getNews } = productsSlice.actions;
+
 export const productsAction = productsSlice.actions;
 export default productsSlice.reducer;
