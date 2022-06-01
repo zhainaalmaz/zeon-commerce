@@ -42,6 +42,7 @@ export default function Input({
       onChange={onChange}
       size="small"
       {...otherProps}
+      inputcomponent="true"
     />
   );
 }

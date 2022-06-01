@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import Button from '../../ui/Button';
-// import { onAddToFavorite } from '../../store/favoriteSlice';
 import Content from '../../ui/Content';
 
 const StyledP = styled.p`
@@ -10,7 +9,6 @@ const StyledP = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #393939;
-  margin: 18px 43%;
 `;
 const StyledContent = styled.div`
   display: flex;
@@ -34,7 +32,7 @@ const BestSeller = () => {
       <StyledContent>
         {filteredItem.length !== 0 &&
           filteredItem.slice(0, count).map((item) => (
-            <div key={item.id}>
+            <div key={item.id} style={{ width: '284px' }}>
               <Content item={item} />
             </div>
           ))}
@@ -43,11 +41,8 @@ const BestSeller = () => {
       {filteredItem.length <= count || (
         <Button
           sx={{
-            background: 'black',
             width: '107px',
             height: '32px',
-            color: 'white',
-            marginTop: '16px',
           }}
           onClick={countClickHandler}
         >

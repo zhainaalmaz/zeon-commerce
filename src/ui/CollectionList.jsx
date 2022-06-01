@@ -9,7 +9,7 @@ const StyledP = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #393939;
-  margin: 18px 43%;
+  text-align: start;
 `;
 const StyledContent = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ const StyledContent = styled.div`
 const CollectionList = () => {
   const params = useParams();
   const collectionParams = +params.collectionList;
-
+  console.log(collectionParams);
   const product = useSelector((state) => state.products.data);
   const collection = useSelector((state) => state.collections.data);
   const collectionName = collection.filter(
@@ -29,13 +29,12 @@ const CollectionList = () => {
 
   console.log(product, 'product');
   const filteredItem = product.filter(
-    (item) => item.collectionId == collectionParams
+    (item) => item.collectionId === collectionParams
   );
 
   return (
     <div className="container">
       <StyledP>{`${collectionName[0]?.title}`}</StyledP>
-
       <StyledContent>
         {filteredItem.map((item) => (
           <div key={item.id}>

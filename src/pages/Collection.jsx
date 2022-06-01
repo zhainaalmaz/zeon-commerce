@@ -38,11 +38,8 @@ const Collection = () => {
       {collection.length <= count || (
         <Button
           sx={{
-            background: 'black',
             width: '107px',
             height: '32px',
-            color: 'white',
-            marginTop: '16px',
           }}
           size="small"
           onClick={countClickHandler}

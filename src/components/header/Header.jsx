@@ -8,7 +8,9 @@ import { ReactComponent as FavoriteLogo } from './../../assets/icons/favorite.sv
 import MuiDrawer from './Drawer';
 import { useNavigate } from 'react-router-dom';
 import { getLogoRequest } from '../../api/service';
-
+import { ReactComponent as SearchSvg } from '../../assets/icons/searchIcon.svg';
+import { ReactComponent as FavoritedSvg } from '../../assets/icons/favorite2.svg';
+import { useSelector } from 'react-redux';
 const StyledLayout = styled.div`
   margin: 22px 0;
   display: flex;
@@ -39,6 +41,12 @@ const StyledContact = styled.div`
 const Header = () => {
   let navigate = useNavigate();
   const [logo, setLogo] = useState();
+  const [isFavorite, setIsFavorite] = useState([]);
+  const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
+
+  useEffect(() => {
+    setIsFavorite(favoriteItems);
+  }, [favoriteItems]);
 
   useEffect(() => {
     const getLogo = async () => {
@@ -79,13 +87,21 @@ const Header = () => {
           <img alt="logo" src={logo} />
         </Link>
 
-        <Input width="50%" placeholder="Поиск" />
+        <Input width="50%" placeholder="Поиск">
+          <span>
+            <SearchSvg />
+          </span>
+        </Input>
         <NavLink style={{ color: 'black' }} to="/favorite">
-          <FavoriteLogo style={{ marginRight: 10 }} />
+          {isFavorite.length > 0 ? (
+            <FavoritedSvg style={{ marginRight: 10 }} />
+          ) : (
+            <FavoriteLogo style={{ marginRight: 10 }} fill="#393939" />
+          )}
           Избранное
         </NavLink>
         <NavLink style={{ color: 'black' }} to="/cart">
-          <BasketLogo style={{ marginRight: 10 }} />
+          <BasketLogo style={{ marginRight: 10 }} fill="#393939" />
           Корзина
         </NavLink>
       </StyledContent>

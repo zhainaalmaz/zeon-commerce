@@ -15,11 +15,19 @@ export default function Button({
 }) {
   return (
     <MUIButton
+      style={{ backgroundColor: 'black' }}
       fullWidth={fullWidth}
       type={type}
       className={className}
       variant={variant}
-      sx={{ textTransform: 'none', ...sx }}
+      sx={{
+        borderRadius: 0,
+        textTransform: 'none',
+        backgroundColor: 'black',
+        color: 'white',
+        marginTop: '16px',
+        ...sx,
+      }}
       disableRipple={disableRipple}
       onClick={onClick}
       {...other}

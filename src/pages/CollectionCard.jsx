@@ -2,7 +2,7 @@ import React from 'react';
 import CardMedia from '@mui/material/CardMedia';
 import styled from 'styled-components';
 import { ReactComponent as ArrowSvg } from '../assets/icons/arrow.svg';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const StyledCard = styled.div`
   width: 286px;
@@ -31,11 +31,10 @@ const StyledButton = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 18px 12px 30px;
   gap: 10px;
   width: 286px;
   height: 44px;
-  &:hover {
+  :hover {
     background-color: white;
     span {
       color: black;
@@ -59,11 +58,20 @@ export default function CollectionCard({ item }) {
       <StyledCard key={item.id}>
         <CardMedia component="img" height="374" image={item.image} alt="hhhh" />
         <StyledTitle>{item.title}</StyledTitle>
-        <StyledButton>
-          <Link to={`/${item.id}`}>
+
+        <NavLink
+          to={`/${item.id}`}
+          style={{
+            fontWeight: '500',
+            fontSize: '14px',
+            lineHeight: '17px',
+            color: '#ffffff',
+          }}
+        >
+          <StyledButton>
             <StyledSpan> Смотреть все</StyledSpan> <ArrowSvg fill="white" />
-          </Link>
-        </StyledButton>
+          </StyledButton>
+        </NavLink>
       </StyledCard>
     </>
   );

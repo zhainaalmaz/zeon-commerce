@@ -6,9 +6,10 @@ import { ReactComponent as Hearted } from '../assets/icons/heart2.svg';
 import { onAddToFavorite, onRemoveFromFavorite } from '../store/favoriteSlice';
 import { ReactComponent as DiscounSvg } from '../assets/icons/discount.svg';
 import { Link, useParams } from 'react-router-dom';
+import { mathPercent } from '../utils';
 
 const StyledContainer = styled.div`
-  width: 284px;
+  width: 286px;
   height: 536px;
   background: white;
   margin: 8px 4px;
@@ -58,11 +59,17 @@ const StyledSizetitle = styled.p`
   margin-top: 6px;
 `;
 
-export const mathPercent = (previousPrice, discount) => {
-  const element = previousPrice / 100;
-  const result = discount / +element.toFixed(0);
-  return 100 - result.toFixed(0);
-};
+const StyledSpan = styled.span`
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: matrix(0.71, -0.7, 0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 8px;
+  left: 5px;
+`;
 
 const Content = ({ item }) => {
   const params = useParams();
@@ -86,14 +93,11 @@ const Content = ({ item }) => {
         <div style={{ display: 'flex' }}>
           <div style={{ position: 'absolute' }}>
             {!!item.discount && (
-              <DiscounSvg>
-                {!!item.discount && (
-                  <span>
-                    {`${mathPercent(item.previousPrice, item.discount)}`}%
-                  </span>
-                )}
-              </DiscounSvg>
+              <StyledSpan>
+                {`${mathPercent(item.previousPrice, item.discount)}`}%
+              </StyledSpan>
             )}
+            {!!item.discount && <DiscounSvg />}
           </div>
           <div
             style={{
@@ -112,19 +116,28 @@ const Content = ({ item }) => {
             {!!filteredFev && <Heart onClick={() => onRemoveFavorite(item)} />}
           </div>
         </div>
-        <StyledImage
-          src={item.productImages.map((el) => {
-            return el.image;
-          })}
-        />
         <Link to={`/${collectionId}/${item.id}`}>
+          <StyledImage
+            src={item.productImages.map((el) => {
+              return el.image;
+            })}
+          />
+
           <div style={{ margin: '8px' }}>
             <StyledTitle>{item.title}</StyledTitle>
             <StyledPricetitle style={{ marginTop: '5px' }}>
               <span>
-                {!!item.discount ? item.discount : item.previousPrice} p.
+                {item.discount ? (
+                  <>
+                    <span>{item.discount}p. </span>
+                    <span className="previousPrice">
+                      {item.previousPrice}p.
+                    </span>
+                  </>
+                ) : (
+                  <span>{item.previousPrice}p.</span>
+                )}
               </span>
-              <span> {!!item.discount && item.previousPrice} p. </span>
             </StyledPricetitle>
             <StyledSizetitle>Размер:{item.sizeRage}</StyledSizetitle>
             <StyledColordiv>
