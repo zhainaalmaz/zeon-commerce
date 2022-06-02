@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import CollectionCard from './CollectionCard';
-import Button from '../ui/Button';
+import CollectionCard from '../../pages/CollectionCard';
+import Button from '../../ui/Button';
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 18px;
 `;
 
 const StyledTitle = styled.p`
@@ -14,7 +15,8 @@ const StyledTitle = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #393939;
-  margin-top: 32px;
+  // text-align: start;
+  padding-top: 32px;
 `;
 
 const Collection = () => {
@@ -40,6 +42,7 @@ const Collection = () => {
           sx={{
             width: '107px',
             height: '32px',
+            marginTop: '16px',
           }}
           size="small"
           onClick={countClickHandler}

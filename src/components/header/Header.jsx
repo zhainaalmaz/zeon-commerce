@@ -7,10 +7,10 @@ import { ReactComponent as BasketLogo } from './../../assets/icons/basket.svg';
 import { ReactComponent as FavoriteLogo } from './../../assets/icons/favorite.svg';
 import MuiDrawer from './Drawer';
 import { useNavigate } from 'react-router-dom';
-import { getLogoRequest } from '../../api/service';
 import { ReactComponent as SearchSvg } from '../../assets/icons/searchIcon.svg';
 import { ReactComponent as FavoritedSvg } from '../../assets/icons/favorite2.svg';
 import { useSelector } from 'react-redux';
+
 const StyledLayout = styled.div`
   margin: 22px 0;
   display: flex;
@@ -33,32 +33,15 @@ const StyledContent = styled.div`
   align-items: center;
 `;
 
-const StyledContact = styled.div`
-  display: flex;
-  align-items: flex-end;
-`;
-
 const Header = () => {
   let navigate = useNavigate();
-  const [logo, setLogo] = useState();
+  const headerLogo = useSelector((state) => state.commerce.data);
   const [isFavorite, setIsFavorite] = useState([]);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
 
   useEffect(() => {
     setIsFavorite(favoriteItems);
   }, [favoriteItems]);
-
-  useEffect(() => {
-    const getLogo = async () => {
-      try {
-        const logoResponse = await getLogoRequest();
-        setLogo(logoResponse.data.headerLogo);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getLogo();
-  }, []);
 
   return (
     <div className="container">
@@ -74,17 +57,22 @@ const Header = () => {
             Новости
           </NavLink>
         </StyledContainer>
-        <StyledContact>
-          <span>
-            Тел:<a href="tel"> +996 000 00 00 00</a>
-          </span>
-        </StyledContact>
+
+        <span>
+          Тел:
+          <a
+            href="tel:+996 000 00 00 00"
+            style={{ color: 'black', marginLeft: 5 }}
+          >
+            +996 000 00 00 00
+          </a>
+        </span>
       </StyledLayout>
       <Divider />
       <StyledContent>
         <MuiDrawer navigate={navigate} />
         <Link to="/">
-          <img alt="logo" src={logo} />
+          <img alt="logo" src={headerLogo.headerLogo} />
         </Link>
 
         <Input width="50%" placeholder="Поиск">

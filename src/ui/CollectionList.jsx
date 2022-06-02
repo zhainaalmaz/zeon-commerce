@@ -20,7 +20,7 @@ const StyledContent = styled.div`
 const CollectionList = () => {
   const params = useParams();
   const collectionParams = +params.collectionList;
-  console.log(collectionParams);
+
   const product = useSelector((state) => state.products.data);
   const collection = useSelector((state) => state.collections.data);
   const collectionName = collection.filter(
@@ -35,6 +35,7 @@ const CollectionList = () => {
   return (
     <div className="container">
       <StyledP>{`${collectionName[0]?.title}`}</StyledP>
+
       <StyledContent>
         {filteredItem.map((item) => (
           <div key={item.id}>

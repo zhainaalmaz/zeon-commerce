@@ -1,21 +1,5 @@
 import { axiosInstance } from './api';
 
-export const getLogoRequest = () => {
-  return axiosInstance.get('commerce.json');
-};
-
-export const getInfoAboutUsRequest = () => {
-  return axiosInstance.get('commerce.json');
-};
-
-export const getNewsRequest = () => {
-  return axiosInstance.get('commerce.json');
-};
-
-export const getNumberRequest = () => {
-  return axiosInstance.get('commerce.json');
-};
-
 export const getCoruselImageRequest = () => {
   return axiosInstance.get('corusel.json');
 };
@@ -26,4 +10,8 @@ export const getProductsRequest = () => {
 
 export const getCollectionsRequest = () => {
   return axiosInstance.get('collections.json');
+};
+
+export const getCommerceRequest = () => {
+  return axiosInstance.get('commerce.json');
 };

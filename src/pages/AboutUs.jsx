@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { getInfoAboutUsRequest } from '../api/service';
+import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -8,6 +8,7 @@ const StyledContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   text-align: start;
+  padding: 12px 0 72px 0;
 `;
 
 const StyledSection = styled.div`
@@ -43,19 +44,7 @@ const StyledP = styled.p`
 `;
 
 const AboutUs = () => {
-  const [aboutUs, setAboutUs] = useState({});
-
-  useEffect(() => {
-    const getInfoAboutUs = async () => {
-      try {
-        const aboutResponse = await getInfoAboutUsRequest();
-        setAboutUs(aboutResponse.data.aboutUs);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getInfoAboutUs();
-  }, []);
+  const aboutUs = useSelector((state) => state.commerce.data.aboutUs);
 
   return (
     <div style={{ background: '#ECECEC' }}>
@@ -63,16 +52,16 @@ const AboutUs = () => {
         <StyledContainer>
           <StyledSection>
             <StyledDiv>
-              <img width={327} src={aboutUs.image1} alt="aboutUsImg1" />
-              <img width={327} src={aboutUs.image2} alt="aboutUsImg2" />
+              <img width={327} src={aboutUs?.image1} alt="aboutUsImg1" />
+              <img width={327} src={aboutUs?.image2} alt="aboutUsImg2" />
             </StyledDiv>
           </StyledSection>
           <div>
-            <img width={327} src={aboutUs.image3} alt="aboutUsImg3" />
+            <img width={327} src={aboutUs?.image3} alt="aboutUsImg3" />
           </div>
           <StyledText>
-            <StyledSpan>{aboutUs.title}</StyledSpan>
-            <StyledP>{aboutUs.text}</StyledP>
+            <StyledSpan>{aboutUs?.title}</StyledSpan>
+            <StyledP>{aboutUs?.text}</StyledP>
           </StyledText>
         </StyledContainer>
       </div>

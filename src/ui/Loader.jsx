@@ -1,15 +1,11 @@
-import React from 'react';
-import classes from './Loader.module.css';
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
-const Loader = () => {
+export default function Loader() {
   return (
-    <div className={classes.loader}>
-      <div className={classes.loader_ripple}>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
+    <Box sx={{ display: 'flex' }}>
+      <CircularProgress />
+    </Box>
   );
-};
-
-export default Loader;
+}

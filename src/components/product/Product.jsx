@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,7 +10,9 @@ import {
   onAddToFavorite,
   onRemoveFromFavorite,
 } from '../../store/favoriteSlice';
-import { mathPercent } from '../../utils';
+import { addToCart } from '../../store/cartSlice';
+
+import InterestedProducts from '../InterestedProducts';
 
 const StyledColordiv = styled.div`
   display: flex;
@@ -97,9 +99,10 @@ const Product = () => {
   const products = +params.productId;
   const product = useSelector((state) => state.products.data);
   const filteredProduct = product.filter((item) => item.id === products);
-
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
-
+  const sameProduct = product.filter((element) => element.title);
+  // const navigate = useNavigate();
+  const [count] = useState(5);
   const dispatch = useDispatch();
 
   const onAddFavorite = (item) => {
@@ -110,6 +113,12 @@ const Product = () => {
     dispatch(onRemoveFromFavorite(item));
   };
 
+  const addToCartHandler = (item) => {
+    dispatch(addToCart(item));
+
+    // navigate.push('/cart');
+  };
+
   return (
     <div style={{ background: '#ECECEC' }}>
       <div className="container">
@@ -117,7 +126,7 @@ const Product = () => {
           {filteredProduct.map((item) => (
             <>
               {item.productImages.map((el) => (
-                <StyledSection>
+                <StyledSection key={el.id}>
                   <img
                     width={308}
                     src={el.image}
@@ -192,6 +201,7 @@ const Product = () => {
                         display: 'flex',
                         marginTop: '12px',
                       }}
+                      onClick={() => addToCartHandler(item)}
                     >
                       <Button
                         style={{
@@ -224,6 +234,15 @@ const Product = () => {
               </StyledBlock>
             </>
           ))}
+        </div>
+
+        <div>
+          <StyledTitle style={{ marginTop: 48 }}>Похожие товары</StyledTitle>
+          <div style={{ display: 'flex' }}>
+            {sameProduct.slice(0, count).map((item) => (
+              <InterestedProducts key={item.id} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ import { Link, useParams } from 'react-router-dom';
 import { mathPercent } from '../utils';
 
 const StyledContainer = styled.div`
-  width: 286px;
+  width: 284px;
   height: 536px;
   background: white;
   margin: 8px 4px;

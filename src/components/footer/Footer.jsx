@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { getLogoRequest, getNumberRequest } from '../../api/service';
+import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Help from '../../pages/Help';
 import styled from 'styled-components';
 import { ReactComponent as TelegramSvg } from './../../assets/icons/telegram.svg';
 import { ReactComponent as WhatsappSvg } from './../../assets/icons/whatsapp.svg';
 import { ReactComponent as InstagramSvg } from './../../assets/icons/instagram.svg';
+import { useSelector } from 'react-redux';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -30,6 +30,8 @@ const StyledP = styled.p`
   line-height: 17px;
   color: #ffffff;
   padding: 3px;
+  display: flex;
+  align-items: center;
 `;
 
 const StyledSpan = styled.span`
@@ -39,33 +41,12 @@ const StyledSpan = styled.span`
   color: #e2e2e2;
 `;
 
+const StyledAtag = styled.a`
+  color: white;
+`;
+
 const Footer = () => {
-  const [logo, setLogo] = useState();
-  const [number, setNumber] = useState([]);
-
-  useEffect(() => {
-    const getLogo = async () => {
-      try {
-        const logoResponse = await getLogoRequest();
-        setLogo(logoResponse.data.footerLogo);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getLogo();
-  }, []);
-
-  useEffect(() => {
-    const getNumber = async () => {
-      try {
-        const numberResponse = await getNumberRequest();
-        setNumber(numberResponse.data.contacts.mobile);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getNumber();
-  }, []);
+  const footerData = useSelector((state) => state.commerce.data);
 
   return (
     <>
@@ -75,7 +56,7 @@ const Footer = () => {
       <StyledContainer>
         <StyledContent>
           <div>
-            <img src={logo} alt="footerLogo" />
+            <img src={footerData.footerLogo} alt="footerLogo" />
             <p style={{ color: '#B9B9B9', marginTop: '32px' }}>
               Developed by Zeon 2022
             </p>
@@ -100,9 +81,9 @@ const Footer = () => {
           </div>
           <div>
             <StyledSpan>Контакты</StyledSpan>
-            {number.map((item) => (
+            {footerData.mobile?.map((item) => (
               <StyledP key={item.id}>
-                <img src={item.image} alt="svg" />
+                <img style={{ marginRight: 5 }} src={item.image} alt="svg" />
                 <a style={{ color: 'white' }} href={item.title}>
                   {item.data}
                 </a>
@@ -111,18 +92,27 @@ const Footer = () => {
           </div>
           <div>
             <StyledSpan>Мы в социальных сетях:</StyledSpan>
-            <StyledP>
-              <InstagramSvg />
-              Instagram
-            </StyledP>
-            <StyledP>
-              <TelegramSvg />
-              Telegram
-            </StyledP>
-            <StyledP>
-              <WhatsappSvg />
-              Whatsapp
-            </StyledP>
+
+            <StyledAtag href={footerData.socialMedia?.instagram}>
+              <StyledP>
+                <InstagramSvg style={{ marginRight: 5 }} />
+                {footerData.socialMedia?.instagramTitle}
+              </StyledP>
+            </StyledAtag>
+
+            <StyledAtag href={footerData.socialMedia?.telegram}>
+              <StyledP>
+                <TelegramSvg style={{ marginRight: 5 }} />
+                {footerData.socialMedia?.telegramTitle}
+              </StyledP>
+            </StyledAtag>
+
+            <StyledAtag href={footerData.socialMedia?.whatsapp}>
+              <StyledP>
+                <WhatsappSvg style={{ marginRight: 5 }} />
+                {footerData.socialMedia?.whatsappTitle}
+              </StyledP>
+            </StyledAtag>
           </div>
         </StyledContent>
       </StyledContainer>

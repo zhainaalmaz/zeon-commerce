@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Content from '../ui/Content';
 import styled from 'styled-components';
-import BestSeller from '../components/main/BestSeller';
 import InterestedProducts from '../components/InterestedProducts';
 
 const StyledP = styled.p`
@@ -11,6 +10,7 @@ const StyledP = styled.p`
   line-height: 29px;
   color: #393939;
   text-align: start;
+  margin-top: 11px;
 `;
 
 const StyledDiv = styled.div`
@@ -39,29 +39,42 @@ const StyledCountText = styled.p`
 `;
 
 const Favorite = () => {
+  const product = useSelector((state) => state.products.data);
+  const filteredItem = product.filter((item) => item.discount);
+
   const favoriteItem = useSelector((state) => state.favorite.favoriteItems);
-  const [items, setItems] = useState([]);
+  const [interestPost, setInterestedPost] = useState([]);
+  const [count] = useState(5);
 
   useEffect(() => {
-    setItems(favoriteItem);
-  }, [favoriteItem]);
+    setInterestedPost(filteredItem);
+  }, []);
 
   return (
     <div className="container">
       <StyledP>Избранное</StyledP>
-      {items.length > 0 ? (
-        <StyledCountText>
-          Товаров в избранном: <span>{items.length}</span>
-        </StyledCountText>
+      {favoriteItem.length > 0 ? (
+        <>
+          <StyledCountText>
+            Товаров в избранном: <span>{favoriteItem.length}</span>
+          </StyledCountText>
+          <StyledDiv>
+            {favoriteItem.map((item) => (
+              <Content item={item} key={item.id} />
+            ))}
+          </StyledDiv>
+        </>
       ) : (
-        <StyledText>У Вас пока нет избранных товаров</StyledText>
+        <>
+          <StyledText>У Вас пока нет избранных товаров</StyledText>
+          <StyledP style={{ marginTop: 48 }}>Возможно Вас заинтересует</StyledP>
+          <div style={{ display: 'flex' }}>
+            {interestPost.slice(0, count).map((item) => (
+              <InterestedProducts key={item.id} item={item} />
+            ))}
+          </div>
+        </>
       )}
-      <StyledDiv>
-        {favoriteItem.map((item) => (
-          <Content item={item} />
-        ))}
-      </StyledDiv>
-      {items.length === 0 && <InterestedProducts />}
     </div>
   );
 };

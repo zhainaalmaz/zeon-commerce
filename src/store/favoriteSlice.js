@@ -4,7 +4,6 @@ const initialState = {
   favoriteItems: localStorage.getItem('favoriteItems')
     ? JSON.parse(localStorage.getItem('favoriteItems'))
     : [],
-  favoriteTotalQuantity: 0,
 };
 
 const favoriteSlice = createSlice({

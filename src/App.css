@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+.main {
+  background-color: #f8f8f8;
+}
+
 .previousPrice {
   text-decoration: line-through;
   font-size: 0.8rem;

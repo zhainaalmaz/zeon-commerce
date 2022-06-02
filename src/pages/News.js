@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { getNewsRequest } from '../api/service';
+import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -37,27 +37,16 @@ const StyledTitle = styled.p`
   align-items: center;
   color: #393939;
   margin-bottom: 21px;
+  padding-top: 8px;
 `;
 const News = () => {
-  const [news, setNews] = useState([]);
-
-  useEffect(() => {
-    const getNews = async () => {
-      try {
-        const newsResponse = await getNewsRequest();
-        setNews(newsResponse.data.news);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getNews();
-  }, []);
+  const newsData = useSelector((state) => state.commerce.data.news);
 
   return (
     <div style={{ background: '#ECECEC' }}>
       <div className="container">
         <StyledTitle>Новости </StyledTitle>
-        {news.map((item) => {
+        {newsData.map((item) => {
           return (
             <StyledContainer key={item.id}>
               <img width={226} src={item.image} alt="newsImg" />

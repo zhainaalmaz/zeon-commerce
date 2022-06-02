@@ -9,11 +9,13 @@ const StyledP = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #393939;
+  margin-top: 44px;
 `;
 const StyledContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 18px;
 `;
 
 const BestSeller = () => {
@@ -43,6 +45,7 @@ const BestSeller = () => {
           sx={{
             width: '107px',
             height: '32px',
+            marginTop: '16px',
           }}
           onClick={countClickHandler}
         >

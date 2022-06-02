@@ -3,7 +3,8 @@ import MainCarosel from '../carosel/MainCarosel';
 import BestSeller from './BestSeller';
 import NewProducts from './NewProducts';
 import { Divider } from '@mui/material';
-import Collection from '../../pages/Collection';
+import Collection from './Collection';
+import Advantages from './Advantages';
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
         <BestSeller />
         <NewProducts />
         <Collection />
+        <Advantages />
       </div>
     </div>
   );
