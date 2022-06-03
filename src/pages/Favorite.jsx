@@ -10,7 +10,7 @@ const StyledP = styled.p`
   line-height: 29px;
   color: #393939;
   text-align: start;
-  margin-top: 11px;
+  padding-top: 11px;
 `;
 
 const StyledDiv = styled.div`

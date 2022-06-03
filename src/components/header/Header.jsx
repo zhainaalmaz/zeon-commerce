@@ -9,6 +9,7 @@ import MuiDrawer from './Drawer';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as SearchSvg } from '../../assets/icons/searchIcon.svg';
 import { ReactComponent as FavoritedSvg } from '../../assets/icons/favorite2.svg';
+import { ReactComponent as AddedBasketIcon } from '../../assets/icons/basket2.svg';
 import { useSelector } from 'react-redux';
 
 const StyledLayout = styled.div`
@@ -33,15 +34,25 @@ const StyledContent = styled.div`
   align-items: center;
 `;
 
+const StyledSpan = styled.span`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #393939;
+`;
+
 const Header = () => {
   let navigate = useNavigate();
   const headerLogo = useSelector((state) => state.commerce.data);
   const [isFavorite, setIsFavorite] = useState([]);
+  const [isAdded, setIsAdded] = useState([]);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
+  const addedItems = useSelector((state) => state.cart.cartItems);
 
   useEffect(() => {
     setIsFavorite(favoriteItems);
-  }, [favoriteItems]);
+    setIsAdded(addedItems);
+  }, [addedItems, favoriteItems]);
 
   return (
     <div className="container">
@@ -80,17 +91,27 @@ const Header = () => {
             <SearchSvg />
           </span>
         </Input>
-        <NavLink style={{ color: 'black' }} to="/favorite">
+        <NavLink
+          style={{ color: 'black', display: 'flex', alignItems: 'center' }}
+          to="/favorite"
+        >
           {isFavorite.length > 0 ? (
             <FavoritedSvg style={{ marginRight: 10 }} />
           ) : (
             <FavoriteLogo style={{ marginRight: 10 }} fill="#393939" />
           )}
-          Избранное
+          <StyledSpan> Избранное</StyledSpan>
         </NavLink>
-        <NavLink style={{ color: 'black' }} to="/cart">
-          <BasketLogo style={{ marginRight: 10 }} fill="#393939" />
-          Корзина
+        <NavLink
+          style={{ color: 'black', display: 'flex', alignItems: 'center' }}
+          to="/cart"
+        >
+          {isAdded.length > 0 ? (
+            <AddedBasketIcon style={{ marginRight: 10 }} />
+          ) : (
+            <BasketLogo style={{ marginRight: 10 }} fill="#393939" />
+          )}
+          <StyledSpan> Корзина</StyledSpan>
         </NavLink>
       </StyledContent>
     </div>

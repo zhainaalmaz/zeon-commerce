@@ -34,6 +34,7 @@ const StyledButton = styled.button`
   gap: 10px;
   width: 286px;
   height: 44px;
+  cursor: pointer;
   :hover {
     background-color: white;
     span {

@@ -47,6 +47,7 @@ const NewProducts = () => {
             width: '107px',
             height: '32px',
             marginTop: '16px',
+            cursor: 'pointer',
           }}
           onClick={countClickHandler}
         >

@@ -17,6 +17,23 @@
   color: #adadad;
 }
 
+input[type='radio']:checked + label::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid grey;
+}
+
+label {
+  margin-top: 1;
+}
+
 @media all and (max-width: 1200px) {
   div {
     width: 100%;

@@ -11,7 +11,7 @@ import {
   onRemoveFromFavorite,
 } from '../../store/favoriteSlice';
 import { addToCart } from '../../store/cartSlice';
-
+import { useNavigate } from 'react-router-dom';
 import InterestedProducts from '../InterestedProducts';
 
 const StyledColordiv = styled.div`
@@ -19,11 +19,14 @@ const StyledColordiv = styled.div`
 `;
 
 const StyledDivColor = styled.div`
-  width: 8px;
-  height: 8px;
-  border: 1px;
-  border-radius: 5px;
-  margin: 3px 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  margin-right: 12px;
+  margin-top: 6px;
+  opacity: 47%;
+  margin-left: 6px;
+  padding-bottom: 2px;
 `;
 
 const StyledDiv = styled.div`
@@ -36,7 +39,7 @@ const StyledDiv = styled.div`
 const StyledP = styled.p`
   font-weight: 500;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 20px;
   display: flex;
   align-items: center;
   color: #1d1d1b;
@@ -64,7 +67,7 @@ const StyledSection = styled.div`
 
 const StyledBlock = styled.div`
   width: 520px;
-  height: 434px;
+  height: 464px;
   background: white;
   margin-top: 10px;
   padding: 20px;
@@ -76,6 +79,7 @@ const StyledTitle = styled.p`
   line-height: 29px;
   color: #393939;
   text-align: start;
+  margin-bottom: 15px;
 `;
 
 const StyledPrice = styled.span`
@@ -84,14 +88,33 @@ const StyledPrice = styled.span`
   line-height: 29px;
   color: #393939;
   margin: 10px 0;
+  margin-right: 10px;
 `;
 
 const StyledDescription = styled.p`
   font-weight: 400;
   font-size: 14px;
-  line-height: 180%;
+  line-height: 25px;
   color: #6a6a6a;
-  margin-top: 6px;
+`;
+
+const StyledPriceTitle = styled.span`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  margin-top: 20px;
+`;
+
+const StyledAddToBasketText = styled.span`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
 `;
 
 const Product = () => {
@@ -101,7 +124,10 @@ const Product = () => {
   const filteredProduct = product.filter((item) => item.id === products);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const sameProduct = product.filter((element) => element.title);
-  // const navigate = useNavigate();
+  const [selectedColor, setSelectedColor] = useState('');
+  const [isSelectedProduct, setIsSelectedProduct] = useState(true);
+
+  const navigate = useNavigate();
   const [count] = useState(5);
   const dispatch = useDispatch();
 
@@ -114,9 +140,20 @@ const Product = () => {
   };
 
   const addToCartHandler = (item) => {
-    dispatch(addToCart(item));
+    if (!selectedColor) {
+      alert('Please select color');
+    } else {
+      dispatch(addToCart({ ...item, colors: selectedColor }));
+      setIsSelectedProduct((prev) => !prev);
+    }
+  };
 
-    // navigate.push('/cart');
+  const changeMood = () => {
+    setIsSelectedProduct((prev) => !prev);
+  };
+
+  const handleToGoCart = () => {
+    navigate('/cart');
   };
 
   return (
@@ -144,7 +181,7 @@ const Product = () => {
                 </StyledSection>
               ))}
 
-              <StyledBlock>
+              <StyledBlock key={item.id}>
                 <StyledTitle>{item.title}</StyledTitle>
                 <StyledDiv>
                   <StyledP>
@@ -156,78 +193,141 @@ const Product = () => {
                       {item.colors.map((color) => (
                         <StyledDivColor
                           key={color.id}
-                          style={{ backgroundColor: `${color.color}` }}
-                        ></StyledDivColor>
+                          onClick={() => setSelectedColor(color.color)}
+                          style={{
+                            backgroundColor: `${color.color}`,
+                            position: 'relative',
+                          }}
+                        >
+                          <input
+                            onClick={changeMood}
+                            style={{
+                              opacity: 0,
+                              overflow: 'hidden',
+                              position: 'absolute',
+                            }}
+                            class="radio"
+                            name="radio"
+                            id="radio"
+                            type="radio"
+                          />
+                          <label htmlFor="radio"></label>
+                        </StyledDivColor>
                       ))}
                     </StyledP>
                   </StyledColordiv>
-                  <span>
+                  <StyledPriceTitle>
                     {item.discount ? (
                       <>
-                        <StyledPrice>{item.discount}p.</StyledPrice>
+                        <StyledPrice>{item.discount} p</StyledPrice>
                         <span className="previousPrice">
-                          {item.previousPrice}p.
+                          {item.previousPrice} p
                         </span>
                       </>
                     ) : (
-                      <span>{item.previousPrice}p.</span>
+                      <span>{item.previousPrice} p</span>
                     )}
-                  </span>
+                  </StyledPriceTitle>
                   <StyledP>O товаре:</StyledP>
                   <StyledDescription>{item.description}</StyledDescription>
                   <div
                     style={{
-                      display: 'flex',
                       flexWrap: 'wrap',
                       justifyContent: 'space-between',
                     }}
                   >
-                    <StyledP>
-                      Размерный ряд: <StyledSpan>{item.sizeRage}</StyledSpan>
-                    </StyledP>
-                    <StyledP>
-                      Состав ткани:<StyledSpan> {item.structure}</StyledSpan>
-                    </StyledP>
-                    <StyledP>
-                      Количество в линейке :
-                      <StyledSpan>{item.amountOfLines}</StyledSpan>
-                    </StyledP>
-                    <StyledP>
-                      Материал: <StyledSpan>{item.material}</StyledSpan>
-                    </StyledP>
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                      }}
+                    >
+                      <div>
+                        <StyledP>
+                          Размерный ряд:
+                          <StyledSpan>{item.sizeRage}</StyledSpan>
+                        </StyledP>
+                        <StyledP>
+                          Состав ткани:
+                          <StyledSpan> {item.structure}</StyledSpan>
+                        </StyledP>
+                      </div>
+                      <div style={{ textAlign: 'end' }}>
+                        <StyledP>
+                          Количество в линейке :
+                          <StyledSpan>{item.amountOfLines}</StyledSpan>
+                        </StyledP>
+                        <StyledP>
+                          Материал: <StyledSpan>{item.material}</StyledSpan>
+                        </StyledP>
+                      </div>
+                    </div>
                     <div
                       style={{
                         width: '480px',
                         display: 'flex',
-                        marginTop: '12px',
                       }}
-                      onClick={() => addToCartHandler(item)}
                     >
-                      <Button
-                        style={{
-                          width: '418px',
-                          marginRight: 5,
-                          backgroundColor: 'black',
-                        }}
-                      >
-                        <BasketSvg style={{ marginRight: 5 }} fill="white" />
-                        Добавить в корзину
-                      </Button>
-                      {!!favoriteItems.length ? (
-                        <Button>
-                          <HeartSvg
-                            fill="white"
-                            onClick={() => onRemoveFavorite(item)}
-                          />
+                      {isSelectedProduct ? (
+                        <Button
+                          style={{
+                            width: '418px',
+                            height: '44px',
+                            marginRight: 5,
+                            backgroundColor: 'black',
+                          }}
+                          onClick={handleToGoCart}
+                        >
+                          <BasketSvg style={{ marginRight: 7 }} fill="white" />
+                          <StyledAddToBasketText>
+                            Перейти в корзину
+                          </StyledAddToBasketText>
                         </Button>
                       ) : (
-                        <Button>
-                          <HeartedSvg
-                            fill="white"
-                            onClick={() => onAddFavorite(item)}
-                          />
+                        <Button
+                          style={{
+                            width: '418px',
+                            height: '44px',
+                            marginRight: 5,
+                            backgroundColor: 'black',
+                          }}
+                          onClick={() => addToCartHandler(item)}
+                        >
+                          <BasketSvg style={{ marginRight: 7 }} fill="white" />
+                          <StyledAddToBasketText>
+                            Добавить в корзину
+                          </StyledAddToBasketText>
                         </Button>
                       )}
+                      <div>
+                        {!!favoriteItems.length ? (
+                          <Button
+                            style={{
+                              height: '44px',
+                              marginRight: 5,
+                              backgroundColor: 'black',
+                            }}
+                          >
+                            <HeartSvg
+                              fill="white"
+                              onClick={() => onRemoveFavorite(item)}
+                            />
+                          </Button>
+                        ) : (
+                          <Button
+                            style={{
+                              height: '44px',
+                              marginRight: 5,
+                              backgroundColor: 'black',
+                            }}
+                          >
+                            <HeartedSvg
+                              fill="white"
+                              onClick={() => onAddFavorite(item)}
+                            />
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </StyledDiv>

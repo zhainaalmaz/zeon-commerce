@@ -39,11 +39,12 @@ const StyledTitle = styled.p`
   margin-bottom: 21px;
   padding-top: 8px;
 `;
+
 const News = () => {
   const newsData = useSelector((state) => state.commerce.data.news);
 
   return (
-    <div style={{ background: '#ECECEC' }}>
+    <div style={{ backgroundColor: '#f8f8f8' }}>
       <div className="container">
         <StyledTitle>Новости </StyledTitle>
         {newsData.map((item) => {

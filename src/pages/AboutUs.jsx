@@ -37,17 +37,19 @@ const StyledSpan = styled.span`
 `;
 
 const StyledP = styled.p`
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 400;
   font-size: 15px;
-  line-height: 160%;
+  line-height: 24px;
   color: #979797;
+  margin-top: 8px;
 `;
 
 const AboutUs = () => {
   const aboutUs = useSelector((state) => state.commerce.data.aboutUs);
 
   return (
-    <div style={{ background: '#ECECEC' }}>
+    <div style={{ backgroundColor: '#f8f8f8' }}>
       <div className="container">
         <StyledContainer>
           <StyledSection>

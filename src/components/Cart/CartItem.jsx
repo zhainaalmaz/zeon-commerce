@@ -1,6 +1,8 @@
-import React from 'react';
+import { React, useState } from 'react';
 import styled from 'styled-components';
-
+import { removeFromCart } from '../../store/cartSlice';
+import { useDispatch } from 'react-redux';
+import { ReactComponent as RemoveItemSvg } from '../../assets/icons/delete.svg';
 const StyledContent = styled.div`
   width: 768px;
   height: 166px;
@@ -41,6 +43,7 @@ const StyledDivColor = styled.div`
   height: 8px;
   border: 1px;
   border-radius: 5px;
+  opacity: 47%;
   margin-right: 5px;
   margin-top: 6px;
 `;
@@ -65,43 +68,67 @@ const StyledCountButtons = styled.div`
 `;
 
 const CartItem = ({ item }) => {
+  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
+
+  const removeFromCArtHandler = () => {
+    dispatch(removeFromCart(item));
+  };
+
   return (
     <StyledContent>
-      <StyledImage
-        src={item.productImages.map((el) => {
-          return el.image;
-        })}
-      />
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+        }}
+      >
+        <div style={{ display: 'flex' }}>
+          <StyledImage
+            src={item.productImages.map((el) => {
+              return el.image;
+            })}
+          />
 
-      <div style={{ margin: '0 8px' }}>
-        <StyledTitle>{item.title}</StyledTitle>
-        <div style={{ marginTop: 8, textAlign: 'start', gap: '6px' }}>
-          <StyledSizetitle>Размер:{item.sizeRage}</StyledSizetitle>
-          <StyledColordiv>
-            {item.colors.map((color) => (
-              <StyledDivColor
-                key={color.id}
-                style={{ backgroundColor: `${color.color}` }}
-              ></StyledDivColor>
-            ))}
-          </StyledColordiv>
-          <StyledPricetitle style={{ marginTop: '5px' }}>
-            <span>
-              {item.discount ? (
-                <>
-                  <span>{item.discount}p. </span>
-                  <span className="previousPrice">{item.previousPrice}p.</span>
-                </>
-              ) : (
-                <span>{item.previousPrice}p.</span>
-              )}
-            </span>
-          </StyledPricetitle>
+          <div style={{ margin: '0 8px' }}>
+            <StyledTitle>{item.title}</StyledTitle>
+            <div style={{ marginTop: 8, textAlign: 'start', gap: '6px' }}>
+              <StyledSizetitle>Размер:{item.sizeRage}</StyledSizetitle>
+              <StyledColordiv>
+                <StyledDivColor
+                  style={{ backgroundColor: `${item.colors}` }}
+                ></StyledDivColor>
+              </StyledColordiv>
+              <StyledPricetitle style={{ marginTop: '5px' }}>
+                <span>
+                  {item.discount ? (
+                    <>
+                      <span>{item.discount}p. </span>
+                      <span className="previousPrice">
+                        {item.previousPrice}p.
+                      </span>
+                    </>
+                  ) : (
+                    <span>{item.previousPrice}p.</span>
+                  )}
+                </span>
+              </StyledPricetitle>
+            </div>
+            <StyledCountButtons>
+              <StyledButton onClick={() => setQuantity(quantity - 1)}>
+                -
+              </StyledButton>
+              <span>{quantity}</span>
+              <StyledButton onClick={() => setQuantity(quantity + 1)}>
+                +
+              </StyledButton>
+            </StyledCountButtons>
+          </div>
         </div>
-        <StyledCountButtons>
-          <StyledButton>-</StyledButton>
-          <StyledButton>+</StyledButton>
-        </StyledCountButtons>
+        <div>
+          <RemoveItemSvg onClick={removeFromCArtHandler} />
+        </div>
       </div>
     </StyledContent>
   );

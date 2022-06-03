@@ -12,39 +12,78 @@ const StyledBlock = styled.div`
 `;
 
 const StyledTitle = styled.p`
+  text-align: start;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
   color: #393939;
+  padding-bottom: 4px;
+`;
+
+const StyledContent = styled.div`
+  gap: 12px;
+  width: 336px;
+  // height: 104px;
   text-align: start;
 `;
+
+const StyledP = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #979797;
+  padding-top: 12px;
+`;
+
+const StyledTotal = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #979797;
+  padding-top: 12px;
+`;
+
+const StyledText = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #393939;
+`;
+
 const CartTotal = () => {
   return (
     <div>
       <StyledBlock>
         <StyledTitle>Сумма заказа</StyledTitle>
-        <div>
-          <p>Количество линеек:</p>
-          <p> ...шт</p>
-        </div>
-        <div>
-          <p>Количество товаров::</p>
-          <p> ...шт</p>
-        </div>
-        <div>
-          <p>Стоимость:</p>
-          <p> ...рублей</p>
-        </div>
-        <div>
-          <p>Скидка:</p>
-          <p>...рублей</p>
-        </div>
-        <Divider />
-        <div>
-          <p>Итого к оплате:</p>
-          <p>...рублей</p>
-        </div>
-        <Button>Оформить заказ</Button>
+        <StyledContent>
+          <div>
+            <StyledP>Количество линеек:</StyledP>
+            <StyledText> ...шт</StyledText>
+          </div>
+          <div>
+            <StyledP>Количество товаров::</StyledP>
+            <StyledText> ...шт</StyledText>
+          </div>
+          <div>
+            <StyledP>Стоимость:</StyledP>
+            <StyledText> ...рублей</StyledText>
+          </div>
+          <div>
+            <StyledP>Скидка:</StyledP>
+            <StyledText>...рублей</StyledText>
+          </div>
+          <Divider />
+          <div>
+            <StyledTotal>Итого к оплате:</StyledTotal>
+            <StyledText>...рублей</StyledText>
+          </div>
+        </StyledContent>
+        <Button style={{ background: 'red', width: '100%' }}>
+          Оформить заказ
+        </Button>
       </StyledBlock>
     </div>
   );

@@ -37,7 +37,16 @@ export default function Input({
       id={id}
       multiple={multiple}
       hidden={hidden}
-      sx={{ width: width || 1, m: m || 0.5, p, py, px, my, mx, ...sx }}
+      sx={{
+        width: width || 1,
+        m: m || 0.5,
+        p,
+        py,
+        px,
+        my,
+        mx,
+        ...sx,
+      }}
       placeholder={placeholder}
       onChange={onChange}
       size="small"

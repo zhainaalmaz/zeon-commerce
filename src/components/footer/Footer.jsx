@@ -32,6 +32,7 @@ const StyledP = styled.p`
   padding: 3px;
   display: flex;
   align-items: center;
+  margin-top: 12px;
 `;
 
 const StyledSpan = styled.span`

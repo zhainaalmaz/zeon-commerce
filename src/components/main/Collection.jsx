@@ -43,6 +43,7 @@ const Collection = () => {
             width: '107px',
             height: '32px',
             marginTop: '16px',
+            cursor: 'pointer',
           }}
           size="small"
           onClick={countClickHandler}

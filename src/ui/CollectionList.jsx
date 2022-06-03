@@ -10,11 +10,13 @@ const StyledP = styled.p`
   line-height: 29px;
   color: #393939;
   text-align: start;
+  padding-top: 36px;
 `;
 const StyledContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 18px;
 `;
 
 const CollectionList = () => {

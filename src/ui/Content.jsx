@@ -21,10 +21,11 @@ const StyledContainer = styled.div`
 const StyledDivColor = styled.div`
   width: 8px;
   height: 8px;
-  border: 1px;
-  border-radius: 5px;
-  margin-right: 5px;
+  border: solid 0.2px rgba(209, 209, 209, 1);
+  border-radius: 4px;
+  margin-right: 12px;
   margin-top: 6px;
+  opacity: 47%;
 `;
 
 const StyledImage = styled.img`
@@ -129,17 +130,17 @@ const Content = ({ item }) => {
               <span>
                 {item.discount ? (
                   <>
-                    <span>{item.discount}p. </span>
+                    <span style={{ marginRight: 5 }}>{item.discount} p </span>
                     <span className="previousPrice">
-                      {item.previousPrice}p.
+                      {item.previousPrice} p
                     </span>
                   </>
                 ) : (
-                  <span>{item.previousPrice}p.</span>
+                  <span>{item.previousPrice} p</span>
                 )}
               </span>
             </StyledPricetitle>
-            <StyledSizetitle>Размер:{item.sizeRage}</StyledSizetitle>
+            <StyledSizetitle>Размер: {item.sizeRage}</StyledSizetitle>
             <StyledColordiv>
               {item.colors.map((color) => (
                 <StyledDivColor

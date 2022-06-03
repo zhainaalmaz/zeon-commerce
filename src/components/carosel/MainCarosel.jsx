@@ -23,7 +23,7 @@ export default function MainCarosel() {
   }, []);
 
   return (
-    <div>
+    <div style={{ padding: 11 }}>
       <Swiper
         modules={[Pagination]}
         style={{ height: 'auto' }}
