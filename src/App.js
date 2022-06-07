@@ -15,6 +15,7 @@ import { fetchAsyncCollections } from './store/collectionsSlice';
 import CollectionList from './ui/CollectionList';
 import Product from './components/product/Product';
 import { fetchAsyncCommerce } from './store/commerceSlice';
+import Help from './pages/Help';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,9 +39,9 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/:collectionList" element={<CollectionList />} />
           <Route path="/:collectionList/:productId" element={<Product />} />
+          <Route path="/help" element={<Help />} />
         </Routes>
       </div>
-
       <Footer />
     </div>
   );

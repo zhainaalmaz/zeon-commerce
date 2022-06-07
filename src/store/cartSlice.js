@@ -13,27 +13,44 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart(state, action) {
-      state.cartItems.findIndex((item) => item.id === action.payload.id);
-      {
-        const cartProduct = { ...action.payload, cartQuantity: 1 };
-        state.cartItems.push(cartProduct);
-      }
+      console.log();
+      state.cartItems.push(action.payload);
       localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+      return state;
     },
     removeFromCart(state, action) {
-      state.cartItems.map((cartItem) => {
-        if (cartItem.id === action.payload.id && cartItem) {
-          const nextCartItems = state.cartItems.filter(
-            (item) => item.id !== cartItem.id
-          );
-          state.cartItems = nextCartItems;
-        }
-        localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
-        return state;
+      const index = state.cartItems.findIndex(
+        (item) =>
+          item?.selectColor === action.payload.selectColor &&
+          item?.id === action.payload.id
+      );
+      state.cartItems.splice(index, 1);
+      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+      return state;
+    },
+    increaseItem: (state, action) => {
+      state.cartItems?.map((item) => {
+        if (
+          item?.selectColor === action.payload.selectColor &&
+          item?.id === action.payload.id
+        )
+          item.quantity = item.quantity + 1;
       });
+      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+    },
+    decreaseItem: (state, action) => {
+      state?.cartItems?.map((item) => {
+        if (
+          item?.selectColor === action.payload.selectColor &&
+          item?.id === action.payload.id
+        )
+          item.quantity = item.quantity - 1;
+      });
+      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
     },
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, increaseItem, decreaseItem } =
+  cartSlice.actions;
 export default cartSlice.reducer;

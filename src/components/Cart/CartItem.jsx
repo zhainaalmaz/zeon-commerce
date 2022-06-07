@@ -1,8 +1,13 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import styled from 'styled-components';
-import { removeFromCart } from '../../store/cartSlice';
+import {
+  removeFromCart,
+  increaseItem,
+  decreaseItem,
+} from '../../store/cartSlice';
 import { useDispatch } from 'react-redux';
 import { ReactComponent as RemoveItemSvg } from '../../assets/icons/delete.svg';
+
 const StyledContent = styled.div`
   width: 768px;
   height: 166px;
@@ -24,7 +29,7 @@ const StyledTitle = styled.p`
   padding-bottom: 7px;
 `;
 
-const StyledPricetitle = styled.p`
+const StyledPricetitle = styled.div`
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -69,10 +74,17 @@ const StyledCountButtons = styled.div`
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
 
   const removeFromCArtHandler = () => {
     dispatch(removeFromCart(item));
+  };
+
+  const increaseItemHandler = () => {
+    dispatch(increaseItem(item));
+  };
+
+  const decreaseItemHandler = () => {
+    dispatch(decreaseItem(item));
   };
 
   return (
@@ -86,41 +98,42 @@ const CartItem = ({ item }) => {
       >
         <div style={{ display: 'flex' }}>
           <StyledImage
-            src={item.productImages.map((el) => {
+            src={item?.productImages.map((el) => {
               return el.image;
             })}
           />
 
           <div style={{ margin: '0 8px' }}>
-            <StyledTitle>{item.title}</StyledTitle>
+            <StyledTitle>{item?.title}</StyledTitle>
             <div style={{ marginTop: 8, textAlign: 'start', gap: '6px' }}>
-              <StyledSizetitle>Размер:{item.sizeRage}</StyledSizetitle>
+              <StyledSizetitle>Размер:{item?.sizeRage}</StyledSizetitle>
               <StyledColordiv>
                 <StyledDivColor
-                  style={{ backgroundColor: `${item.colors}` }}
+                  style={{ backgroundColor: `${item?.selectColor}` }}
                 ></StyledDivColor>
               </StyledColordiv>
               <StyledPricetitle style={{ marginTop: '5px' }}>
                 <span>
-                  {item.discount ? (
+                  {item?.discount ? (
                     <>
-                      <span>{item.discount}p. </span>
+                      <span>{item?.discount}p. </span>
                       <span className="previousPrice">
-                        {item.previousPrice}p.
+                        {item?.previousPrice}p.
                       </span>
                     </>
                   ) : (
-                    <span>{item.previousPrice}p.</span>
+                    <span>{item?.previousPrice}p.</span>
                   )}
                 </span>
               </StyledPricetitle>
             </div>
             <StyledCountButtons>
-              <StyledButton onClick={() => setQuantity(quantity - 1)}>
+              <StyledButton onClick={() => decreaseItemHandler(item)}>
                 -
               </StyledButton>
-              <span>{quantity}</span>
-              <StyledButton onClick={() => setQuantity(quantity + 1)}>
+
+              <span>{item?.quantity}</span>
+              <StyledButton onClick={() => increaseItemHandler(item)}>
                 +
               </StyledButton>
             </StyledCountButtons>

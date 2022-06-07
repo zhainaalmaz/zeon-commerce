@@ -1,6 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import Help from '../../pages/Help';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ReactComponent as TelegramSvg } from './../../assets/icons/telegram.svg';
 import { ReactComponent as WhatsappSvg } from './../../assets/icons/whatsapp.svg';
@@ -51,9 +50,6 @@ const Footer = () => {
 
   return (
     <>
-      <Routes>
-        <Route path="/help" element={<Help />} />
-      </Routes>
       <StyledContainer>
         <StyledContent>
           <div>

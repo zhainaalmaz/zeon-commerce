@@ -25,6 +25,9 @@ const StyledContainer = styled.div`
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -32,6 +35,9 @@ const StyledContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media {
+    display: flex;
+  }
 `;
 
 const StyledSpan = styled.span`
@@ -39,6 +45,18 @@ const StyledSpan = styled.span`
   font-size: 16px;
   line-height: 20px;
   color: #393939;
+`;
+
+const StyledPhoneBlock = styled.span`
+  @media (min-width: 320px) {
+    display: none;
+  }
+`;
+
+const StyledDivider = styled.div`
+  @media (min-width: 320px) {
+    display: none;
+  }
 `;
 
 const Header = () => {
@@ -69,7 +87,7 @@ const Header = () => {
           </NavLink>
         </StyledContainer>
 
-        <span>
+        <StyledPhoneBlock>
           Тел:
           <a
             href="tel:+996 000 00 00 00"
@@ -77,9 +95,11 @@ const Header = () => {
           >
             +996 000 00 00 00
           </a>
-        </span>
+        </StyledPhoneBlock>
       </StyledLayout>
-      <Divider />
+      <StyledDivider>
+        <Divider />
+      </StyledDivider>
       <StyledContent>
         <MuiDrawer navigate={navigate} />
         <Link to="/">
@@ -106,7 +126,7 @@ const Header = () => {
           style={{ color: 'black', display: 'flex', alignItems: 'center' }}
           to="/cart"
         >
-          {isAdded.length > 0 ? (
+          {isAdded?.length > 0 ? (
             <AddedBasketIcon style={{ marginRight: 10 }} />
           ) : (
             <BasketLogo style={{ marginRight: 10 }} fill="#393939" />

@@ -53,7 +53,7 @@ const Cart = () => {
   return (
     <div className="container">
       <StyledTitle>Корзина</StyledTitle>
-      {cartProducts.cartItems.length === 0 ? (
+      {!cartProducts || cartProducts?.cartItems?.length < 1 ? (
         <>
           <StyledText>У Вас пока нет товаров в корзине</StyledText>
           <StyledP style={{ marginTop: 48 }}>Возможно Вас заинтересует</StyledP>
@@ -67,8 +67,8 @@ const Cart = () => {
         <div>
           <StyledContainer>
             <div>
-              {cartProducts.cartItems.map((item) => (
-                <div key={item.id}>
+              {cartProducts?.cartItems?.map((item) => (
+                <div key={item?.id + item?.selectColor}>
                   <CartItem item={item} />
                 </div>
               ))}

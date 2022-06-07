@@ -36,7 +36,7 @@ const StyledDiv = styled.div`
   text-align: start;
 `;
 
-const StyledP = styled.p`
+const StyledP = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -140,12 +140,10 @@ const Product = () => {
   };
 
   const addToCartHandler = (item) => {
-    if (!selectedColor) {
-      alert('Please select color');
-    } else {
-      dispatch(addToCart({ ...item, colors: selectedColor }));
-      setIsSelectedProduct((prev) => !prev);
-    }
+    const newItem = { ...item, selectColor: selectedColor };
+    newItem.quantity = 1;
+    dispatch(addToCart(newItem));
+    setIsSelectedProduct((prev) => !prev);
   };
 
   const changeMood = () => {
@@ -159,182 +157,183 @@ const Product = () => {
   return (
     <div style={{ background: '#ECECEC' }}>
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          {filteredProduct.map((item) => (
-            <>
-              {item.productImages.map((el) => (
-                <StyledSection key={el.id}>
-                  <img
-                    width={308}
-                    src={el.image}
-                    style={{ marginBottom: '10px' }}
-                    alt="img"
-                  />
-                  <img
-                    width={308}
-                    src={el.image}
-                    alt="img"
-                    style={{ marginBottom: '10px' }}
-                  />
-                  <img width={308} src={el.image} alt="img" />
-                  <img width={308} src={el.image} alt="img" />
-                </StyledSection>
-              ))}
+        {filteredProduct.map((item) => (
+          <div
+            style={{ display: 'flex', justifyContent: 'space-around' }}
+            key={item.id}
+          >
+            {item.productImages.map((el) => (
+              <StyledSection key={el.id}>
+                <img
+                  width={308}
+                  src={el.image}
+                  style={{ marginBottom: '10px' }}
+                  alt="img"
+                />
+                <img
+                  width={308}
+                  src={el.image}
+                  alt="img"
+                  style={{ marginBottom: '10px' }}
+                />
+                <img width={308} src={el.image} alt="img" />
+                <img width={308} src={el.image} alt="img" />
+              </StyledSection>
+            ))}
 
-              <StyledBlock key={item.id}>
-                <StyledTitle>{item.title}</StyledTitle>
-                <StyledDiv>
+            <StyledBlock key={item.id}>
+              <StyledTitle>{item.title}</StyledTitle>
+              <StyledDiv>
+                <StyledP>
+                  Артикул:<StyledSpan> {item.article}</StyledSpan>
+                </StyledP>
+                <StyledColordiv>
                   <StyledP>
-                    Артикул:<StyledSpan> {item.article}</StyledSpan>
-                  </StyledP>
-                  <StyledColordiv>
-                    <StyledP>
-                      Цвет:
-                      {item.colors.map((color) => (
-                        <StyledDivColor
-                          key={color.id}
-                          onClick={() => setSelectedColor(color.color)}
+                    Цвет:
+                    {item.colors.map((color) => (
+                      <StyledDivColor
+                        key={color.id}
+                        onClick={() => setSelectedColor(color.color)}
+                        style={{
+                          backgroundColor: `${color.color}`,
+                          position: 'relative',
+                        }}
+                      >
+                        <input
+                          onClick={changeMood}
                           style={{
-                            backgroundColor: `${color.color}`,
-                            position: 'relative',
+                            opacity: 0,
+                            overflow: 'hidden',
+                            position: 'absolute',
                           }}
-                        >
-                          <input
-                            onClick={changeMood}
-                            style={{
-                              opacity: 0,
-                              overflow: 'hidden',
-                              position: 'absolute',
-                            }}
-                            class="radio"
-                            name="radio"
-                            id="radio"
-                            type="radio"
-                          />
-                          <label htmlFor="radio"></label>
-                        </StyledDivColor>
-                      ))}
-                    </StyledP>
-                  </StyledColordiv>
-                  <StyledPriceTitle>
-                    {item.discount ? (
-                      <>
-                        <StyledPrice>{item.discount} p</StyledPrice>
-                        <span className="previousPrice">
-                          {item.previousPrice} p
-                        </span>
-                      </>
-                    ) : (
-                      <span>{item.previousPrice} p</span>
-                    )}
-                  </StyledPriceTitle>
-                  <StyledP>O товаре:</StyledP>
-                  <StyledDescription>{item.description}</StyledDescription>
+                          className="radio"
+                          name="radio"
+                          id="radio"
+                          type="radio"
+                        />
+                        <label htmlFor="radio"></label>
+                      </StyledDivColor>
+                    ))}
+                  </StyledP>
+                </StyledColordiv>
+                <StyledPriceTitle>
+                  {item.discount ? (
+                    <>
+                      <StyledPrice>{item.discount} p</StyledPrice>
+                      <span className="previousPrice">
+                        {item.previousPrice} p
+                      </span>
+                    </>
+                  ) : (
+                    <span>{item.previousPrice} p</span>
+                  )}
+                </StyledPriceTitle>
+                <StyledP>O товаре:</StyledP>
+                <StyledDescription>{item.description}</StyledDescription>
+                <div
+                  style={{
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                  }}
+                >
                   <div
                     style={{
-                      flexWrap: 'wrap',
+                      display: 'flex',
                       justifyContent: 'space-between',
                     }}
                   >
-                    <div
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                      }}
-                    >
-                      <div>
-                        <StyledP>
-                          Размерный ряд:
-                          <StyledSpan>{item.sizeRage}</StyledSpan>
-                        </StyledP>
-                        <StyledP>
-                          Состав ткани:
-                          <StyledSpan> {item.structure}</StyledSpan>
-                        </StyledP>
-                      </div>
-                      <div style={{ textAlign: 'end' }}>
-                        <StyledP>
-                          Количество в линейке :
-                          <StyledSpan>{item.amountOfLines}</StyledSpan>
-                        </StyledP>
-                        <StyledP>
-                          Материал: <StyledSpan>{item.material}</StyledSpan>
-                        </StyledP>
-                      </div>
+                    <div>
+                      <StyledP>
+                        Размерный ряд:
+                        <StyledSpan>{item.sizeRage}</StyledSpan>
+                      </StyledP>
+                      <StyledP>
+                        Состав ткани:
+                        <StyledSpan> {item.structure}</StyledSpan>
+                      </StyledP>
                     </div>
-                    <div
-                      style={{
-                        width: '480px',
-                        display: 'flex',
-                      }}
-                    >
-                      {isSelectedProduct ? (
+                    <div style={{ textAlign: 'end' }}>
+                      <StyledP>
+                        Количество в линейке :
+                        <StyledSpan>{item.amountOfLines}</StyledSpan>
+                      </StyledP>
+                      <StyledP>
+                        Материал: <StyledSpan>{item.material}</StyledSpan>
+                      </StyledP>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      width: '480px',
+                      display: 'flex',
+                    }}
+                  >
+                    {isSelectedProduct ? (
+                      <Button
+                        style={{
+                          width: '418px',
+                          height: '44px',
+                          marginRight: 5,
+                          backgroundColor: 'black',
+                        }}
+                        onClick={handleToGoCart}
+                      >
+                        <BasketSvg style={{ marginRight: 7 }} fill="white" />
+                        <StyledAddToBasketText>
+                          Перейти в корзину
+                        </StyledAddToBasketText>
+                      </Button>
+                    ) : (
+                      <Button
+                        style={{
+                          width: '418px',
+                          height: '44px',
+                          marginRight: 5,
+                          backgroundColor: 'black',
+                        }}
+                        onClick={() => addToCartHandler(item)}
+                      >
+                        <BasketSvg style={{ marginRight: 7 }} fill="white" />
+                        <StyledAddToBasketText>
+                          Добавить в корзину
+                        </StyledAddToBasketText>
+                      </Button>
+                    )}
+                    <div>
+                      {!!favoriteItems.length ? (
                         <Button
                           style={{
-                            width: '418px',
                             height: '44px',
                             marginRight: 5,
                             backgroundColor: 'black',
                           }}
-                          onClick={handleToGoCart}
                         >
-                          <BasketSvg style={{ marginRight: 7 }} fill="white" />
-                          <StyledAddToBasketText>
-                            Перейти в корзину
-                          </StyledAddToBasketText>
+                          <HeartSvg
+                            fill="white"
+                            onClick={() => onRemoveFavorite(item)}
+                          />
                         </Button>
                       ) : (
                         <Button
                           style={{
-                            width: '418px',
                             height: '44px',
                             marginRight: 5,
                             backgroundColor: 'black',
                           }}
-                          onClick={() => addToCartHandler(item)}
                         >
-                          <BasketSvg style={{ marginRight: 7 }} fill="white" />
-                          <StyledAddToBasketText>
-                            Добавить в корзину
-                          </StyledAddToBasketText>
+                          <HeartedSvg
+                            fill="white"
+                            onClick={() => onAddFavorite(item)}
+                          />
                         </Button>
                       )}
-                      <div>
-                        {!!favoriteItems.length ? (
-                          <Button
-                            style={{
-                              height: '44px',
-                              marginRight: 5,
-                              backgroundColor: 'black',
-                            }}
-                          >
-                            <HeartSvg
-                              fill="white"
-                              onClick={() => onRemoveFavorite(item)}
-                            />
-                          </Button>
-                        ) : (
-                          <Button
-                            style={{
-                              height: '44px',
-                              marginRight: 5,
-                              backgroundColor: 'black',
-                            }}
-                          >
-                            <HeartedSvg
-                              fill="white"
-                              onClick={() => onAddFavorite(item)}
-                            />
-                          </Button>
-                        )}
-                      </div>
                     </div>
                   </div>
-                </StyledDiv>
-              </StyledBlock>
-            </>
-          ))}
-        </div>
+                </div>
+              </StyledDiv>
+            </StyledBlock>
+          </div>
+        ))}
 
         <div>
           <StyledTitle style={{ marginTop: 48 }}>Похожие товары</StyledTitle>

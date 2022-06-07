@@ -4,7 +4,7 @@ import favoriteSlice from './favoriteSlice';
 import collectionsSlice from './collectionsSlice';
 import commerceSlice from './commerceSlice';
 import cartSlice from './cartSlice';
-import loadingSlice from './loadingSlice';
+// import searchSlice from './searchSlice';
 
 export const store = configureStore({
   reducer: {
@@ -13,8 +13,10 @@ export const store = configureStore({
     collections: collectionsSlice,
     commerce: commerceSlice,
     cart: cartSlice,
-    loading: loadingSlice,
+    // searchSort: searchSlice,
   },
 });
+
+window.store = store;
 
 export default store;
