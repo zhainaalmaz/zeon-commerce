@@ -11,6 +11,10 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 18px;
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const StyledContent = styled.div`

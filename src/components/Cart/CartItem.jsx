@@ -49,14 +49,18 @@ const StyledDivColor = styled.div`
   border: 1px;
   border-radius: 5px;
   opacity: 47%;
-  margin-right: 5px;
-  margin-top: 6px;
+  margin: 6px 5px 0 5px;
 `;
 
 const StyledColordiv = styled.div`
   display: flex;
   flex-direction: row;
   margin: 5px auto;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: justify;
+  color: #7c7c7c;
 `;
 
 const StyledButton = styled.button`
@@ -65,11 +69,32 @@ const StyledButton = styled.button`
   background: #f8f8f8;
   border: 1px solid #efefef;
   border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #393939;
+  border-radius: 2.23404px;
 `;
 
 const StyledCountButtons = styled.div`
-  width: 120px;
+  width: 100px;
   height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+`;
+
+const StyledSpan = styled.span`
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #393939;
+  border-radius: 2.23404px;
 `;
 
 const CartItem = ({ item }) => {
@@ -103,11 +128,12 @@ const CartItem = ({ item }) => {
             })}
           />
 
-          <div style={{ margin: '0 8px' }}>
+          <div style={{ margin: '0 16px' }}>
             <StyledTitle>{item?.title}</StyledTitle>
             <div style={{ marginTop: 8, textAlign: 'start', gap: '6px' }}>
-              <StyledSizetitle>Размер:{item?.sizeRage}</StyledSizetitle>
+              <StyledSizetitle>Размер: {item?.sizeRage}</StyledSizetitle>
               <StyledColordiv>
+                Цвет:
                 <StyledDivColor
                   style={{ backgroundColor: `${item?.selectColor}` }}
                 ></StyledDivColor>
@@ -132,7 +158,7 @@ const CartItem = ({ item }) => {
                 -
               </StyledButton>
 
-              <span>{item?.quantity}</span>
+              <StyledSpan>{item?.quantity}</StyledSpan>
               <StyledButton onClick={() => increaseItemHandler(item)}>
                 +
               </StyledButton>

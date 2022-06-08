@@ -16,9 +16,16 @@ import CollectionList from './ui/CollectionList';
 import Product from './components/product/Product';
 import { fetchAsyncCommerce } from './store/commerceSlice';
 import Help from './pages/Help';
+import { useLocation } from 'react-router-dom';
+import Breadcrumb from './ui/breadCrumbs/BreadCrumbs';
+import SearchPage from './components/search/SearchPage';
+import Offerts from './pages/Offerts';
 
 function App() {
   const dispatch = useDispatch();
+
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter((x) => x);
 
   useEffect(() => {
     dispatch(fetchAsyncProducts());
@@ -30,6 +37,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="main">
+        {pathnames.length > 0 && <Breadcrumb />}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<AboutUs />} />
@@ -40,6 +48,8 @@ function App() {
           <Route path="/:collectionList" element={<CollectionList />} />
           <Route path="/:collectionList/:productId" element={<Product />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/offert" element={<Offerts />} />
+          <Route path="/searchpage/:inputEntered" element={<SearchPage />} />
         </Routes>
       </div>
       <Footer />

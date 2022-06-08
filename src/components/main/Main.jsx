@@ -18,7 +18,7 @@ const Main = () => {
       <StyledDivider>
         <Divider />
       </StyledDivider>
-      <div className="container">
+      <div className="container" style={{ paddingTop: 10 }}>
         <MainCarosel />
         <BestSeller />
         <NewProducts />

@@ -30,20 +30,18 @@ const StyledContent = styled.div`
   text-align: start;
 `;
 
-const StyledP = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #979797;
-  padding-top: 12px;
-`;
-
 const StyledTotal = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #979797;
-  padding-top: 12px;
+`;
+
+const StyledP = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #979797;
 `;
 
 const StyledText = styled.p`
@@ -52,6 +50,12 @@ const StyledText = styled.p`
   line-height: 17px;
   text-align: right;
   color: #393939;
+`;
+
+const StyledDiv = styled.div`
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const CartTotal = () => {
@@ -72,7 +76,7 @@ const CartTotal = () => {
 
   const totalDiscount = productFromCart?.reduce(
     (sum, current) =>
-      (sum += current.discount
+      (sum += current?.discount
         ? (current?.previousPrice - current?.discount) * current?.quantity
         : 0),
     0
@@ -90,27 +94,27 @@ const CartTotal = () => {
         <div key={productFromCart.id}>
           <StyledTitle>Сумма заказа</StyledTitle>
           <StyledContent>
-            <div>
+            <StyledDiv>
               <StyledP>Количество линеек:</StyledP>
               <StyledText>{totalQuantity} шт</StyledText>
-            </div>
-            <div>
+            </StyledDiv>
+            <StyledDiv>
               <StyledP>Количество товаров::</StyledP>
               <StyledText>{totalAmountOfLines} шт</StyledText>
-            </div>
-            <div>
+            </StyledDiv>
+            <StyledDiv>
               <StyledP>Стоимость:</StyledP>
               <StyledText>{totalPrice}рублей</StyledText>
-            </div>
-            <div>
+            </StyledDiv>
+            <StyledDiv>
               <StyledP>Скидка:</StyledP>
               <StyledText>{totalDiscount}рублей</StyledText>
-            </div>
-            <Divider />
-            <div>
+            </StyledDiv>
+            <Divider style={{ margin: '24px 0' }} />
+            <StyledDiv>
               <StyledTotal>Итого к оплате:</StyledTotal>
               <StyledText>{totalFinalPrice}рублей</StyledText>
-            </div>
+            </StyledDiv>
           </StyledContent>
           <Button
             style={{ background: 'red', width: '100%' }}

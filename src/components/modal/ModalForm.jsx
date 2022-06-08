@@ -126,7 +126,7 @@ const ModalForm = ({ showModal }) => {
                 <option>🇺🇸 +711</option>
               </select>
 
-              <StyledInput type="number" placeholder="Введите номер телефона" />
+              <StyledInput type="select" placeholder="Введите номер телефона" />
             </StyledDiv>
             <StyledLabel>Страна</StyledLabel>
             <StyledInput

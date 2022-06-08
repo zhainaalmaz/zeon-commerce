@@ -11,11 +11,22 @@ const StyledP = styled.p`
   color: #393939;
   margin-top: 44px;
 `;
+
 const StyledContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 18px;
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  } ;
+`;
+
+const StyledButton = styled(Button)`
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 
 const BestSeller = () => {
@@ -41,7 +52,7 @@ const BestSeller = () => {
       </StyledContent>
 
       {filteredItem.length <= count || (
-        <Button
+        <StyledButton
           sx={{
             width: '107px',
             height: '32px',
@@ -51,7 +62,7 @@ const BestSeller = () => {
           onClick={countClickHandler}
         >
           Еще
-        </Button>
+        </StyledButton>
       )}
     </div>
   );

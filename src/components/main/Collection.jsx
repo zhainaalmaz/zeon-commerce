@@ -8,6 +8,10 @@ const StyledContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 18px;
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  } ;
 `;
 
 const StyledTitle = styled.p`
@@ -15,12 +19,12 @@ const StyledTitle = styled.p`
   font-size: 24px;
   line-height: 29px;
   color: #393939;
-  // text-align: start;
   padding-top: 32px;
 `;
 
 const Collection = () => {
   const collection = useSelector((state) => state.collections.data);
+  console.log(collection, 'collection');
   const [count, setCount] = useState(4);
 
   const countClickHandler = () => {

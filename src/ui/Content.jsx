@@ -77,7 +77,6 @@ const Content = ({ item }) => {
   const collectionId = params.collectionList;
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const filteredFev = favoriteItems.find((el) => el.id === item.id);
-
   const dispatch = useDispatch();
 
   const onAddFavorite = (item) => {

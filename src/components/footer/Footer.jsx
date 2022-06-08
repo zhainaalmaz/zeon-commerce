@@ -21,6 +21,10 @@ const StyledContent = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 48px 100px;
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const StyledP = styled.p`
@@ -45,6 +49,20 @@ const StyledAtag = styled.a`
   color: white;
 `;
 
+const StyledBlock = styled.div`
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const StyledImg = styled.img`
+  @media (max-width: 320px) {
+    display: flex;
+    align-items: start;
+  }
+`;
+
 const Footer = () => {
   const footerData = useSelector((state) => state.commerce.data);
 
@@ -52,12 +70,12 @@ const Footer = () => {
     <>
       <StyledContainer>
         <StyledContent>
-          <div>
-            <img src={footerData.footerLogo} alt="footerLogo" />
+          <StyledBlock>
+            <StyledImg src={footerData.footerLogo} alt="footerLogo" />
             <p style={{ color: '#B9B9B9', marginTop: '32px' }}>
               Developed by Zeon 2022
             </p>
-          </div>
+          </StyledBlock>
           <div>
             <StyledSpan>Компания</StyledSpan>
             <StyledP>

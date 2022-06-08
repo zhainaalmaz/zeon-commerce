@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Input from '../../ui/CustomInput';
 import styled from 'styled-components';
 import { Divider } from '@mui/material';
 import { ReactComponent as BasketLogo } from './../../assets/icons/basket.svg';
 import { ReactComponent as FavoriteLogo } from './../../assets/icons/favorite.svg';
 import MuiDrawer from './Drawer';
 import { useNavigate } from 'react-router-dom';
-import { ReactComponent as SearchSvg } from '../../assets/icons/searchIcon.svg';
 import { ReactComponent as FavoritedSvg } from '../../assets/icons/favorite2.svg';
 import { ReactComponent as AddedBasketIcon } from '../../assets/icons/basket2.svg';
 import { useSelector } from 'react-redux';
+import SearchBar from '../search/SearchBar';
 
 const StyledLayout = styled.div`
   margin: 22px 0;
@@ -25,7 +24,7 @@ const StyledContainer = styled.div`
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
-  @media (max-width: 768px) {
+  @media (max-width: 320px) {
     display: none;
   }
 `;
@@ -53,12 +52,6 @@ const StyledPhoneBlock = styled.span`
   }
 `;
 
-const StyledDivider = styled.div`
-  @media (min-width: 320px) {
-    display: none;
-  }
-`;
-
 const Header = () => {
   let navigate = useNavigate();
   const headerLogo = useSelector((state) => state.commerce.data);
@@ -73,67 +66,65 @@ const Header = () => {
   }, [addedItems, favoriteItems]);
 
   return (
-    <div className="container">
-      <StyledLayout>
-        <StyledContainer>
-          <NavLink style={{ color: 'black' }} to="/about">
-            О нас
-          </NavLink>
-          <NavLink style={{ color: 'black' }} to="/collection">
-            Коллекции
-          </NavLink>
-          <NavLink style={{ color: 'black' }} to="/news">
-            Новости
-          </NavLink>
-        </StyledContainer>
+    <div className="divider-line">
+      <div className="container">
+        <StyledLayout>
+          <StyledContainer>
+            <NavLink style={{ color: 'black' }} to="/about">
+              О нас
+            </NavLink>
+            <NavLink style={{ color: 'black' }} to="/collection">
+              Коллекции
+            </NavLink>
+            <NavLink style={{ color: 'black' }} to="/news">
+              Новости
+            </NavLink>
+          </StyledContainer>
 
-        <StyledPhoneBlock>
-          Тел:
-          <a
-            href="tel:+996 000 00 00 00"
-            style={{ color: 'black', marginLeft: 5 }}
+          <StyledPhoneBlock>
+            Тел:
+            <a
+              href="tel:+996 000 00 00 00"
+              style={{ color: 'black', marginLeft: 5 }}
+            >
+              +996 000 00 00 00
+            </a>
+          </StyledPhoneBlock>
+        </StyledLayout>
+      </div>
+      <Divider className="divider-line" />
+      <div className="container">
+        <StyledContent>
+          {/* <MuiDrawer navigate={navigate} /> */}
+          <Link to="/">
+            <img alt="logo" src={headerLogo.headerLogo} />
+          </Link>
+
+          <SearchBar />
+          <NavLink
+            style={{ color: 'black', display: 'flex', alignItems: 'center' }}
+            to="/favorite"
           >
-            +996 000 00 00 00
-          </a>
-        </StyledPhoneBlock>
-      </StyledLayout>
-      <StyledDivider>
-        <Divider />
-      </StyledDivider>
-      <StyledContent>
-        <MuiDrawer navigate={navigate} />
-        <Link to="/">
-          <img alt="logo" src={headerLogo.headerLogo} />
-        </Link>
-
-        <Input width="50%" placeholder="Поиск">
-          <span>
-            <SearchSvg />
-          </span>
-        </Input>
-        <NavLink
-          style={{ color: 'black', display: 'flex', alignItems: 'center' }}
-          to="/favorite"
-        >
-          {isFavorite.length > 0 ? (
-            <FavoritedSvg style={{ marginRight: 10 }} />
-          ) : (
-            <FavoriteLogo style={{ marginRight: 10 }} fill="#393939" />
-          )}
-          <StyledSpan> Избранное</StyledSpan>
-        </NavLink>
-        <NavLink
-          style={{ color: 'black', display: 'flex', alignItems: 'center' }}
-          to="/cart"
-        >
-          {isAdded?.length > 0 ? (
-            <AddedBasketIcon style={{ marginRight: 10 }} />
-          ) : (
-            <BasketLogo style={{ marginRight: 10 }} fill="#393939" />
-          )}
-          <StyledSpan> Корзина</StyledSpan>
-        </NavLink>
-      </StyledContent>
+            {isFavorite.length > 0 ? (
+              <FavoritedSvg style={{ marginRight: 10 }} />
+            ) : (
+              <FavoriteLogo style={{ marginRight: 10 }} fill="#393939" />
+            )}
+            <StyledSpan> Избранное</StyledSpan>
+          </NavLink>
+          <NavLink
+            style={{ color: 'black', display: 'flex', alignItems: 'center' }}
+            to="/cart"
+          >
+            {isAdded?.length > 0 ? (
+              <AddedBasketIcon style={{ marginRight: 10 }} />
+            ) : (
+              <BasketLogo style={{ marginRight: 10 }} fill="#393939" />
+            )}
+            <StyledSpan> Корзина</StyledSpan>
+          </NavLink>
+        </StyledContent>
+      </div>
     </div>
   );
 };
