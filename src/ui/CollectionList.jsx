@@ -1,8 +1,9 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Content from './Content';
 import styled from 'styled-components';
+import { pathActions } from '../store/path/pathSlice';
 
 const StyledP = styled.p`
   font-weight: 500;
@@ -20,8 +21,9 @@ const StyledContent = styled.div`
 `;
 
 const CollectionList = () => {
-  const params = useParams();
-  const collectionParams = +params.collectionList;
+  const dispatch = useDispatch();
+  const { collectionList } = useParams();
+  const collectionParams = +collectionList;
 
   const product = useSelector((state) => state.products.data);
   const collection = useSelector((state) => state.collections.data);
@@ -29,10 +31,14 @@ const CollectionList = () => {
     (element) => element.id === collectionParams
   );
 
-  console.log(product, 'product');
   const filteredItem = product.filter(
     (item) => item.collectionId === collectionParams
   );
+
+  useEffect(() => {
+    const paths = { [+collectionList]: collectionName[0]?.title };
+    dispatch(pathActions.setPaths(paths));
+  }, [collectionName]);
 
   return (
     <div className="container">

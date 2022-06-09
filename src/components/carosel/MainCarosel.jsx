@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import './MainCarosel.css';
 
 const StyledContainer = styled.div`
-  padding-bottom: 11px;
+  padding-bottom: 15px;
 
   // @media screen and (max-width: 360px) {
   //   height: 300px;
@@ -35,16 +35,14 @@ export default function MainCarosel() {
   return (
     <StyledContainer>
       <Swiper
-        // style={{ background: 'black' }}
         modules={[Pagination]}
-        style={{ height: 'auto' }}
         slidesPerView={1}
         grabCursor={true}
         pagination={{ clickable: true }}
         speed={1000}
         loop={true}
         autoplay={{
-          delay: 3000,
+          delay: 10000,
         }}
       >
         {coruselImg.map((item) => (

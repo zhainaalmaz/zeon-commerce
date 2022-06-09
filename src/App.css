@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.divider-line {
-  border-bottom: 1px solid grey;
-}
-
 .container {
   width: 1168px;
   margin: 0 auto;

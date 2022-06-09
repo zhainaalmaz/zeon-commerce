@@ -74,18 +74,13 @@ const StyledSpan = styled.span`
 
 const Content = ({ item }) => {
   const params = useParams();
-  const collectionId = params.collectionList;
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const filteredFev = favoriteItems.find((el) => el.id === item.id);
   const dispatch = useDispatch();
 
-  const onAddFavorite = (item) => {
-    dispatch(onAddToFavorite(item));
-  };
-
-  const onRemoveFavorite = (item) => {
-    dispatch(onRemoveFromFavorite(item));
-  };
+  console.log(params);
+  const onAddFavorite = (item) => dispatch(onAddToFavorite(item));
+  const onRemoveFavorite = (item) => dispatch(onRemoveFromFavorite(item));
 
   return (
     <div>
@@ -116,7 +111,9 @@ const Content = ({ item }) => {
             {!!filteredFev && <Heart onClick={() => onRemoveFavorite(item)} />}
           </div>
         </div>
-        <Link to={`/${collectionId}/${item.id}`}>
+        <Link
+          to={`/${params?.collectionId ? params?.collectionId : ''}/${item.id}`}
+        >
           <StyledImage
             src={item.productImages.map((el) => {
               return el.image;

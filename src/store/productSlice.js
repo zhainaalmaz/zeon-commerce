@@ -19,16 +19,16 @@ const productsSlice = createSlice({
   extraReducers: {
     [fetchAsyncProducts.pending]: (state, action) => {
       state.status = 'pending';
-      console.log('Pending');
+      // console.log('Pending');
     },
     [fetchAsyncProducts.fulfilled]: (state, action) => {
       state.status = 'fulfilled';
       state.data = action.payload;
-      console.log('Fetched Successufully!');
+      // console.log('Fetched Successufully!');
     },
     [fetchAsyncProducts.rejected]: (state) => {
       state.status = 'rejected';
-      console.log('Rejected');
+      // console.log('Rejected');
     },
   },
 });

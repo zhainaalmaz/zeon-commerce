@@ -53,7 +53,6 @@ const StyledPhoneBlock = styled.span`
 `;
 
 const Header = () => {
-  let navigate = useNavigate();
   const headerLogo = useSelector((state) => state.commerce.data);
   const [isFavorite, setIsFavorite] = useState([]);
   const [isAdded, setIsAdded] = useState([]);
@@ -92,7 +91,7 @@ const Header = () => {
           </StyledPhoneBlock>
         </StyledLayout>
       </div>
-      <Divider className="divider-line" />
+      <Divider />
       <div className="container">
         <StyledContent>
           {/* <MuiDrawer navigate={navigate} /> */}

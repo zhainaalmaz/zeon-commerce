@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -13,6 +13,7 @@ import {
 import { addToCart } from '../../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import InterestedProducts from '../InterestedProducts';
+import { pathActions } from '../../store/path/pathSlice';
 
 const StyledColordiv = styled.div`
   display: flex;
@@ -126,10 +127,11 @@ const Product = () => {
   const sameProduct = product.filter((element) => element.title);
   const [selectedColor, setSelectedColor] = useState('');
   const [isSelectedProduct, setIsSelectedProduct] = useState(true);
-
+  console.log(filteredProduct);
   const navigate = useNavigate();
-  const [count] = useState(5);
   const dispatch = useDispatch();
+
+  const [count] = useState(5);
 
   const onAddFavorite = (item) => {
     dispatch(onAddToFavorite(item));
@@ -153,6 +155,13 @@ const Product = () => {
   const handleToGoCart = () => {
     navigate('/cart');
   };
+
+  useEffect(() => {
+    const paths = { [params.productId]: filteredProduct[0]?.title };
+    if (params?.collectionList) paths[params?.collectionList] = 'random';
+
+    dispatch(pathActions.setPaths(paths));
+  }, [filteredProduct]);
 
   return (
     <div style={{ background: '#ECECEC' }}>
