@@ -108,21 +108,30 @@ const Footer = () => {
           <div>
             <StyledSpan>Мы в социальных сетях:</StyledSpan>
 
-            <StyledAtag href={footerData.socialMedia?.instagram}>
+            <StyledAtag
+              target={'_blank'}
+              href={footerData.socialMedia?.instagram}
+            >
               <StyledP>
                 <InstagramSvg style={{ marginRight: 5 }} />
                 {footerData.socialMedia?.instagramTitle}
               </StyledP>
             </StyledAtag>
 
-            <StyledAtag href={footerData.socialMedia?.telegram}>
+            <StyledAtag
+              target={'_blank'}
+              href={footerData.socialMedia?.telegram}
+            >
               <StyledP>
                 <TelegramSvg style={{ marginRight: 5 }} />
                 {footerData.socialMedia?.telegramTitle}
               </StyledP>
             </StyledAtag>
 
-            <StyledAtag href={footerData.socialMedia?.whatsapp}>
+            <StyledAtag
+              target={'_blank'}
+              href={footerData.socialMedia?.whatsapp}
+            >
               <StyledP>
                 <WhatsappSvg style={{ marginRight: 5 }} />
                 {footerData.socialMedia?.whatsappTitle}

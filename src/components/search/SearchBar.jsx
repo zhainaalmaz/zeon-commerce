@@ -50,6 +50,7 @@ const SearchBar = () => {
       </>
       {filteredData.length !== 0 && (
         <div className="dataResult">
+          <div className="dataRes"> </div>
           {filteredData.map((value, key) => (
             <>
               <NavLink

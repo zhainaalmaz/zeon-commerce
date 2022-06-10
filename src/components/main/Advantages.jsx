@@ -34,7 +34,8 @@ const StyledTitle = styled.p`
   font-size: 14px;
   line-height: 17px;
   color: #393939;
-  margin-top: 28px;
+  margin-top: 18px;
+  margin-bottom: 10px;
 `;
 
 const StyledText = styled.p`
@@ -44,6 +45,7 @@ const StyledText = styled.p`
   text-align: center;
   letter-spacing: 0.04em;
   color: #979797;
+  margin-top: 10px;
 `;
 
 const StyledT = styled.p`

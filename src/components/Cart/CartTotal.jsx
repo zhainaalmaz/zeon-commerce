@@ -5,6 +5,8 @@ import Button from '../../ui/Button';
 import { useSelector } from 'react-redux';
 import ModalForm from '../modal/ModalForm';
 
+import SuccessModal from '../modal/SuccessModal';
+
 const StyledBlock = styled.div`
   width: 384px;
   height: 311px;
@@ -58,9 +60,21 @@ const StyledDiv = styled.div`
   justify-content: space-between;
 `;
 
+const StyledButton = styled(Button)`
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;s
+  color: #ffffff;
+`;
+
 const CartTotal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const productFromCart = useSelector((state) => state.cart.cartItems);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const totalQuantity = productFromCart.reduce((sum, current) => {
     return sum + current?.quantity;
@@ -85,7 +99,12 @@ const CartTotal = () => {
   const totalFinalPrice = totalPrice - totalDiscount;
 
   const showModalHandler = () => {
-    setIsModalOpen((prevState) => !prevState);
+    setIsModalOpen((prev) => !prev);
+  };
+
+  const successHandler = () => {
+    console.log('SUCCESS');
+    setShowSuccess(true);
   };
 
   return (
@@ -116,13 +135,21 @@ const CartTotal = () => {
               <StyledText>{totalFinalPrice}рублей</StyledText>
             </StyledDiv>
           </StyledContent>
-          <Button
-            style={{ background: 'red', width: '100%' }}
+          <StyledButton
+            style={{ background: 'red' }}
             onClick={() => setIsModalOpen(true)}
           >
             Оформить заказ
-          </Button>
-          {isModalOpen ? <ModalForm showModal={showModalHandler} /> : ''}
+          </StyledButton>
+          {isModalOpen && (
+            <ModalForm
+              showModal={showModalHandler}
+              data={productFromCart}
+              totalFinalPrice={totalFinalPrice}
+              successHandler={successHandler}
+            />
+          )}
+          {showSuccess && <SuccessModal />}
         </div>
       </StyledBlock>
     </div>

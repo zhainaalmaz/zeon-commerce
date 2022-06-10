@@ -24,10 +24,8 @@
 
 .modal {
   color: rgb(34, 34, 34);
-  border-radius: 0.5rem;
   background-color: white;
-  max-width: 27rem;
-  width: 95%;
+  width: 440px;
   border-top: 0.0625rem solid rgb(239, 239, 239);
   border-bottom: 00.0625rem solid rgb(239, 239, 239);
   margin: auto;

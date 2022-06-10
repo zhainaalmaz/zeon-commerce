@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-import Button from '../../ui/Button';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import Modal from '../../ui/modal/Modal';
 import styled from 'styled-components';
 import { ReactComponent as CloseSvg } from '../../assets/icons/delete.svg';
-import Modal from '../../ui/modal/Modal';
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
-import './Modal.css';
-import useForm from '../../hooks/useForm';
-import { validate } from '../../hooks/useForm';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { axiosinstance } from '../../api/api';
 
 const StyledLayout = styled.div`
-  width: 440px;
-  height: 672px;
+  width: 450px;
+  height: 652px;
 `;
 
 const StyledForm = styled.form`
@@ -21,6 +17,10 @@ const StyledForm = styled.form`
   margin: 32px 24px;
   padding: 0px;
   gap: 32px;
+`;
+
+const StyledDiv = styled.div`
+  margin-top: 12px;
 `;
 
 const StyledTitle = styled.h1`
@@ -43,16 +43,6 @@ const StyledLabel = styled.label`
   margin-top: 12px;
 `;
 
-const StyledErrorLabel = styled.label`
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  color: red;
-  margin-top: 12px;
-`;
-
 const StyledInput = styled.input`
   padding: 13px 10px 13px 12px;
   gap: 10px;
@@ -67,6 +57,33 @@ const StyledInput = styled.input`
     font-size: 14px;
     line-height: 17px;
   }
+`;
+
+const StyledCheckedDiv = styled.div`
+  height: 24px;
+  margin-top: 16px;
+  text-align: start;
+`;
+
+const StyledSpan = styled.span`
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #393939;
+`;
+
+const StyledSection = styled.section`
+  margin-top: 24px;
+`;
+
+const StyledErrorLabel = styled.label`
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: red;
+  margin-top: 12px;
 `;
 
 const ErrorInput = styled.input`
@@ -84,239 +101,167 @@ const ErrorInput = styled.input`
   }
 `;
 
-const StyledDiv = styled.div`
-  margin-top: 12px;
-`;
+const ModalForm = ({
+  showModal,
+  totalFinalPrice,
+  data,
+  success,
+  successHandler,
+}) => {
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    reset,
+  } = useForm({
+    mode: 'onBlur',
+  });
 
-const StyledSection = styled.section`
-  margin-top: 24px;
-`;
+  const order = {
+    product: data,
+    totalPrice: totalFinalPrice,
+  };
 
-const StyledCheckedDiv = styled.div`
-  height: 24px;
-  margin-top: 16px;
-  text-align: start;
-`;
+  const onSubmithandler = (data) => {
+    axiosinstance
+      .post('/orders.json', {
+        ...data,
+        order,
+      })
+      .then((res) => {
+        console.log(res.data, 'dsta');
+      });
 
-const StyledSpan = styled.span`
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  color: #393939;
-`;
-
-const StyledButton = styled(Button)`
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-`;
-
-const ModalForm = ({ showModal }) => {
-  const [touched, setTouched] = useState(false);
-  const { handleChange, handleSubmit, values, errors, setValues } =
-    useForm(validate);
-
-  const blurHandler = () => {
-    console.log(values);
-    // console.log('input blurred');
-    setValues((values) => ({
-      ...values,
-      // touched,
-    }));
+    reset();
+    showModal();
+    successHandler();
   };
 
   return (
-    <Modal>
+    <Modal style={{ width: '440px' }}>
       <StyledLayout>
-        <StyledForm onSubmit={handleSubmit}>
+        <StyledForm onSubmit={handleSubmit(onSubmithandler)}>
           <StyledDiv>
             <StyledTitle>
-              Оформление заказа <CloseSvg onClick={showModal} />
+              Оформление заказа{' '}
+              <CloseSvg style={{ width: 24 }} onClick={showModal} />
             </StyledTitle>
           </StyledDiv>
           <StyledSection>
-            {!errors.username ? (
+            {errors.username ? (
+              <>
+                <StyledErrorLabel>Ваше имя</StyledErrorLabel>
+                <ErrorInput placeholder="Например Иван" />
+              </>
+            ) : (
               <>
                 <StyledLabel>Ваше имя</StyledLabel>
                 <StyledInput
                   placeholder="Например Иван"
-                  type="text"
-                  name="username"
-                  value={values.username}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
-                />
-              </>
-            ) : (
-              <>
-                <StyledErrorLabel>Ваше имя</StyledErrorLabel>
-                <ErrorInput
-                  placeholder="Например Иван"
-                  type="text"
-                  name="username"
-                  value={values.username}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
+                  {...register('username', {
+                    required: true,
+                  })}
                 />
               </>
             )}
 
-            {!errors.surname ? (
-              <>
-                <StyledLabel>Ваше фамилия</StyledLabel>
-                <StyledInput
-                  placeholder="Например Иванов"
-                  type="text"
-                  name="surname"
-                  value={values.surname}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
-                />
-              </>
-            ) : (
+            {errors.surname ? (
               <>
                 <StyledErrorLabel>Ваше фамилия</StyledErrorLabel>
-                <ErrorInput
+                <ErrorInput placeholder="Например Иванов" />
+              </>
+            ) : (
+              <>
+                <StyledLabel>Ваше фамилия </StyledLabel>
+                <StyledInput
                   placeholder="Например Иванов"
-                  type="text"
-                  name="surname"
-                  value={values.surname}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
+                  {...register('surname', {
+                    required: true,
+                  })}
                 />
               </>
             )}
 
-            {!errors.email ? (
+            {errors.email ? (
+              <>
+                <StyledErrorLabel> Электронная почта</StyledErrorLabel>
+                <ErrorInput placeholder="example@mail.com" />
+              </>
+            ) : (
               <>
                 <StyledLabel htmlFor="Электронная почта">
                   Электронная почта
                 </StyledLabel>
                 <StyledInput
                   placeholder="example@mail.com"
-                  type="email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
-                />
-              </>
-            ) : (
-              <>
-                <StyledErrorLabel> Электронная почта</StyledErrorLabel>
-                <ErrorInput
-                  placeholder="example@mail.com"
-                  type="email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
+                  {...register('email', {
+                    pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i,
+                  })}
                 />
               </>
             )}
 
-            <StyledDiv>
-              {errors.number ? (
-                <>
-                  <StyledErrorLabel>Ваш номер телефона</StyledErrorLabel>
-                  <ErrorInput
-                    placeholder="Введите номер телефона"
-                    type="number"
-                    name="number"
-                    value={values.number}
-                    onChange={handleChange}
-                    onBlur={blurHandler}
-                  />
-                </>
-              ) : (
-                <>
-                  <StyledLabel>Ваш номер телефона </StyledLabel>
-                  <StyledInput
-                    placeholder="Введите номер телефона"
-                    type="number"
-                    name="number"
-                    value={values.number}
-                    onChange={handleChange}
-                    onBlur={blurHandler}
-                  />
-                </>
-              )}
-            </StyledDiv>
+            {errors.number ? (
+              <>
+                <StyledErrorLabel>Ваш номер телефона</StyledErrorLabel>
+                <ErrorInput placeholder="Введите номер телефона" />
+              </>
+            ) : (
+              <>
+                <StyledLabel>Ваш номер телефона</StyledLabel>
+                <StyledInput
+                  placeholder="Введите номер телефона"
+                  {...register('number', {
+                    pattern:
+                      /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+                  })}
+                />
+              </>
+            )}
 
-            {!errors.country ? (
+            {errors.country ? (
+              <>
+                <StyledErrorLabel>Страна</StyledErrorLabel>
+                <ErrorInput placeholder="Введите страну" />
+              </>
+            ) : (
               <>
                 <StyledLabel>Страна</StyledLabel>
                 <StyledInput
                   placeholder="Введите страну"
-                  type="text"
-                  name="country"
-                  value={values.country}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
-                />
-              </>
-            ) : (
-              <>
-                <StyledErrorLabel>Страна</StyledErrorLabel>
-                <ErrorInput
-                  placeholder="Введите страну"
-                  type="text"
-                  name="country"
-                  value={values.country}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
+                  {...register('country', {
+                    required: true,
+                  })}
                 />
               </>
             )}
 
-            {!errors.city ? (
+            {errors.city ? (
+              <>
+                <StyledErrorLabel>Город</StyledErrorLabel>
+                <ErrorInput placeholder="Введите город" />
+              </>
+            ) : (
               <>
                 <StyledLabel>Город</StyledLabel>
                 <StyledInput
                   placeholder="Введите город"
-                  type="text"
-                  name="city"
-                  value={values.city}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
-                />
-              </>
-            ) : (
-              <>
-                <StyledErrorLabel>Город</StyledErrorLabel>
-                <ErrorInput
-                  placeholder="Введите город"
-                  type="text"
-                  name="city"
-                  value={values.city}
-                  onChange={handleChange}
-                  onBlur={blurHandler}
+                  {...register('city', {
+                    required: true,
+                  })}
                 />
               </>
             )}
+
+            <StyledCheckedDiv>
+              <input style={{ marginRight: 8 }} type="checkbox" />
+              <StyledSpan>
+                Согласен с условиями <Link to="/offert">публичной оферты</Link>
+              </StyledSpan>
+            </StyledCheckedDiv>
           </StyledSection>
-          <StyledCheckedDiv>
-            <input style={{ marginRight: 8 }} type="checkbox" />
-            <StyledSpan>
-              Согласен с условиями <a href="/">публичной оферты</a>
-            </StyledSpan>
-          </StyledCheckedDiv>
-          {!errors ? (
-            <StyledButton style={{ width: '100%' }} onClick={handleSubmit}>
-              Заказать
-            </StyledButton>
-          ) : (
-            <StyledButton
-              style={{ width: '100%', background: 'grey' }}
-              onClick={handleSubmit}
-            >
-              Заказать
-            </StyledButton>
-          )}
+
+          <input type="submit" disabled={!isValid} onSubmit={onSubmithandler} />
         </StyledForm>
       </StyledLayout>
     </Modal>

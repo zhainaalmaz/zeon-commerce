@@ -5,7 +5,7 @@ import { ReactComponent as Heart } from '../assets/icons/heart1.svg';
 import { ReactComponent as Hearted } from '../assets/icons/heart2.svg';
 import { onAddToFavorite, onRemoveFromFavorite } from '../store/favoriteSlice';
 import { ReactComponent as DiscounSvg } from '../assets/icons/discount.svg';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { mathPercent } from '../utils';
 
 const StyledContainer = styled.div`
@@ -74,9 +74,24 @@ const StyledSpan = styled.span`
 
 const Content = ({ item }) => {
   const params = useParams();
+
+  const collectionId = params.collectionList;
+  console.log(params, 'collerId');
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const filteredFev = favoriteItems.find((el) => el.id === item.id);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const navigateHandler = () => {
+    if (!!collectionId) {
+      console.log('wwwww');
+      navigate(`/${collectionId}/${item.id}`);
+    } else {
+      console.log('111111');
+
+      navigate(`/products/${item.id}`);
+    }
+  };
 
   console.log(params);
   const onAddFavorite = (item) => dispatch(onAddToFavorite(item));
@@ -111,9 +126,17 @@ const Content = ({ item }) => {
             {!!filteredFev && <Heart onClick={() => onRemoveFavorite(item)} />}
           </div>
         </div>
-        <Link
-          to={`/${params?.collectionId ? params?.collectionId : ''}/${item.id}`}
+        <button
+          onClick={navigateHandler}
+          style={{
+            border: 'none',
+            textAlign: 'start',
+            backgroundColor: 'white',
+          }}
         >
+          {/* <Link */}
+          {/* // to={`/${params?.collectionId ? params?.collectionId : ''}/${item.id}`} */}
+          {/* > */}
           <StyledImage
             src={item.productImages.map((el) => {
               return el.image;
@@ -146,7 +169,8 @@ const Content = ({ item }) => {
               ))}
             </StyledColordiv>
           </div>
-        </Link>
+        </button>
+        {/* </Link> */}
       </StyledContainer>
     </div>
   );
