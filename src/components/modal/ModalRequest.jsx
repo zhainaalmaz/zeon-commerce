@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Button from '../../ui/Button';
-import userLogo from '../../assets/icons/user-logo.svg';
-import phoneLogo from '../../assets/icons/telephone.svg';
+import { ReactComponent as UserLogo } from '../../assets/icons/user-logo.svg';
+import { ReactComponent as Phonelogo } from '../../assets/icons/phone.svg';
 import { ReactComponent as DeleteSvg } from '../../assets/icons/delete.svg';
+import { useForm } from 'react-hook-form';
 
 const StyledContent = styled.div`
-  padding: 32px 24px;
+  margin: 22px 38px 32px 38px;
 `;
 
 const StyledTitle = styled.p`
@@ -25,74 +25,119 @@ const StyledText = styled.p`
   align-items: flex-end;
   color: #393939;
   margin-top: 6px;
+  margin-bottom: 12px;
 `;
 
 const StyledInput = styled.input`
+  border: none;
   padding: 10px 12px;
   width: 392px;
   height: 44px;
   background: #ffffff;
-  border: 1px solid #e7e7e7;
-  margin-top: 10px;
   ::placeholder {
     color: #d0d0d0;
     font-size: 14px;
     line-height: 17px;
-    padding-left: 20px;
   }
 `;
 
-const StyledButton = styled(Button)`
-  width: 280px;
-  height: 44px;
-  background: #1d1d1b;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+const StyledLabel = styled.label`
+  margin-bottom: 10px;
   display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
+  gap: 10;
+  border: 1px solid #e7e7e7;
 `;
 
-const StyledDiv = styled.div`
-  position: relative;
-`;
-
-const ModalRequest = () => {
+const ModalRequest = ({
+  setOpenDialog,
+  setOpen,
+  showsuccess,
+  setshowsuccess,
+}) => {
   const divRef = useRef(null);
+
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    reset,
+  } = useForm({
+    mode: 'all',
+  });
+
+  const submitHandler = () => {
+    setshowsuccess(!showsuccess);
+    reset();
+    console.log('work');
+  };
+  useEffect(() => {}, [errors]);
+
   return (
     <div className="request-container">
       <div className="request-overlay">
         <div className="request-modal" ref={divRef}>
-          <StyledContent>
-            <DeleteSvg style={{ display: 'flex', textAlign: 'end' }} />
-            <div style={{ textAlign: 'start' }}>
-              <StyledTitle>Если у Вас остались вопросы</StyledTitle>
-              <StyledText>
-                Оставьте заявку и мы обязательно <br /> Вам перезвоним
-              </StyledText>
-              <StyledDiv>
-                <img
-                  style={{ position: 'absolute', top: '19px', left: '8px' }}
-                  src={userLogo}
-                  alt="userlogo"
+          <form
+            onSubmit={handleSubmit(submitHandler)}
+            style={{ position: 'relative' }}
+          >
+            <DeleteSvg
+              style={{ position: 'absolute', top: -10, right: 20 }}
+              onClick={() => {
+                setOpenDialog(false);
+                setOpen(false);
+              }}
+            />
+            <StyledContent>
+              <div style={{ textAlign: 'start' }}>
+                <StyledTitle>Если у Вас остались вопросы</StyledTitle>
+                <StyledText>
+                  Оставьте заявку и мы обязательно <br /> Вам перезвоним
+                </StyledText>
+
+                <StyledLabel
+                  style={
+                    errors.user
+                      ? { border: '1px solid red' }
+                      : { border: '1px solid #e7e7e7' }
+                  }
+                >
+                  <UserLogo style={{ width: 30, margin: '10px 5px' }} />
+                  <StyledInput
+                    placeholder="Как к Вам обращаться?"
+                    {...register('user', {
+                      required: true,
+                    })}
+                  />
+                </StyledLabel>
+
+                <StyledLabel
+                  style={
+                    errors.tel
+                      ? { border: '1px solid red' }
+                      : { border: '1px solid #e7e7e7' }
+                  }
+                >
+                  <Phonelogo style={{ width: 30, margin: '10px 5px' }} />
+                  <StyledInput
+                    type="tel"
+                    placeholder="Номер телефона"
+                    {...register('tel', {
+                      required: true,
+                      minLength: 3,
+                      // pattern:
+                      //   /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+                    })}
+                  />
+                </StyledLabel>
+
+                <input
+                  style={{ width: 360, marginTop: 12 }}
+                  type="submit"
+                  disabled={!isValid}
                 />
-                <StyledInput type="logo" placeholder="Как к Вам обращаться?" />
-              </StyledDiv>
-              <StyledDiv>
-                <img
-                  style={{ position: 'absolute', top: '19px', left: '8px' }}
-                  src={phoneLogo}
-                  alt="/"
-                />
-                <StyledInput placeholder="Номер телефона" />
-              </StyledDiv>
-              <StyledButton style={{ width: '100%', backgroundColor: 'black' }}>
-                Заказать звонок
-              </StyledButton>
-            </div>
-          </StyledContent>
+              </div>
+            </StyledContent>
+          </form>
         </div>
       </div>
     </div>

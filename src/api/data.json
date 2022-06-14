@@ -40,6 +40,36 @@
         "id": 8,
         "title": "Коллекция осень 2020",
         "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+      },
+      {
+        "id": 9,
+        "title": "Коллекция лето 2023",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection1.png?alt=media&token=54c8abb6-a8d0-4cd6-afb1-477cb3ce7f7e"
+      },
+      {
+        "id": 10,
+        "title": "Коллекция осень 2023",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection2.png?alt=media&token=f96f7e37-9e28-4a1a-a77f-c838dbc2c5e3"
+      },
+      {
+        "id": 11,
+        "title": "Коллекция весна 2019",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection3.png?alt=media&token=744d5725-b074-4187-91ce-f9ccb19b5902"
+      },
+      {
+        "id": 12,
+        "title": "Коллекция осень 2019",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection4.png?alt=media&token=c50b0586-009e-42b3-a324-dbbb26ab5296"
+      },
+      {
+        "id": 13,
+        "title": "Костюмы",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection4.png?alt=media&token=c50b0586-009e-42b3-a324-dbbb26ab5296"
+      },
+      {
+        "id": 14,
+        "title": "Коллекция осень 2024",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
       }
     ],
     "products": [
@@ -159,6 +189,7 @@
       {
         "id": 3,
         "collection": "Коллекция лето 2020",
+        "collectionId": 1,
         "title": "Летнее платье ",
         "article": "платье03",
         "bestseller": true,
@@ -271,7 +302,7 @@
       {
         "id": 5,
         "collection": "Коллекция лето 2020",
-        "collectionId": 1,
+        "collectionId": 2,
         "title": "Весеннее платье ",
         "article": "платье05",
         "bestseller": true,
@@ -495,7 +526,7 @@
       {
         "id": 9,
         "collection": "Коллекция весна 2021",
-        "collectionId": 2,
+        "collectionId": 3,
         "title": "Осеннее платье",
         "article": "платье09",
         "bestseller": true,
@@ -719,7 +750,7 @@
       {
         "id": 13,
         "collection": "Коллекция осень 2020",
-        "collectionId": 3,
+        "collectionId": 4,
         "title": "Зимнее платье ",
         "article": "платье13",
         "bestseller": true,
@@ -943,7 +974,7 @@
       {
         "id": 17,
         "collection": "Коллекция зима 2020",
-        "collectionId": 4,
+        "collectionId": 5,
         "title": "Вечернее платье",
         "article": "платье17",
         "bestseller": true,
@@ -999,7 +1030,7 @@
       {
         "id": 18,
         "collection": "Коллекция зима 2020",
-        "collectionId": 4,
+        "collectionId": 5,
         "title": "Вечернее платье",
         "article": "платье18",
         "bestseller": true,
@@ -1056,7 +1087,7 @@
       {
         "id": 19,
         "collection": "Коллекция зима 2020",
-        "collectionId": 4,
+        "collectionId": 6,
         "title": "Вечернее платье",
         "article": "платье19",
         "bestseller": false,
@@ -1112,7 +1143,7 @@
       {
         "id": 20,
         "collection": "Коллекция осень 2021",
-        "collectionId": 5,
+        "collectionId": 6,
         "title": "Летнее платье",
         "article": "платье21",
         "bestseller": false,
@@ -1161,7 +1192,7 @@
         "discount": 0,
         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
         "sizeRage": "42-50",
-        "amountOfLines": 5,
+        "amountOfLines": 6,
         "structure": "Полиэстер",
         "material": "Полиэстер"
       },
@@ -1224,7 +1255,7 @@
       {
         "id": 22,
         "collection": "Коллекция зима 2021",
-        "collectionId": 4,
+        "collectionId": 6,
         "title": "Осеннее платье",
         "article": "платье22",
         "bestseller": true,
@@ -1280,7 +1311,7 @@
       {
         "id": 23,
         "collection": "Коллекция осень 2021",
-        "collectionId": 5,
+        "collectionId": 6,
         "title": "Вечернее платье",
         "article": "платье23",
         "bestseller": true,
@@ -1336,7 +1367,7 @@
       {
         "id": 24,
         "collection": "Коллекция зима 2020",
-        "collectionId": 4,
+        "collectionId": 7,
         "title": "Вечернее платье",
         "article": "платье20",
         "bestseller": true,
@@ -1392,7 +1423,7 @@
       {
         "id": 25,
         "collection": "Коллекция зима 2020",
-        "collectionId": 4,
+        "collectionId": 7,
         "title": "Вечернее платье",
         "article": "платье20",
         "bestseller": true,
@@ -1504,7 +1535,7 @@
       {
         "id": 27,
         "collection": "Коллекция зима 2020",
-        "collectionId": 4,
+        "collectionId": 7,
         "title": "Вечернее платье",
         "article": "платье20",
         "bestseller": true,
@@ -1560,7 +1591,7 @@
       {
         "id": 28,
         "collection": "Коллекция зима 2020",
-        "collectionId": 6,
+        "collectionId": 8,
         "title": "Вечернее платье",
         "article": "платье20",
         "bestseller": true,
@@ -1616,7 +1647,7 @@
       {
         "id": 29,
         "collection": "Коллекция зима 2020",
-        "collectionId": 6,
+        "collectionId": 8,
         "title": "Летнее платье",
         "article": "платье20",
         "bestseller": true,
@@ -1672,7 +1703,7 @@
       {
         "id": 30,
         "collection": "Коллекция зима 2020",
-        "collectionId": 6,
+        "collectionId": 8,
         "title": "Вечерний наряд",
         "article": "платье20",
         "bestseller": true,
@@ -1954,5 +1985,103 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
       }
     ]
-  }
+  },
+  "news": [
+    {
+      "id": 1,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+    },
+    {
+      "id": 2,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+    },
+    {
+      "id": 3,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+    },
+    {
+      "id": 4,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+    },
+    {
+      "id": 5,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+    },
+    {
+      "id": 6,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+    },
+    {
+      "id": 7,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+    },
+    {
+      "id": 8,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+    },
+    {
+      "id": 9,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+    },
+    {
+      "id": 10,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+    },
+    {
+      "id": 11,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+    },
+    {
+      "id": 12,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+    },
+    {
+      "id": 13,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+    },
+    {
+      "id": 14,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+    },
+    {
+      "id": 15,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+    },
+    {
+      "id": 16,
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+    }
+  ]
 }

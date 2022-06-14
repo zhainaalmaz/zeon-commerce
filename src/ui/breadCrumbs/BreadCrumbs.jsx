@@ -40,7 +40,7 @@ export default function Breadcrumb() {
     <div className="breadcrumb">
       <div className="container">
         <Breadcrumbs aria-label="breadcrumb">
-          {pathname.lengh > 0 ? (
+          {pathname.length > 0 ? (
             <button className="navLink2" onClick={() => navigate('/')}>
               Главная
             </button>

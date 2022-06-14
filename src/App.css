@@ -59,6 +59,7 @@ input[disabled] {
   justify-content: center;
   align-items: center;
   z-index: 999999;
+
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in 0s;
 }
@@ -123,6 +124,20 @@ input[disabled] {
   overflow: hidden;
   display: block;
   margin-top: 226px;
+}
+
+.scale-hover {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.scale {
+  transition: 1s;
+  display: block;
+}
+
+.scale:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 320px) {

@@ -1,5 +1,5 @@
 .container {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999999;
+  z-index: 99999;
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in 0s;
 }

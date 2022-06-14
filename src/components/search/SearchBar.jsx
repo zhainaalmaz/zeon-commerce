@@ -52,7 +52,7 @@ const SearchBar = () => {
         <div className="dataResult">
           <div className="dataRes"> </div>
           {filteredData.map((value, key) => (
-            <>
+            <div key={value.id}>
               <NavLink
                 style={{
                   textDecoration: 'none',
@@ -60,8 +60,12 @@ const SearchBar = () => {
                   justifyContent: 'start',
                   alignItems: 'flex-start',
                   color: 'black',
-                  marginTop: 32,
-                  marginLeft: 5,
+                  marginTop: 16,
+                  marginBottom: 16,
+                  marginLeft: 20,
+                  fontЦeight: 400,
+                  fontSize: 14,
+                  lineHeight: '150%',
                 }}
                 to={`/searchpage/${value.title}`}
                 onClick={onClearInput}
@@ -70,7 +74,7 @@ const SearchBar = () => {
                 {value.title}
               </NavLink>
               <hr style={{ border: '1px solid #EEEEEE' }} />
-            </>
+            </div>
           ))}
         </div>
       )}

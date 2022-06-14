@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   color: #1d1d1b;
-  z-index: 20;
+  z-index: 3;
   position: relative;
   margin-left: 35px;
 }
@@ -45,7 +45,7 @@ input:focus {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
-  z-index: 7;
+  z-index: 2;
 }
 
 .dataRes {
@@ -53,7 +53,7 @@ input:focus {
   height: 48px;
   position: absolute;
   background-color: white;
-  z-index: 7;
+  z-index: 2;
 }
 
 .dataResult::-webkit-scrollbar {

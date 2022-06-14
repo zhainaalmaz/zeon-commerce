@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Modal from '../../ui/modal/Modal';
 import styled from 'styled-components';
@@ -76,45 +76,14 @@ const StyledSection = styled.section`
   margin-top: 24px;
 `;
 
-const StyledErrorLabel = styled.label`
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  color: red;
-  margin-top: 12px;
-`;
-
-const ErrorInput = styled.input`
-  padding: 13px 10px 13px 12px;
-  gap: 10px;
-  width: 392px;
-  height: 44px;
-  background: #ffffff;
-  border: 1px solid red;
-  margin-top: 4px;
-  ::placeholder {
-    color: red;
-    font-size: 14px;
-    line-height: 17px;
-  }
-`;
-
-const ModalForm = ({
-  showModal,
-  totalFinalPrice,
-  data,
-  success,
-  successHandler,
-}) => {
+const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
   const {
     register,
     formState: { errors, isValid },
     handleSubmit,
     reset,
   } = useForm({
-    mode: 'onBlur',
+    mode: 'all',
   });
 
   const order = {
@@ -137,126 +106,150 @@ const ModalForm = ({
     successHandler();
   };
 
+  useEffect(() => {}, [errors]);
+
   return (
     <Modal style={{ width: '440px' }}>
       <StyledLayout>
         <StyledForm onSubmit={handleSubmit(onSubmithandler)}>
           <StyledDiv>
             <StyledTitle>
-              Оформление заказа{' '}
+              Оформление заказа
               <CloseSvg style={{ width: 24 }} onClick={showModal} />
             </StyledTitle>
           </StyledDiv>
           <StyledSection>
-            {errors.username ? (
-              <>
-                <StyledErrorLabel>Ваше имя</StyledErrorLabel>
-                <ErrorInput placeholder="Например Иван" />
-              </>
-            ) : (
-              <>
-                <StyledLabel>Ваше имя</StyledLabel>
-                <StyledInput
-                  placeholder="Например Иван"
-                  {...register('username', {
-                    required: true,
-                  })}
-                />
-              </>
-            )}
+            <>
+              <StyledLabel
+                style={
+                  errors.username ? { color: 'red' } : { color: '#d0d0d0' }
+                }
+              >
+                Ваше имя
+              </StyledLabel>
+              <StyledInput
+                style={
+                  errors.username
+                    ? { border: '1px solid red' }
+                    : { border: '1px solid #e7e7e7' }
+                }
+                placeholder="Например Иван"
+                {...register('username', {
+                  required: true,
+                })}
+              />
+            </>
 
-            {errors.surname ? (
-              <>
-                <StyledErrorLabel>Ваше фамилия</StyledErrorLabel>
-                <ErrorInput placeholder="Например Иванов" />
-              </>
-            ) : (
-              <>
-                <StyledLabel>Ваше фамилия </StyledLabel>
-                <StyledInput
-                  placeholder="Например Иванов"
-                  {...register('surname', {
-                    required: true,
-                  })}
-                />
-              </>
-            )}
+            <>
+              <StyledLabel
+                style={errors.surname ? { color: 'red' } : { color: '#d0d0d0' }}
+              >
+                Ваше фамилия
+              </StyledLabel>
+              <StyledInput
+                style={
+                  errors.surname
+                    ? { border: '1px solid red' }
+                    : { border: '1px solid #e7e7e7' }
+                }
+                placeholder="Например Иванов"
+                {...register('surname', {
+                  required: true,
+                })}
+              />
+            </>
 
-            {errors.email ? (
-              <>
-                <StyledErrorLabel> Электронная почта</StyledErrorLabel>
-                <ErrorInput placeholder="example@mail.com" />
-              </>
-            ) : (
-              <>
-                <StyledLabel htmlFor="Электронная почта">
-                  Электронная почта
-                </StyledLabel>
-                <StyledInput
-                  placeholder="example@mail.com"
-                  {...register('email', {
-                    pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i,
-                  })}
-                />
-              </>
-            )}
+            <>
+              <StyledLabel
+                style={errors.email ? { color: 'red' } : { color: '#d0d0d0' }}
+                htmlFor="Электронная почта"
+              >
+                Электронная почта
+              </StyledLabel>
+              <StyledInput
+                style={
+                  errors.email
+                    ? { border: '1px solid red' }
+                    : { border: '1px solid #e7e7e7' }
+                }
+                placeholder="example@mail.com"
+                {...register('email', {
+                  required: true,
+                  pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i,
+                })}
+              />
+            </>
 
-            {errors.number ? (
-              <>
-                <StyledErrorLabel>Ваш номер телефона</StyledErrorLabel>
-                <ErrorInput placeholder="Введите номер телефона" />
-              </>
-            ) : (
-              <>
-                <StyledLabel>Ваш номер телефона</StyledLabel>
-                <StyledInput
-                  placeholder="Введите номер телефона"
-                  {...register('number', {
-                    pattern:
-                      /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
-                  })}
-                />
-              </>
-            )}
+            <>
+              <StyledLabel
+                style={errors.number ? { color: 'red' } : { color: '#d0d0d0' }}
+              >
+                Ваш номер телефона
+              </StyledLabel>
+              <StyledInput
+                style={
+                  errors.number
+                    ? { border: '1px solid red' }
+                    : { border: '1px solid #e7e7e7' }
+                }
+                type="tel"
+                placeholder="Введите номер телефона"
+                {...register('number', {
+                  required: true,
+                  minLength: 5,
+                })}
+              />
+            </>
 
-            {errors.country ? (
-              <>
-                <StyledErrorLabel>Страна</StyledErrorLabel>
-                <ErrorInput placeholder="Введите страну" />
-              </>
-            ) : (
-              <>
-                <StyledLabel>Страна</StyledLabel>
-                <StyledInput
-                  placeholder="Введите страну"
-                  {...register('country', {
-                    required: true,
-                  })}
-                />
-              </>
-            )}
+            <>
+              <StyledLabel
+                style={errors.country ? { color: 'red' } : { color: '#d0d0d0' }}
+              >
+                Страна
+              </StyledLabel>
+              <StyledInput
+                style={
+                  errors.country
+                    ? { border: '1px solid red' }
+                    : { border: '1px solid #e7e7e7' }
+                }
+                placeholder="Введите страну"
+                {...register('country', {
+                  required: true,
+                })}
+              />
+            </>
 
-            {errors.city ? (
-              <>
-                <StyledErrorLabel>Город</StyledErrorLabel>
-                <ErrorInput placeholder="Введите город" />
-              </>
-            ) : (
-              <>
-                <StyledLabel>Город</StyledLabel>
-                <StyledInput
-                  placeholder="Введите город"
-                  {...register('city', {
-                    required: true,
-                  })}
-                />
-              </>
-            )}
+            <>
+              <StyledLabel
+                style={errors.city ? { color: 'red' } : { color: '#d0d0d0' }}
+              >
+                Город
+              </StyledLabel>
+              <StyledInput
+                style={
+                  errors.city
+                    ? { border: '1px solid red' }
+                    : { border: '1px solid #e7e7e7' }
+                }
+                placeholder="Введите город"
+                {...register('city', {
+                  required: true,
+                })}
+              />
+            </>
 
             <StyledCheckedDiv>
-              <input style={{ marginRight: 8 }} type="checkbox" />
+              <input
+                style={{ marginRight: 8 }}
+                type="checkbox"
+                {...register('checkbox', {
+                  required: true,
+                })}
+              />
               <StyledSpan>
-                Согласен с условиями <Link to="/offert">публичной оферты</Link>
+                Согласен с условиями
+                <Link to="/offert"> публичной оферты</Link>
               </StyledSpan>
             </StyledCheckedDiv>
           </StyledSection>

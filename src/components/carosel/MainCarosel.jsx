@@ -42,7 +42,7 @@ export default function MainCarosel() {
         speed={1000}
         loop={true}
         autoplay={{
-          delay: 10000,
+          delay: 3000,
         }}
       >
         {coruselImg.map((item) => (

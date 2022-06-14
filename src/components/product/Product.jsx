@@ -125,9 +125,9 @@ const Product = () => {
   const filteredProduct = product.filter((item) => item.id === products);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const sameProduct = product.filter((element) => element.title);
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedColor, setSelectedColor] = useState('#73A39D');
   const [isSelectedProduct, setIsSelectedProduct] = useState(true);
-  console.log(filteredProduct);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -149,7 +149,7 @@ const Product = () => {
   };
 
   const changeMood = () => {
-    setIsSelectedProduct((prev) => !prev);
+    setIsSelectedProduct(selectedColor);
   };
 
   const handleToGoCart = () => {
@@ -174,19 +174,21 @@ const Product = () => {
             {item.productImages.map((el) => (
               <StyledSection key={el.id}>
                 <img
+                  className="scale"
                   width={308}
                   src={el.image}
                   style={{ marginBottom: '10px' }}
                   alt="img"
                 />
                 <img
+                  className="scale"
                   width={308}
                   src={el.image}
                   alt="img"
                   style={{ marginBottom: '10px' }}
                 />
-                <img width={308} src={el.image} alt="img" />
-                <img width={308} src={el.image} alt="img" />
+                <img className="scale" width={308} src={el.image} alt="img" />
+                <img className="scale" width={308} src={el.image} alt="img" />
               </StyledSection>
             ))}
 
@@ -228,13 +230,15 @@ const Product = () => {
                 <StyledPriceTitle>
                   {item.discount ? (
                     <>
-                      <StyledPrice>{item.discount} p</StyledPrice>
+                      <StyledPrice>
+                        {item.discount.toLocaleString()} p
+                      </StyledPrice>
                       <span className="previousPrice">
-                        {item.previousPrice} p
+                        {item.previousPrice.toLocaleString()} p
                       </span>
                     </>
                   ) : (
-                    <span>{item.previousPrice} p</span>
+                    <span>{item.previousPrice.toLocaleString()} p</span>
                   )}
                 </StyledPriceTitle>
                 <StyledP>O товаре:</StyledP>
@@ -257,14 +261,14 @@ const Product = () => {
                         <StyledSpan>{item.sizeRage}</StyledSpan>
                       </StyledP>
                       <StyledP>
-                        Состав ткани:
-                        <StyledSpan> {item.structure}</StyledSpan>
+                        Количество в линейке :
+                        <StyledSpan>{item.amountOfLines}</StyledSpan>
                       </StyledP>
                     </div>
                     <div style={{ textAlign: 'end' }}>
                       <StyledP>
-                        Количество в линейке :
-                        <StyledSpan>{item.amountOfLines}</StyledSpan>
+                        Состав ткани:
+                        <StyledSpan> {item.structure}</StyledSpan>
                       </StyledP>
                       <StyledP>
                         Материал: <StyledSpan>{item.material}</StyledSpan>
@@ -277,7 +281,7 @@ const Product = () => {
                       display: 'flex',
                     }}
                   >
-                    {isSelectedProduct ? (
+                    {!isSelectedProduct ? (
                       <Button
                         style={{
                           width: '418px',
@@ -309,7 +313,7 @@ const Product = () => {
                       </Button>
                     )}
                     <div>
-                      {!!favoriteItems.length ? (
+                      {favoriteItems.length ? (
                         <Button
                           style={{
                             height: '44px',

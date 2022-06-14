@@ -71,7 +71,10 @@ const Footer = () => {
       <StyledContainer>
         <StyledContent>
           <StyledBlock>
-            <StyledImg src={footerData.footerLogo} alt="footerLogo" />
+            <Link to="/">
+              <StyledImg src={footerData.footerLogo} alt="footerLogo" />
+            </Link>
+
             <p style={{ color: '#B9B9B9', marginTop: '32px' }}>
               Developed by Zeon 2022
             </p>

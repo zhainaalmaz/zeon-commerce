@@ -24,7 +24,6 @@ const StyledTitle = styled.p`
 
 const Collection = () => {
   const collection = useSelector((state) => state.collections.data);
-  console.log(collection, 'collection');
   const [count, setCount] = useState(4);
 
   const countClickHandler = () => {
@@ -35,13 +34,13 @@ const Collection = () => {
     <div className="container">
       <StyledTitle>Коллекции</StyledTitle>
       <StyledContainer className="container">
-        {collection.length !== 0 &&
+        {collection?.length !== 0 &&
           collection
-            .slice(0, count)
+            ?.slice(0, count)
             .map((item) => <CollectionCard key={item.id} item={item} />)}
       </StyledContainer>
 
-      {collection.length <= count || (
+      {collection?.length <= count || (
         <Button
           sx={{
             width: '107px',

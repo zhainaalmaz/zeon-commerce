@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import Content from '../../ui/Content';
 import styled from 'styled-components';
 import InterestedProducts from '../InterestedProducts';
+import './SearchBar.css';
+import Pagination from '../../ui/pagination/Pagination';
 
 const StyledContent = styled.div`
   display: flex;
@@ -48,7 +50,7 @@ const SearchPage = () => {
   const filteredItem = products.filter((item) => item.discount);
 
   const [interestPost, setInterestedPost] = useState([]);
-  const [count] = useState(5);
+  const [count] = useState(8);
 
   const params = useParams();
   const searchItemParams = params.inputEntered;
@@ -60,6 +62,23 @@ const SearchPage = () => {
   useEffect(() => {
     setInterestedPost(filteredItem);
   }, []);
+
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const itemsPerPage = 8;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(filterResult.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(filterResult.length / itemsPerPage));
+  }, [itemOffset]);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % filterResult.length;
+    setItemOffset(newOffset);
+  };
 
   return (
     <div className="container">
@@ -84,12 +103,13 @@ const SearchPage = () => {
             </StyledSpan>
           </div>
           <StyledContent>
-            {filterResult.map((item) => (
-              <div>
+            {currentItems.map((item) => (
+              <div key={item.id}>
                 <Content item={item} />
               </div>
             ))}
           </StyledContent>
+          <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
         </>
       )}
     </div>

@@ -76,7 +76,7 @@ const Content = ({ item }) => {
   const params = useParams();
 
   const collectionId = params.collectionList;
-  console.log(params, 'collerId');
+
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const filteredFev = favoriteItems.find((el) => el.id === item.id);
   const dispatch = useDispatch();
@@ -84,16 +84,12 @@ const Content = ({ item }) => {
 
   const navigateHandler = () => {
     if (!!collectionId) {
-      console.log('wwwww');
       navigate(`/${collectionId}/${item.id}`);
     } else {
-      console.log('111111');
-
       navigate(`/products/${item.id}`);
     }
   };
 
-  console.log(params);
   const onAddFavorite = (item) => dispatch(onAddToFavorite(item));
   const onRemoveFavorite = (item) => dispatch(onRemoveFromFavorite(item));
 
@@ -137,11 +133,7 @@ const Content = ({ item }) => {
           {/* <Link */}
           {/* // to={`/${params?.collectionId ? params?.collectionId : ''}/${item.id}`} */}
           {/* > */}
-          <StyledImage
-            src={item.productImages.map((el) => {
-              return el.image;
-            })}
-          />
+          <StyledImage src={item.productImages[0].image} />
 
           <div style={{ margin: '8px' }}>
             <StyledTitle>{item.title}</StyledTitle>
@@ -149,13 +141,15 @@ const Content = ({ item }) => {
               <span>
                 {item.discount ? (
                   <>
-                    <span style={{ marginRight: 5 }}>{item.discount} p </span>
+                    <span style={{ marginRight: 5 }}>
+                      {item.discount.toLocaleString()} p{' '}
+                    </span>
                     <span className="previousPrice">
-                      {item.previousPrice} p
+                      {item.previousPrice.toLocaleString()} p
                     </span>
                   </>
                 ) : (
-                  <span>{item.previousPrice} p</span>
+                  <span>{item.previousPrice.toLocaleString()} p</span>
                 )}
               </span>
             </StyledPricetitle>

@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Content from './Content';
 import styled from 'styled-components';
 import { pathActions } from '../store/path/pathSlice';
+import Pagination from './pagination/Pagination';
+import InterestedProducts from '../components/InterestedProducts';
 
 const StyledP = styled.p`
   font-weight: 500;
@@ -18,6 +20,16 @@ const StyledContent = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 18px;
+  padding-bottom: 16px;
+`;
+
+const StyledTitle = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  text-align: center;
 `;
 
 const CollectionList = () => {
@@ -35,6 +47,9 @@ const CollectionList = () => {
     (item) => item.collectionId === collectionParams
   );
 
+  const filteredNewItems = product.filter((item) => item.newproducts);
+  const [count] = useState(5);
+
   useEffect(() => {
     const paths = { [+collectionList]: collectionName[0]?.title };
     dispatch(pathActions.setPaths(paths));
@@ -44,13 +59,23 @@ const CollectionList = () => {
     <div className="container">
       <StyledP>{`${collectionName[0]?.title}`}</StyledP>
 
-      <StyledContent>
-        {filteredItem.map((item) => (
-          <div key={item.id}>
-            <Content item={item} />
-          </div>
-        ))}
-      </StyledContent>
+      <div>
+        <StyledContent>
+          {filteredItem.map((item) => (
+            <div key={item.id}>
+              <Content item={item} />
+            </div>
+          ))}
+        </StyledContent>
+      </div>
+      <div style={{ marginTop: 64 }}>
+        <StyledTitle>Новинки</StyledTitle>
+        <div style={{ display: 'flex' }}>
+          {filteredNewItems.slice(0, count).map((item) => (
+            <InterestedProducts key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

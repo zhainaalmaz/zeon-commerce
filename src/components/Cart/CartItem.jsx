@@ -142,13 +142,13 @@ const CartItem = ({ item }) => {
                 <span>
                   {item?.discount ? (
                     <>
-                      <span>{item?.discount}p. </span>
+                      <span>{item?.discount.toLocaleString()}p. </span>
                       <span className="previousPrice">
-                        {item?.previousPrice}p.
+                        {item?.previousPrice.toLocaleString()}p.
                       </span>
                     </>
                   ) : (
-                    <span>{item?.previousPrice}p.</span>
+                    <span>{item?.previousPrice.toLocaleString()}p.</span>
                   )}
                 </span>
               </StyledPricetitle>

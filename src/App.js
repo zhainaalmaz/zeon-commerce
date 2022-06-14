@@ -20,6 +20,8 @@ import { useLocation } from 'react-router-dom';
 import Breadcrumb from './ui/breadCrumbs/BreadCrumbs';
 import SearchPage from './components/search/SearchPage';
 import Offerts from './pages/Offerts';
+import Collections from './pages/Collections';
+import Floating from './components/floatingButtons/Floating';
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +38,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {/* <Floating /> */}
+
       <div className="main">
         {pathnames.length > 0 && <Breadcrumb />}
         <Routes>
@@ -46,6 +50,7 @@ function App() {
           <Route path="/favorite" element={<Favorite />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/:collectionList" element={<CollectionList />} />
+          <Route path="/collections" element={<Collections />} />
           <Route path="/:prodId" element={<Product />} />
           <Route path="/:collectionList/:productId" element={<Product />} />
           <Route path="/help" element={<Help />} />

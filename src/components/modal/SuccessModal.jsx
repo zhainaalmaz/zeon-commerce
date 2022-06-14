@@ -2,9 +2,6 @@ import React, { useRef } from 'react';
 import { ReactComponent as SuccessOrder } from '../../assets/icons/check.svg';
 import Button from '../../ui/Button';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { clearItemsFromCart } from '../../store/cartSlice';
 
 const StyledContent = styled.div`
   padding: 28px 24px;
@@ -33,17 +30,8 @@ const StyledButton = styled(Button)`
   background: #1d1d1b;
 `;
 
-const SuccessModal = ({ onClose }) => {
+const SuccessModal = ({ setOpen, setshowsuccess, showsuccess, ...props }) => {
   const divRef = useRef(null);
-  const navigate = useNavigate();
-
-  const reDirect = () => {
-    navigate('/');
-    dispatch(clearItemsFromCart());
-    onClose();
-  };
-
-  const dispatch = useDispatch();
 
   return (
     <div className="success-container">
@@ -57,8 +45,9 @@ const SuccessModal = ({ onClose }) => {
               <br /> скоро Вам перезвонят
             </StyledText>
             <StyledButton
-              style={{ width: '100%' }}
-              onClick={() => reDirect() && dispatch(clearItemsFromCart())}
+              style={{ width: '100%', background: 'black' }}
+              onClick={() => setOpen(false)}
+              {...props}
             >
               Продолжить покупки
             </StyledButton>

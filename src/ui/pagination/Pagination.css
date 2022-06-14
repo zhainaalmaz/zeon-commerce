@@ -1,0 +1,40 @@
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  gap: 5px;
+}
+
+.pagination .page-num {
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 400;
+  border: 1px solid inherit;
+  background-color: white;
+  text-align: center;
+  color: #979797;
+}
+
+.pagination .page-link {
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 400;
+  border: 1px solid inherit;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+}
+
+.pagination .page-num:hover {
+  background-color: black;
+  color: #f8f8f8;
+}
+
+.pagination .active {
+  background-color: black;
+  color: #f8f8f8;
+}

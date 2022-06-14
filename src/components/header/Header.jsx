@@ -46,11 +46,7 @@ const StyledSpan = styled.span`
   color: #393939;
 `;
 
-const StyledPhoneBlock = styled.span`
-  @media (min-width: 320px) {
-    display: none;
-  }
-`;
+const StyledPhoneBlock = styled.span``;
 
 const Header = () => {
   const headerLogo = useSelector((state) => state.commerce.data);
@@ -72,7 +68,7 @@ const Header = () => {
             <NavLink style={{ color: 'black' }} to="/about">
               О нас
             </NavLink>
-            <NavLink style={{ color: 'black' }} to="/collection">
+            <NavLink style={{ color: 'black' }} to="/collections">
               Коллекции
             </NavLink>
             <NavLink style={{ color: 'black' }} to="/news">

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Divider } from '@mui/material';
 import Button from '../../ui/Button';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ModalForm from '../modal/ModalForm';
 
 import SuccessModal from '../modal/SuccessModal';
+import { clearItemsFromCart } from '../../store/cartSlice';
+import { useNavigate } from 'react-router-dom';
 
 const StyledBlock = styled.div`
   width: 384px;
@@ -69,12 +71,14 @@ const StyledButton = styled(Button)`
   align-items: center;
   text-align: center;s
   color: #ffffff;
+  gap: 10px;
 `;
 
 const CartTotal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const productFromCart = useSelector((state) => state.cart.cartItems);
   const [showSuccess, setShowSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const totalQuantity = productFromCart.reduce((sum, current) => {
     return sum + current?.quantity;
@@ -98,6 +102,8 @@ const CartTotal = () => {
 
   const totalFinalPrice = totalPrice - totalDiscount;
 
+  const dispatch = useDispatch();
+
   const showModalHandler = () => {
     setIsModalOpen((prev) => !prev);
   };
@@ -105,6 +111,11 @@ const CartTotal = () => {
   const successHandler = () => {
     console.log('SUCCESS');
     setShowSuccess(true);
+  };
+
+  const reDirect = () => {
+    navigate('/');
+    dispatch(clearItemsFromCart());
   };
 
   return (
@@ -123,16 +134,16 @@ const CartTotal = () => {
             </StyledDiv>
             <StyledDiv>
               <StyledP>Стоимость:</StyledP>
-              <StyledText>{totalPrice}рублей</StyledText>
+              <StyledText>{totalPrice.toLocaleString()} рублей</StyledText>
             </StyledDiv>
             <StyledDiv>
               <StyledP>Скидка:</StyledP>
-              <StyledText>{totalDiscount}рублей</StyledText>
+              <StyledText>{totalDiscount.toLocaleString()} рублей</StyledText>
             </StyledDiv>
-            <Divider style={{ margin: '24px 0' }} />
+            <div style={{ border: '1px dashed grey', margin: '24px 0' }}></div>
             <StyledDiv>
               <StyledTotal>Итого к оплате:</StyledTotal>
-              <StyledText>{totalFinalPrice}рублей</StyledText>
+              <StyledText>{totalFinalPrice.toLocaleString()} рублей</StyledText>
             </StyledDiv>
           </StyledContent>
           <StyledButton
@@ -149,7 +160,7 @@ const CartTotal = () => {
               successHandler={successHandler}
             />
           )}
-          {showSuccess && <SuccessModal />}
+          {showSuccess && <SuccessModal onClick={reDirect} />}
         </div>
       </StyledBlock>
     </div>
