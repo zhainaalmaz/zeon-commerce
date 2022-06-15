@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
 import Button from '../../ui/Button';
 import { ReactComponent as BasketSvg } from '../../assets/icons/basket.svg';
 import { ReactComponent as HeartSvg } from '../../assets/icons/heart3.svg';
@@ -12,111 +11,13 @@ import {
 } from '../../store/favoriteSlice';
 import { addToCart } from '../../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
-import InterestedProducts from '../InterestedProducts';
+import InterestedProducts from '../interestedProducts/InterestedProducts';
 import { pathActions } from '../../store/path/pathSlice';
-
-const StyledColordiv = styled.div`
-  display: flex;
-`;
-
-const StyledDivColor = styled.div`
-  width: 10px;
-  height: 10px;
-  border-radius: 6px;
-  margin-right: 12px;
-  margin-top: 6px;
-  opacity: 47%;
-  margin-left: 6px;
-  padding-bottom: 2px;
-`;
-
-const StyledDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: start;
-`;
-
-const StyledP = styled.div`
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  color: #1d1d1b;
-  margin: 8px 0;
-`;
-
-const StyledSpan = styled.span`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 100%;
-  display: flex;
-  align-items: center;
-  color: #393939;
-  margin: 0 10px;
-`;
-
-const StyledSection = styled.div`
-  width: 624px;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 10px;
-`;
-
-const StyledBlock = styled.div`
-  width: 520px;
-  height: 464px;
-  background: white;
-  margin-top: 10px;
-  padding: 20px;
-`;
-
-const StyledTitle = styled.p`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  text-align: start;
-  margin-bottom: 15px;
-`;
-
-const StyledPrice = styled.span`
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  margin: 10px 0;
-  margin-right: 10px;
-`;
-
-const StyledDescription = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 25px;
-  color: #6a6a6a;
-`;
-
-const StyledPriceTitle = styled.span`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  margin-top: 20px;
-`;
-
-const StyledAddToBasketText = styled.span`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-`;
+import cls from './Product.module.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import SwiperCore, { Pagination, Autoplay } from 'swiper';
 
 const Product = () => {
   const params = useParams();
@@ -167,42 +68,40 @@ const Product = () => {
     <div style={{ background: '#ECECEC' }}>
       <div className="container">
         {filteredProduct.map((item) => (
-          <div
-            style={{ display: 'flex', justifyContent: 'space-around' }}
-            key={item.id}
-          >
+          <div className={cls.main} key={item.id}>
             {item.productImages.map((el) => (
-              <StyledSection key={el.id}>
-                <img
-                  className="scale"
-                  width={308}
-                  src={el.image}
-                  style={{ marginBottom: '10px' }}
-                  alt="img"
-                />
-                <img
-                  className="scale"
-                  width={308}
-                  src={el.image}
-                  alt="img"
-                  style={{ marginBottom: '10px' }}
-                />
-                <img className="scale" width={308} src={el.image} alt="img" />
-                <img className="scale" width={308} src={el.image} alt="img" />
-              </StyledSection>
+              <>
+                <div key={el.id} className={cls.section}>
+                  <img className="scale" src={el.image} alt="img" />
+                  <img className="scale" src={el.image} alt="img" />
+                  <img
+                    style={{ marginBottom: 0 }}
+                    className="scale"
+                    src={el.image}
+                    alt="img"
+                  />
+                  <img
+                    style={{ marginBottom: 0 }}
+                    className="scale"
+                    src={el.image}
+                    alt="img"
+                  />
+                </div>
+              </>
             ))}
 
-            <StyledBlock key={item.id}>
-              <StyledTitle>{item.title}</StyledTitle>
-              <StyledDiv>
-                <StyledP>
-                  Артикул:<StyledSpan> {item.article}</StyledSpan>
-                </StyledP>
-                <StyledColordiv>
-                  <StyledP>
+            <div className={cls.block} key={item.id}>
+              <h5 className={cls.title}>{item.title}</h5>
+              <div className={cls.content}>
+                <p className={cls.description}>
+                  Артикул:<span className={cls.span}> {item.article}</span>
+                </p>
+                <div className={cls.colors}>
+                  <p className={cls.description}>
                     Цвет:
                     {item.colors.map((color) => (
-                      <StyledDivColor
+                      <div
+                        className={cls.color}
                         key={color.id}
                         onClick={() => setSelectedColor(color.color)}
                         style={{
@@ -223,64 +122,57 @@ const Product = () => {
                           type="radio"
                         />
                         <label htmlFor="radio"></label>
-                      </StyledDivColor>
+                      </div>
                     ))}
-                  </StyledP>
-                </StyledColordiv>
-                <StyledPriceTitle>
+                  </p>
+                </div>
+                <div className={cls.priceTitle}>
                   {item.discount ? (
                     <>
-                      <StyledPrice>
+                      <p className={cls.price}>
                         {item.discount.toLocaleString()} p
-                      </StyledPrice>
-                      <span className="previousPrice">
+                      </p>
+                      <span className={cls.prevPrice}>
                         {item.previousPrice.toLocaleString()} p
                       </span>
                     </>
                   ) : (
-                    <span>{item.previousPrice.toLocaleString()} p</span>
+                    <span className={cls.span}>
+                      {item.previousPrice.toLocaleString()} p
+                    </span>
                   )}
-                </StyledPriceTitle>
-                <StyledP>O товаре:</StyledP>
-                <StyledDescription>{item.description}</StyledDescription>
+                </div>
+                <p className={cls.description}>O товаре:</p>
+                <p className={cls.aboutItem}>{item.description}</p>
                 <div
                   style={{
                     flexWrap: 'wrap',
                     justifyContent: 'space-between',
                   }}
                 >
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                    }}
-                  >
+                  <div className={cls.table}>
                     <div>
-                      <StyledP>
+                      <p className={cls.description}>
                         Размерный ряд:
-                        <StyledSpan>{item.sizeRage}</StyledSpan>
-                      </StyledP>
-                      <StyledP>
+                        <span className={cls.span}>{item.sizeRage}</span>
+                      </p>
+                      <p className={cls.description}>
                         Количество в линейке :
-                        <StyledSpan>{item.amountOfLines}</StyledSpan>
-                      </StyledP>
+                        <span className={cls.span}>{item.amountOfLines}</span>
+                      </p>
                     </div>
                     <div style={{ textAlign: 'end' }}>
-                      <StyledP>
+                      <p className={cls.description}>
                         Состав ткани:
-                        <StyledSpan> {item.structure}</StyledSpan>
-                      </StyledP>
-                      <StyledP>
-                        Материал: <StyledSpan>{item.material}</StyledSpan>
-                      </StyledP>
+                        <span className={cls.span}> {item.structure}</span>
+                      </p>
+                      <p className={cls.description}>
+                        Материал:
+                        <span className={cls.span}>{item.material}</span>
+                      </p>
                     </div>
                   </div>
-                  <div
-                    style={{
-                      width: '480px',
-                      display: 'flex',
-                    }}
-                  >
+                  <div className={cls.buttons}>
                     {!isSelectedProduct ? (
                       <Button
                         style={{
@@ -292,9 +184,9 @@ const Product = () => {
                         onClick={handleToGoCart}
                       >
                         <BasketSvg style={{ marginRight: 7 }} fill="white" />
-                        <StyledAddToBasketText>
+                        <span className={cls.addToBasket}>
                           Перейти в корзину
-                        </StyledAddToBasketText>
+                        </span>
                       </Button>
                     ) : (
                       <Button
@@ -307,9 +199,9 @@ const Product = () => {
                         onClick={() => addToCartHandler(item)}
                       >
                         <BasketSvg style={{ marginRight: 7 }} fill="white" />
-                        <StyledAddToBasketText>
+                        <span className={cls.addToBasket}>
                           Добавить в корзину
-                        </StyledAddToBasketText>
+                        </span>
                       </Button>
                     )}
                     <div>
@@ -343,14 +235,14 @@ const Product = () => {
                     </div>
                   </div>
                 </div>
-              </StyledDiv>
-            </StyledBlock>
+              </div>
+            </div>
           </div>
         ))}
 
         <div>
-          <StyledTitle style={{ marginTop: 48 }}>Похожие товары</StyledTitle>
-          <div style={{ display: 'flex' }}>
+          <h6 className={cls.title}>Похожие товары</h6>
+          <div className={cls.interestedProducts}>
             {sameProduct.slice(0, count).map((item) => (
               <InterestedProducts key={item.id} item={item} />
             ))}

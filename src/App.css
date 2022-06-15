@@ -6,6 +6,18 @@
   width: 1168px;
   margin: 0 auto;
 }
+@media all and (max-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .main {
+    max-width: 320px;
+    background-color: #f8f8f8;
+  }
+}
 
 .main {
   background-color: #f8f8f8;
@@ -24,14 +36,10 @@ input[type='radio']:checked + label::before {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background-color: transparent;
   border: 1px solid grey;
-}
-
-label {
-  margin-top: 1;
 }
 
 input[type='submit'] {
@@ -137,30 +145,5 @@ input[disabled] {
 }
 
 .scale:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 320px) {
-  p {
-    text-align: start;
-  }
-}
-
-@media all and (max-width: 1200px) {
-  div {
-    width: 100%;
-  }
-}
-
-@media all and (max-width: 480px) {
-  div {
-    width: 100%;
-  }
-}
-
-@media all and (max-width: 890px) {
-  .container {
-    max-width: 890px;
-    margin: 0 auto;
-  }
+  transform: scale(1.2);
 }

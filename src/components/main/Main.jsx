@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import MainCarosel from '../carosel/MainCarosel';
-import BestSeller from './BestSeller';
-import NewProducts from './NewProducts';
+import BestSeller from './bestSeller/BestSeller';
+import NewProducts from './newProduct/NewProducts';
 import { Divider } from '@mui/material';
-import Collection from './Collection';
-import Advantages from './Advantages';
+import Collection from './collection/Collection';
+import Advantages from './advantage/Advantages';
 import arrow from '../../assets/icons/up.svg';
 import deleteSvg from '../../assets/icons/delete.svg';
 import callback from '../../assets/icons/callback.svg';
 import Floating from '../floatingButtons/Floating';
-
+import cls from './Main.module.css';
 const Main = () => {
   const [open, setOpen] = useState(false);
 
@@ -25,21 +25,12 @@ const Main = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#f8f8f8', width: '100%' }}>
+    <div className={cls.main}>
       <Divider />
       <div className="container" style={{ paddingTop: 10 }}>
         {open && <Floating open={open} setOpen={setOpen} />}
-        <MainCarosel />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'fixed',
-            top: '66%',
-            right: '8%',
-            zIndex: 3,
-          }}
-        >
+        {/* <MainCarosel /> */}
+        <div className={cls.content}>
           {open && (
             <>
               <img

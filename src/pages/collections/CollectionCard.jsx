@@ -1,7 +1,7 @@
 import React from 'react';
 import CardMedia from '@mui/material/CardMedia';
 import styled from 'styled-components';
-import { ReactComponent as ArrowSvg } from '../assets/icons/arrow.svg';
+import { ReactComponent as ArrowSvg } from '../../assets/icons/arrow.svg';
 import { NavLink } from 'react-router-dom';
 
 const StyledCard = styled.div`

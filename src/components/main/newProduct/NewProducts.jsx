@@ -1,23 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import styled from 'styled-components';
-import Button from '../../ui/Button';
-import Content from '../../ui/Content';
-
-const StyledP = styled.p`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  margin-top: 44px;
-`;
-
-const StyledContent = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 18px;
-`;
+import Button from '../../../ui/Button';
+import Content from '../../../ui/content/Content';
+import cls from './NewProducts.module.css';
 
 const NewProducts = () => {
   const products = useSelector((state) => state.products.data);
@@ -31,15 +16,15 @@ const NewProducts = () => {
 
   return (
     <>
-      <StyledP>Новинки</StyledP>
-      <StyledContent>
+      <h5 className={cls.title}>Новинки</h5>
+      <section className={cls.content}>
         {filteredItem.length !== 0 &&
           filteredItem.slice(0, count).map((item) => (
             <div key={item.id}>
               <Content item={item} />
             </div>
           ))}
-      </StyledContent>
+      </section>
 
       {filteredItem.length <= count || (
         <Button

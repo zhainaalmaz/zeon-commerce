@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import Content from './Content';
+import Content from './content/Content';
 import styled from 'styled-components';
 import { pathActions } from '../store/path/pathSlice';
-import Pagination from './pagination/Pagination';
-import InterestedProducts from '../components/InterestedProducts';
+import InterestedProducts from '../components/interestedProducts/InterestedProducts';
 
 const StyledP = styled.p`
   font-weight: 500;

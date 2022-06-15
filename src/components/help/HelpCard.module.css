@@ -1,0 +1,27 @@
+.container {
+  background-color: white;
+  margin-bottom: 12px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content h4 {
+  padding: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #393939;
+}
+
+.text {
+  padding: 0px 16px 16px 16px;
+  margin: 0;
+  color: #354455;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 160%;
+}

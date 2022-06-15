@@ -4,16 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import { getCoruselImageRequest } from '../../api/service';
-import styled from 'styled-components';
 import './MainCarosel.css';
-
-const StyledContainer = styled.div`
-  padding-bottom: 15px;
-
-  // @media screen and (max-width: 360px) {
-  //   height: 300px;
-  // }
-`;
 
 SwiperCore.use([Autoplay]);
 
@@ -33,7 +24,7 @@ export default function MainCarosel() {
   }, []);
 
   return (
-    <StyledContainer>
+    <div className="wrapper">
       <Swiper
         modules={[Pagination]}
         slidesPerView={1}
@@ -55,6 +46,6 @@ export default function MainCarosel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </StyledContainer>
+    </div>
   );
 }

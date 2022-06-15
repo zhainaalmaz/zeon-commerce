@@ -48,10 +48,10 @@ const SearchBar = () => {
           <SearchIcon className="searchBtn" onClick={searchNavigateHandler} />
         </div>
       </>
-      {filteredData.length !== 0 && (
+      {filteredData?.length !== 0 && (
         <div className="dataResult">
           <div className="dataRes"> </div>
-          {filteredData.map((value, key) => (
+          {filteredData?.map((value, key) => (
             <div key={value.id}>
               <NavLink
                 style={{

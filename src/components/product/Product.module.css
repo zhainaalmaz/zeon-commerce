@@ -1,0 +1,192 @@
+.section {
+  width: 624px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.section img {
+  width: 308px;
+  margin-bottom: 10px;
+}
+
+@media all and (max-width: 320px) {
+  .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .section img {
+    width: 262px;
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+
+.block {
+  width: 520px;
+  height: 464px;
+  background: white;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+@media all and (max-width: 320px) {
+  .block {
+    width: 288px;
+    height: auto;
+    margin: 16px;
+    padding: 12px;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media all and (max-width: 320px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media all and (max-width: 320px) {
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.title {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  text-align: start;
+}
+
+@media all and (max-width: 320px) {
+  .title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.price {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  margin: 10px 0;
+  margin-right: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #1d1d1b;
+  margin: 8px 0;
+}
+
+.span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #393939;
+  margin: 0 10px;
+}
+
+.prevPrice {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration-line: line-through;
+  color: #979797;
+}
+
+.priceTitle {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+}
+
+.colors {
+  display: flex;
+}
+
+.color {
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  opacity: 47%;
+  margin: 0 6px;
+  display: flex;
+  align-items: center;
+}
+
+.aboutItem {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: #6a6a6a;
+}
+
+.addToBasket {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.buttons {
+  width: 480px;
+  display: flex;
+}
+
+@media all and (max-width: 320px) {
+  .buttons {
+    width: 264px;
+  }
+}
+
+.interestedProducts {
+  display: flex;
+}
+
+@media all and (max-width: 320px) {
+  .interestedProducts {
+    padding: 0 16px;
+    overflow-y: auto;
+  }
+}

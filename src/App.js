@@ -3,11 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Main from './components/main/Main';
-import AboutUs from './pages/AboutUs';
-import Collection from './components/main/Collection';
-import News from './pages/News';
-import Favorite from './pages/Favorite';
-import Cart from './pages/Cart';
+import AboutUs from './pages/aboutUs/AboutUs';
+import Collection from './components/main/collection/Collection';
+import News from './pages/news/News';
+import Favorite from './pages/favorite/Favorite';
+import Cart from './pages/cart/Cart';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchAsyncProducts } from './store/productSlice';
@@ -15,13 +15,12 @@ import { fetchAsyncCollections } from './store/collectionsSlice';
 import CollectionList from './ui/CollectionList';
 import Product from './components/product/Product';
 import { fetchAsyncCommerce } from './store/commerceSlice';
-import Help from './pages/Help';
+import Help from './pages/help/Help';
 import { useLocation } from 'react-router-dom';
 import Breadcrumb from './ui/breadCrumbs/BreadCrumbs';
 import SearchPage from './components/search/SearchPage';
-import Offerts from './pages/Offerts';
-import Collections from './pages/Collections';
-import Floating from './components/floatingButtons/Floating';
+import Offerts from './pages/offerts/Offerts';
+import Collections from './pages/collections/Collections';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,8 +37,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Floating /> */}
-
       <div className="main">
         {pathnames.length > 0 && <Breadcrumb />}
         <Routes>

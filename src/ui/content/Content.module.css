@@ -1,0 +1,89 @@
+.container {
+  width: 284px;
+  height: 536px;
+  background: white;
+  margin: 8px 4px;
+  text-align: start;
+  border: 1px solid #f1f1f1;
+  position: relative;
+}
+
+@media all and (max-width: 320px) {
+  .container {
+    padding-right: 8px;
+    margin-left: 16px;
+  }
+}
+
+.heart {
+  position: absolute;
+  cursor: pointer;
+  top: 1%;
+  right: 3%;
+}
+
+.hearted {
+  position: absolute;
+  cursor: pointer;
+  top: 1%;
+  right: 3%;
+  z-index: -1;
+}
+
+.container:hover .hearted {
+  z-index: 3;
+}
+
+.percentText {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: matrix(0.71, -0.7, 0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+
+.title {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #393939;
+}
+
+.priceTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #393939;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto;
+}
+
+.color {
+  width: 8px;
+  height: 8px;
+  border: solid 0.2px rgba(209, 209, 209, 1);
+  border-radius: 4px;
+  margin-right: 12px;
+  margin-top: 6px;
+  opacity: 47%;
+}
+
+.sizeTitle {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7c7c7c;
+  margin-top: 6px;
+}
+
+.images {
+  width: 100%;
+}

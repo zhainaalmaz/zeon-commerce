@@ -1,0 +1,13 @@
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  padding-top: 32px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}

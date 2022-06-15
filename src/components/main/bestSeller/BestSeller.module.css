@@ -1,0 +1,34 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+@media all and (max-width: 320px) {
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  margin-top: 44px;
+}
+
+.button {
+  width: 107px;
+  height: 32px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 320px) {
+  .button {
+    display: none;
+  }
+}

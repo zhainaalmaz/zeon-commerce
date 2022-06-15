@@ -1,0 +1,89 @@
+.container {
+  width: 226px;
+  height: 420px;
+  background: white;
+  margin: 16px 3px 64px 0;
+  text-align: start;
+  border: 1px solid #f1f1f1;
+  position: relative;
+}
+
+.container:hover .hearted {
+  z-index: 3;
+}
+
+.heart {
+  position: absolute;
+  cursor: pointer;
+  top: 1%;
+  right: 3%;
+}
+
+.hearted {
+  position: absolute;
+  cursor: pointer;
+  top: 1%;
+  right: 3%;
+  z-index: -1;
+}
+
+.percentText {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: matrix(0.71, -0.7, 0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+
+.priceTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #393939;
+}
+
+.title {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #393939;
+}
+
+.sizeTitle {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7c7c7c;
+  margin-top: 6px;
+}
+
+.images {
+  width: 100%;
+  height: 320px;
+}
+
+@media (max-width: 320px) {
+  .images {
+    width: 226px;
+  }
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto;
+}
+
+.color {
+  width: 8px;
+  height: 8px;
+  border: solid 0.2px;
+  border-radius: 4px;
+  margin-right: 12px;
+  margin-top: 6px;
+  opacity: 47%;
+}
