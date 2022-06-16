@@ -48,7 +48,13 @@ input[type='submit'] {
   background: black;
   color: #fff;
   border: 1px solid #999;
-  margin-top: 32px;
+  /* margin-top: 32px; */
+}
+
+@media all and (max-width: 320px) {
+  input[type='submit'] {
+    margin-top: 12px;
+  }
 }
 
 input[disabled] {
@@ -94,6 +100,12 @@ input[disabled] {
   display: block;
   margin-top: 252px;
 }
+@media all and (max-width: 320px) {
+  .success-modal {
+    max-width: 288px;
+    height: 246px;
+  }
+}
 
 .request-container {
   position: fixed;
@@ -132,6 +144,13 @@ input[disabled] {
   overflow: hidden;
   display: block;
   margin-top: 226px;
+}
+
+@media all and (max-width: 320px) {
+  .request-modal {
+    max-width: 288px;
+    height: 274px;
+  }
 }
 
 .scale-hover {

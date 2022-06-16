@@ -62,8 +62,8 @@ const Content = ({ item }) => {
       >
         <img className={cls.images} src={item.productImages[0].image} alt="/" />
         <div style={{ margin: '8px' }}>
-          <h5 className={cls.title}>{item.title}</h5>
-          <p className={cls.priceTitle} style={{ marginTop: '5px' }}>
+          <h5 className={cls.content_title}>{item.title}</h5>
+          <p className={cls.content_priceTitle} style={{ marginTop: '5px' }}>
             <span>
               {item.discount ? (
                 <>

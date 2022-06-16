@@ -21,3 +21,30 @@
 .wrapper {
   padding-bottom: 15px;
 }
+
+.slider_image {
+  height: 488px;
+}
+
+@media all and (max-width: 320px) {
+  .wrapper {
+    width: 320px;
+    /* height: 314px; */
+  }
+}
+
+@media all and (max-width: 320px) {
+  .slider_image {
+    width: 320px;
+    height: 298px;
+    /* height: 314px; */
+  }
+}
+
+@media all and (max-width: 320px) {
+  .slider_main {
+    width: 320px;
+    height: 298px;
+    /* height: 314px; */
+  }
+}

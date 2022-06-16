@@ -1,0 +1,16 @@
+.floating_container {
+  position: fixed;
+  top: 71%;
+  left: 77%;
+  margin: 0;
+  background: transparent;
+  z-index: 3;
+}
+
+@media all and (max-width: 320px) {
+  .floating_container {
+    display: flex;
+    position: static;
+    z-index: 0;
+  }
+}

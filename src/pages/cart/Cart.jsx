@@ -40,7 +40,9 @@ const Cart = () => {
                 </div>
               ))}
             </div>
-            <CartTotal />
+            <div className={cls.content}>
+              <CartTotal />
+            </div>
           </div>
         </div>
       )}

@@ -1,0 +1,52 @@
+.content {
+  padding: 28px 24px;
+}
+@media all and (max-width: 320px) {
+  .content {
+    padding: 24px 16px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  color: #393939;
+  padding-top: 12px;
+}
+
+@media all and (max-width: 320px) {
+  .title {
+    text-align: center;
+  }
+}
+
+.text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  color: #393939;
+  padding-top: 8px;
+}
+
+@media all and (max-width: 320px) {
+  .text {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+.success_button {
+  width: 280px;
+  height: 44px;
+  background: #1d1d1b;
+}
+
+@media all and (max-width: 320px) {
+  .success_icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

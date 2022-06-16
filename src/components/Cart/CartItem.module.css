@@ -6,11 +6,24 @@
   background: #ffffff;
   padding: 12px;
 }
+@media (max-width: 320px) {
+  .container {
+    width: 288px;
+    margin: 16px;
+    padding: 10px;
+  }
+}
 
 .content {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+@media (max-width: 320px) {
+  .content {
+    width: 288px;
+  }
 }
 
 .title {
@@ -19,6 +32,23 @@
   line-height: 17px;
   color: #393939;
   padding-bottom: 7px;
+}
+
+@media (max-width: 320px) {
+  .title {
+    text-align: start;
+  }
+}
+
+.block {
+  margin: 0 16px;
+}
+
+@media (max-width: 320px) {
+  .block {
+    width: 140px;
+    margin: 0 0 0 6px;
+  }
 }
 
 .size {

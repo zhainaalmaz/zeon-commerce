@@ -18,6 +18,19 @@
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
 }
 
+@media all and (max-width: 320px) {
+  .container {
+    width: 288px;
+    margin-left: 16px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .desktop_news {
+    display: none;
+  }
+}
+
 .section {
   margin: 16px;
   text-align: start;
@@ -49,5 +62,27 @@
   .section {
     width: 100%;
     margin: 10px 0;
+  }
+}
+
+.hide_button {
+  margin-top: 6px;
+  width: 264px;
+  height: 32px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #1d1d1b;
+  border: 1px solid #ededed;
+  background: #ffffff;
+}
+
+.mobile_news {
+  display: none;
+}
+
+@media all and (max-width: 320px) {
+  .mobile_news {
+    display: block;
   }
 }

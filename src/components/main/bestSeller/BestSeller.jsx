@@ -20,7 +20,7 @@ const BestSeller = () => {
       <section className={cls.content}>
         {filteredItem.length !== 0 &&
           filteredItem.slice(0, count).map((item) => (
-            <div key={item.id} style={{ width: '284px' }}>
+            <div key={item.id}>
               <Content item={item} />
             </div>
           ))}

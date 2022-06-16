@@ -73,7 +73,7 @@ const InterestedProducts = ({ item }) => {
             </span>
           </p>
           <p className={cls.title}>{item.title}</p>
-          <p className={cls.sizetitle}>Размер: {item.sizeRage}</p>
+          <p className={cls.sizeTitle}>Размер: {item.sizeRage}</p>
           <div className={cls.colors}>
             {item.colors.map((color) => (
               <div

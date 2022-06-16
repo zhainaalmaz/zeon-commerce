@@ -9,13 +9,12 @@ const AboutUs = () => {
     <div className={classes.wrapper}>
       <div className="container">
         <div className={classes.container1}>
-          <div className={classes.section}>
-            <div className={classes.images_block}>
-              <img width={327} src={aboutUs?.image1} alt="aboutUsImg1" />
-              <img width={327} src={aboutUs?.image2} alt="aboutUsImg2" />
-            </div>
+          <div className={classes.images_block}>
+            <img width={327} src={aboutUs?.image1} alt="aboutUsImg1" />
+            <img width={327} src={aboutUs?.image2} alt="aboutUsImg2" />
           </div>
-          <div>
+
+          <div className={classes.image_block}>
             <img width={327} src={aboutUs?.image3} alt="aboutUsImg3" />
           </div>
           <div className={classes.text_block}>

@@ -5,9 +5,10 @@ import classes from './News.module.css';
 const News = () => {
   const newsData = useSelector((state) => state.commerce.data.news);
   const [limit, setLimit] = useState(0);
+  const [hideText, setHideText] = useState(false);
 
   useEffect(() => {
-    changeLimit(4);
+    changeLimit(2);
   }, []);
 
   const changeLimit = (num) => {
@@ -27,6 +28,10 @@ const News = () => {
     };
   }, []);
 
+  const toggleText = () => {
+    setHideText(!hideText);
+  };
+
   return (
     <div style={{ backgroundColor: '#f8f8f8' }}>
       <div className="container">
@@ -38,8 +43,33 @@ const News = () => {
               <div className={classes.container} key={item.id}>
                 <img width={226} src={item.image} alt="newsImg" />
                 <div className={classes.section}>
-                  <span>{item.title}</span>
-                  <p>{item.description}</p>
+                  <div className={classes.desktop_news}>
+                    <span>{item.title}</span>
+                    <p>{item.description}</p>
+                  </div>
+
+                  <div className={classes.mobile_news}>
+                    {hideText ? (
+                      <p>{item.description}</p>
+                    ) : (
+                      <p>{item.description.substr(0, 200)}</p>
+                    )}
+                    {hideText ? (
+                      <button
+                        className={classes.hide_button}
+                        onClick={toggleText}
+                      >
+                        Скрыть
+                      </button>
+                    ) : (
+                      <button
+                        className={classes.hide_button}
+                        onClick={toggleText}
+                      >
+                        Читать полностью
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../../ui/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import ModalForm from '../modal/ModalForm';
-import SuccessModal from '../modal/SuccessModal';
+import SuccessModal from '../modal/modalSuccess/SuccessModal';
 import { clearItemsFromCart } from '../../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import cls from './CartTotal.module.css';

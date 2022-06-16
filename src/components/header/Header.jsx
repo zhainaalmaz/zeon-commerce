@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import styled from 'styled-components';
 import { Divider } from '@mui/material';
 import { ReactComponent as BasketLogo } from './../../assets/icons/basket.svg';
 import { ReactComponent as FavoriteLogo } from './../../assets/icons/favorite.svg';
@@ -10,43 +9,8 @@ import { ReactComponent as FavoritedSvg } from '../../assets/icons/favorite2.svg
 import { ReactComponent as AddedBasketIcon } from '../../assets/icons/basket2.svg';
 import { useSelector } from 'react-redux';
 import SearchBar from '../search/SearchBar';
-
-const StyledLayout = styled.div`
-  margin: 22px 0;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const StyledContainer = styled.div`
-  width: 274px;
-  display: flex;
-  justify-content: space-between;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 21px;
-  @media (max-width: 320px) {
-    display: none;
-  }
-`;
-
-const StyledContent = styled.div`
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media {
-    display: flex;
-  }
-`;
-
-const StyledSpan = styled.span`
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: #393939;
-`;
-
-const StyledPhoneBlock = styled.span``;
+import cls from './Header.module.css';
+import { ReactComponent as SearchIcon } from '../../assets/icons/search2.svg';
 
 const Header = () => {
   const headerLogo = useSelector((state) => state.commerce.data);
@@ -54,6 +18,8 @@ const Header = () => {
   const [isAdded, setIsAdded] = useState([]);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const addedItems = useSelector((state) => state.cart.cartItems);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsFavorite(favoriteItems);
@@ -63,8 +29,8 @@ const Header = () => {
   return (
     <div className="divider-line">
       <div className="container">
-        <StyledLayout>
-          <StyledContainer>
+        <div className={cls.layout}>
+          <div className={cls.container}>
             <NavLink style={{ color: 'black' }} to="/about">
               О нас
             </NavLink>
@@ -74,9 +40,9 @@ const Header = () => {
             <NavLink style={{ color: 'black' }} to="/news">
               Новости
             </NavLink>
-          </StyledContainer>
+          </div>
 
-          <StyledPhoneBlock>
+          <span>
             Тел:
             <a
               href="tel:+996 000 00 00 00"
@@ -84,41 +50,43 @@ const Header = () => {
             >
               +996 000 00 00 00
             </a>
-          </StyledPhoneBlock>
-        </StyledLayout>
+          </span>
+        </div>
       </div>
       <Divider />
       <div className="container">
-        <StyledContent>
-          {/* <MuiDrawer navigate={navigate} /> */}
+        <div className={cls.content}>
+          <div className={cls.burger_menu}>
+            <MuiDrawer navigate={navigate} />
+          </div>
+
           <Link to="/">
             <img alt="logo" src={headerLogo.headerLogo} />
           </Link>
+          <div className={cls.search_icon}>
+            <SearchIcon />
+          </div>
+          <div className={cls.search_input}>
+            <SearchBar />
+          </div>
 
-          <SearchBar />
-          <NavLink
-            style={{ color: 'black', display: 'flex', alignItems: 'center' }}
-            to="/favorite"
-          >
+          <NavLink className={cls.navLink_styles} to="/favorite">
             {isFavorite.length > 0 ? (
               <FavoritedSvg style={{ marginRight: 10 }} />
             ) : (
               <FavoriteLogo style={{ marginRight: 10 }} fill="#393939" />
             )}
-            <StyledSpan> Избранное</StyledSpan>
+            <span className={cls.title}>Избранное</span>
           </NavLink>
-          <NavLink
-            style={{ color: 'black', display: 'flex', alignItems: 'center' }}
-            to="/cart"
-          >
+          <NavLink className={cls.navLink_styles} to="/cart">
             {isAdded?.length > 0 ? (
               <AddedBasketIcon style={{ marginRight: 10 }} />
             ) : (
               <BasketLogo style={{ marginRight: 10 }} fill="#393939" />
             )}
-            <StyledSpan> Корзина</StyledSpan>
+            <span className={cls.title}> Корзина</span>
           </NavLink>
-        </StyledContent>
+        </div>
       </div>
     </div>
   );

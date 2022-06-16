@@ -18,11 +18,17 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-y: auto;
+    width: 100%;
   }
+
   .section img {
     width: 262px;
     margin-bottom: 0;
     margin-right: 8px;
+  }
+  .section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 }
 
@@ -188,5 +194,9 @@
   .interestedProducts {
     padding: 0 16px;
     overflow-y: auto;
+  }
+  .interestedProducts::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 }

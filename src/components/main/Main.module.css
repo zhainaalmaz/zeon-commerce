@@ -7,6 +7,12 @@
   z-index: 3;
 }
 
+@media all and (max-width: 320px) {
+  .content {
+    display: none;
+  }
+}
+
 .main {
   width: 100%;
 }

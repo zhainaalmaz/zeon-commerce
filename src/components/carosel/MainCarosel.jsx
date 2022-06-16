@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import { getCoruselImageRequest } from '../../api/service';
 import './MainCarosel.css';
+// import mobSlider from '../../assets/images/mobSlider.png';
 
 SwiperCore.use([Autoplay]);
 
@@ -37,14 +38,14 @@ export default function MainCarosel() {
         }}
       >
         {coruselImg.map((item) => (
-          <SwiperSlide key={item.id}>
-            <img
-              style={{ height: '488px' }}
-              src={item.image}
-              alt="coruselImg"
-            />
+          <SwiperSlide key={item.id} className="slider_main">
+            <img className="slider_image" src={item.image} alt="coruselImg" />
           </SwiperSlide>
         ))}
+
+        {/* <SwiperSlide>
+          <img className="slider_image" src={mobSlider} alt="coruselImg" />
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

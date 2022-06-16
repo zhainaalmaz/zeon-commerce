@@ -11,3 +11,15 @@
   flex-wrap: wrap;
   margin-top: 18px;
 }
+
+@media all and (max-width: 320px) {
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

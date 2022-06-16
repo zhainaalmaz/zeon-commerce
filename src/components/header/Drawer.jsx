@@ -12,18 +12,17 @@ import {
   Divider,
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
+import Floating from '../floatingButtons/Floating';
+import './Drawer.css';
+import { ReactComponent as DeleteSvg } from '../../assets/icons/delete.svg';
 
 const MuiDrawer = ({ navigate }) => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
   const itemList = [
     {
-      text: 'Меню',
-      onClick: () => navigate('/menu'),
-    },
-    {
       text: 'О нас',
-      onClick: () => navigate('/aboutUs'),
+      onClick: () => navigate('/about'),
     },
     {
       text: 'Новости',
@@ -31,7 +30,7 @@ const MuiDrawer = ({ navigate }) => {
     },
     {
       text: 'Коллекция',
-      onClick: () => navigate('/collection'),
+      onClick: () => navigate('/collections'),
     },
   ];
 
@@ -42,9 +41,10 @@ const MuiDrawer = ({ navigate }) => {
     },
     {
       text: 'Корзина',
-      onClick: () => navigate('/basket'),
+      onClick: () => navigate('/cart'),
     },
   ];
+
   return (
     <div>
       <IconButton
@@ -54,16 +54,23 @@ const MuiDrawer = ({ navigate }) => {
         aria-label="logo"
         onClick={() => setIsDrawerOpen(true)}
       >
-        <MenuIcon />
+        <MenuIcon
+          style={{ border: '2px solid #EDEDED', width: '36px', height: 36 }}
+        />
       </IconButton>
 
       <Drawer
+        className="drawer_container"
         anchor="left"
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
       >
-        <Box p={2} width="250px" textAlign="center" role="presentation">
-          <List>
+        <Box className="drawer_box" p={2} role="presentation">
+          <div className="drawer_header">
+            <h5 className="drawer_menu">Меню</h5>
+            <DeleteSvg onClick={() => setIsDrawerOpen(false)} />
+          </div>
+          <List className="drawer_list">
             {itemList.map((item) => {
               const { text, onClick } = item;
               return (
@@ -75,7 +82,9 @@ const MuiDrawer = ({ navigate }) => {
               );
             })}
           </List>
+
           <Divider />
+
           <List>
             {itemList2.map((item, index) => {
               const { text, onClick } = item;
@@ -93,6 +102,21 @@ const MuiDrawer = ({ navigate }) => {
                 </ListItem>
               );
             })}
+            <div className="drawer_footer">
+              <div style={{ marginBottom: 8 }}>
+                <h5 className="drawer_phone"> Свяжитeсь с нами:</h5>
+                <span className="drawer_number">
+                  Тел:
+                  <a
+                    href="tel:+996 000 00 00 00"
+                    style={{ color: 'black', marginLeft: 5 }}
+                  >
+                    +996 000 00 00 00
+                  </a>
+                </span>
+              </div>
+              <Floating />
+            </div>
           </List>
         </Box>
       </Drawer>

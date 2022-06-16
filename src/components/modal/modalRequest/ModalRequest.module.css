@@ -1,0 +1,87 @@
+.form {
+  position: relative;
+}
+
+.content {
+  margin: 22px 38px 32px 38px;
+}
+
+@media all and (max-width: 320px) {
+  .content {
+    margin: 24px 16px;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  color: #393939;
+}
+
+@media all and (max-width: 320px) {
+  .title {
+    font-size: 14px;
+    line-height: 125%;
+    color: #393939;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: flex-end;
+  color: #393939;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+@media all and (max-width: 320px) {
+  .text {
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    align-items: flex-end;
+    color: #393939;
+  }
+}
+
+.request_input {
+  border: none;
+  padding: 10px 12px;
+  width: 392px;
+  height: 44px;
+  background: #ffffff;
+  /* ::placeholder {
+      color: #d0d0d0;
+      font-size: 14px;
+      line-height: 17px;
+    } */
+}
+
+.request_input::placeholder {
+  color: #d0d0d0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.request_label {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10;
+  border: 1px solid #e7e7e7;
+}
+
+.request_submit {
+  width: 360px;
+  margin-top: 12px;
+}
+
+@media all and (max-width: 320px) {
+  .request_submit {
+    width: 256px;
+  }
+}

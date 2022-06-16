@@ -29,7 +29,7 @@ const Main = () => {
       <Divider />
       <div className="container" style={{ paddingTop: 10 }}>
         {open && <Floating open={open} setOpen={setOpen} />}
-        {/* <MainCarosel /> */}
+        <MainCarosel />
         <div className={cls.content}>
           {open && (
             <>

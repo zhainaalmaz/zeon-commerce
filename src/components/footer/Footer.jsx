@@ -5,145 +5,92 @@ import { ReactComponent as TelegramSvg } from './../../assets/icons/telegram.svg
 import { ReactComponent as WhatsappSvg } from './../../assets/icons/whatsapp.svg';
 import { ReactComponent as InstagramSvg } from './../../assets/icons/instagram.svg';
 import { useSelector } from 'react-redux';
-
-const StyledContainer = styled.div`
-  width: 100%;
-  height: 235px;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  text-align: start;
-`;
-
-const StyledContent = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 48px 100px;
-  @media (max-width: 320px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const StyledP = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  margin-top: 12px;
-`;
-
-const StyledSpan = styled.span`
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #e2e2e2;
-`;
-
-const StyledAtag = styled.a`
-  color: white;
-`;
-
-const StyledBlock = styled.div`
-  @media (max-width: 320px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const StyledImg = styled.img`
-  @media (max-width: 320px) {
-    display: flex;
-    align-items: start;
-  }
-`;
+import cls from './Footer.module.css';
 
 const Footer = () => {
   const footerData = useSelector((state) => state.commerce.data);
 
   return (
-    <>
-      <StyledContainer>
-        <StyledContent>
-          <StyledBlock>
-            <Link to="/">
-              <StyledImg src={footerData.footerLogo} alt="footerLogo" />
+    <div className={cls.container}>
+      <div className={cls.content}>
+        <div>
+          <Link to="/">
+            <img src={footerData.footerLogo} alt="footerLogo" />
+          </Link>
+
+          <p className={cls.dev_text}>Developed by Zeon 2022</p>
+        </div>
+        <div>
+          <span className={cls.main_title}>Компания</span>
+          <p className={cls.title}>
+            <Link style={{ color: '#ffffff' }} to="/about">
+              О нас
             </Link>
-
-            <p style={{ color: '#B9B9B9', marginTop: '32px' }}>
-              Developed by Zeon 2022
+          </p>
+          <p className={cls.title}>
+            <Link style={{ color: 'white' }} to="/news">
+              Новости
+            </Link>
+          </p>
+          <p className={cls.title}>
+            <Link style={{ color: 'white' }} to="/help">
+              Помощь
+            </Link>
+          </p>
+        </div>
+        <div>
+          <span className={cls.main_title}>Контакты</span>
+          {footerData.mobile?.map((item) => (
+            <p className={cls.title} key={item.id}>
+              <img style={{ marginRight: 5 }} src={item.image} alt="svg" />
+              <a style={{ color: 'white' }} href={item.title}>
+                {item.data}
+              </a>
             </p>
-          </StyledBlock>
-          <div>
-            <StyledSpan>Компания</StyledSpan>
-            <StyledP>
-              <Link style={{ color: '#ffffff' }} to="/about">
-                О нас
-              </Link>
-            </StyledP>
-            <StyledP>
-              <Link style={{ color: 'white' }} to="/news">
-                Новости
-              </Link>
-            </StyledP>
-            <StyledP>
-              <Link style={{ color: 'white' }} to="/help">
-                Помощь
-              </Link>
-            </StyledP>
-          </div>
-          <div>
-            <StyledSpan>Контакты</StyledSpan>
-            {footerData.mobile?.map((item) => (
-              <StyledP key={item.id}>
-                <img style={{ marginRight: 5 }} src={item.image} alt="svg" />
-                <a style={{ color: 'white' }} href={item.title}>
-                  {item.data}
-                </a>
-              </StyledP>
-            ))}
-          </div>
-          <div>
-            <StyledSpan>Мы в социальных сетях:</StyledSpan>
+          ))}
+        </div>
+        <div>
+          <span className={cls.main_title}>Мы в социальных сетях:</span>
 
-            <StyledAtag
-              target={'_blank'}
-              href={footerData.socialMedia?.instagram}
-            >
-              <StyledP>
-                <InstagramSvg style={{ marginRight: 5 }} />
-                {footerData.socialMedia?.instagramTitle}
-              </StyledP>
-            </StyledAtag>
+          <a
+            className={cls.footer_link}
+            target={'_blank'}
+            href={footerData.socialMedia?.instagram}
+            alt="/"
+            rel="noreferrer"
+          >
+            <p className={cls.title}>
+              <InstagramSvg style={{ marginRight: 5 }} />
+              {footerData.socialMedia?.instagramTitle}
+            </p>
+          </a>
 
-            <StyledAtag
-              target={'_blank'}
-              href={footerData.socialMedia?.telegram}
-            >
-              <StyledP>
-                <TelegramSvg style={{ marginRight: 5 }} />
-                {footerData.socialMedia?.telegramTitle}
-              </StyledP>
-            </StyledAtag>
+          <a
+            className={cls.footer_link}
+            target={'_blank'}
+            href={footerData.socialMedia?.telegram}
+            rel="noreferrer"
+          >
+            <p className={cls.title}>
+              <TelegramSvg style={{ marginRight: 5 }} />
+              {footerData.socialMedia?.telegramTitle}
+            </p>
+          </a>
 
-            <StyledAtag
-              target={'_blank'}
-              href={footerData.socialMedia?.whatsapp}
-            >
-              <StyledP>
-                <WhatsappSvg style={{ marginRight: 5 }} />
-                {footerData.socialMedia?.whatsappTitle}
-              </StyledP>
-            </StyledAtag>
-          </div>
-        </StyledContent>
-      </StyledContainer>
-    </>
+          <a
+            className={cls.footer_link}
+            target={'_blank'}
+            href={footerData.socialMedia?.whatsapp}
+            rel="noreferrer"
+          >
+            <p className={cls.title}>
+              <WhatsappSvg style={{ marginRight: 5 }} />
+              {footerData.socialMedia?.whatsappTitle}
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 

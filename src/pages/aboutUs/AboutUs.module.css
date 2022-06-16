@@ -1,4 +1,4 @@
-.warpper {
+.wrapper {
   background-color: #f8f8f8;
 }
 
@@ -11,22 +11,16 @@
   padding: 12px 0 72px 0;
 }
 
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media all and (max-width: 320px) {
+  .container1 {
+    padding: 24px 16px;
+  }
 }
 
 .images_block {
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-@media all and (max-width: 320px) {
-  .images_block {
-    width: 288px;
-  }
 }
 
 @media all and (max-width: 320px) {

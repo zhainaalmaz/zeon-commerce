@@ -27,15 +27,7 @@ const NewProducts = () => {
       </section>
 
       {filteredItem.length <= count || (
-        <Button
-          sx={{
-            width: '107px',
-            height: '32px',
-            marginTop: '16px',
-            cursor: 'pointer',
-          }}
-          onClick={countClickHandler}
-        >
+        <Button className={cls.button} onClick={countClickHandler}>
           Еще
         </Button>
       )}

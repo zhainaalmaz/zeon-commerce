@@ -34,7 +34,7 @@ const CartItem = ({ item }) => {
             alt="/"
           />
 
-          <div style={{ margin: '0 16px' }}>
+          <div className={cls.block}>
             <h4 className={cls.title}>{item?.title}</h4>
             <div style={{ marginTop: 8, textAlign: 'start', gap: '6px' }}>
               <p className={cls.size}>Размер: {item?.sizeRage}</p>
@@ -68,7 +68,7 @@ const CartItem = ({ item }) => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={cls.removeIcon}>
           <RemoveItemSvg onClick={removeFromCArtHandler} />
         </div>
       </div>
