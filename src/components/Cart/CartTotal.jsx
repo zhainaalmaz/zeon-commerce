@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import Button from '../../ui/Button';
-import { useDispatch, useSelector } from 'react-redux';
-import ModalForm from '../modal/ModalForm';
-import SuccessModal from '../modal/modalSuccess/SuccessModal';
-import { clearItemsFromCart } from '../../store/cartSlice';
-import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import cls from './CartTotal.module.css';
 
-const CartTotal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const CartTotal = ({ setIsModalOpen }) => {
   const productFromCart = useSelector((state) => state.cart.cartItems);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false);
 
   const totalQuantity = productFromCart.reduce((sum, current) => {
     return sum + current?.quantity;
@@ -35,67 +29,91 @@ const CartTotal = () => {
 
   const totalFinalPrice = totalPrice - totalDiscount;
 
-  const dispatch = useDispatch();
-
-  const showModalHandler = () => {
-    setIsModalOpen((prev) => !prev);
-  };
-
-  const successHandler = () => {
-    console.log('SUCCESS');
-    setShowSuccess(true);
-  };
-
-  const reDirect = () => {
-    navigate('/');
-    dispatch(clearItemsFromCart());
-  };
-
   return (
     <div className={cls.block}>
       <div key={productFromCart.id}>
         <h4 className={cls.title}>Сумма заказа</h4>
         <div className={cls.content}>
           <div className={cls.section}>
-            <p className={cls.description}>Количество линеек:</p>
-            <p className={cls.text}>{totalQuantity} шт</p>
+            <span className={cls.description}>Количество линеек:</span>
+            <span className={cls.text}>{totalQuantity} шт</span>
           </div>
           <div className={cls.section}>
-            <p className={cls.description}>Количество товаров:</p>
-            <p className={cls.text}>{totalAmountOfLines} шт</p>
+            <span className={cls.description}>Количество товаров:</span>
+            <span className={cls.text}>{totalAmountOfLines} шт</span>
           </div>
           <div className={cls.section}>
-            <p className={cls.description}>Стоимость:</p>
-            <p className={cls.text}>{totalPrice.toLocaleString()} рублей</p>
+            <span className={cls.description}>Стоимость:</span>
+            <span className={cls.text}>
+              {totalPrice.toLocaleString()} рублей
+            </span>
           </div>
           <div className={cls.section}>
-            <p className={cls.description}>Скидка:</p>
-            <p className={cls.text}>{totalDiscount.toLocaleString()} рублей</p>
+            <span className={cls.description}>Скидка:</span>
+            <span className={cls.text}>
+              {totalDiscount.toLocaleString()} рублей
+            </span>
           </div>
           <div style={{ border: '1px dashed #BFBFBF', margin: '24px 0' }}></div>
           <div className={cls.section}>
-            <p className={cls.total}>Итого к оплате:</p>
-            <p className={cls.text}>
+            <span className={cls.total}>Итого к оплате:</span>
+            <span className={cls.text}>
               {totalFinalPrice.toLocaleString()} рублей
-            </p>
+            </span>
           </div>
         </div>
-        <Button
-          className={cls.button}
-          style={{ background: 'red' }}
-          onClick={() => setIsModalOpen(true)}
-        >
-          Оформить заказ
-        </Button>
-        {isModalOpen && (
-          <ModalForm
-            showModal={showModalHandler}
-            data={productFromCart}
-            totalFinalPrice={totalFinalPrice}
-            successHandler={successHandler}
-          />
-        )}
-        {showSuccess && <SuccessModal onClick={reDirect} />}
+
+        <div className={cls.cart_mobile}>
+          {!toggle && (
+            <>
+              <div className={cls.mobile_wrapper}>
+                <span className={cls.mobile_title}>Общее количество: </span>
+                <span
+                  className={cls.mobile_text}
+                >{`${totalQuantity} линеек (${totalAmountOfLines}шт.)`}</span>
+              </div>
+              <div className={cls.mobile_wrapper}>
+                <span className={cls.mobile_title}>Стоимость: </span>
+                <span className={cls.mobile_text}>
+                  {totalPrice.toLocaleString()} рублей
+                </span>
+              </div>
+              <div className={cls.mobile_wrapper}>
+                <span className={cls.mobile_title}>Скидка: </span>
+                <span className={cls.mobile_text}>
+                  {totalDiscount.toLocaleString()} рублей
+                </span>
+              </div>
+              <div
+                style={{
+                  border: '1px dashed #BFBFBF',
+                  margin: '24px 0',
+                  width: '288px',
+                }}
+              ></div>
+            </>
+          )}
+          <div className={cls.mobile_wrapper}>
+            <span className={cls.mobile_title}>Итого: </span>
+            <span className={cls.mobile_text}>
+              {totalFinalPrice.toLocaleString()} рублей
+            </span>
+          </div>
+
+          <div className={cls.toggle_button} onClick={() => setToggle(!toggle)}>
+            {toggle ? 'Информация о заказе' : 'Скрыть'}
+          </div>
+        </div>
+
+        <div className={cls.order_button}>
+          <Button
+            className={cls.button}
+            style={{ background: 'red' }}
+            onClick={() => setIsModalOpen(true)}
+          >
+            Оформить заказ
+          </Button>
+        </div>
       </div>
     </div>
   );

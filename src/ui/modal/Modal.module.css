@@ -35,3 +35,9 @@
   display: block;
   margin-top: 70px;
 }
+
+@media all and (max-width: 320px) {
+  .modal {
+    width: 288px;
+  }
+}

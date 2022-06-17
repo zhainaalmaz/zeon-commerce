@@ -10,6 +10,11 @@ const Floating = ({ setOpen }) => {
   const [openDialog, setOpenDialog] = useState(false);
   const [showsuccess, setshowsuccess] = useState(false);
 
+  const onCloseFloating = () => {
+    setOpenDialog(true);
+    // setOpen(false);
+  };
+
   return (
     <div className={cls.floating_container}>
       <a
@@ -29,10 +34,10 @@ const Floating = ({ setOpen }) => {
         <img src={whatsapp} alt="wa" />
       </a>
       <span className="main-icons" href="">
-        <img onClick={() => setOpenDialog(true)} src={telephone} alt="phone" />
+        <img onClick={onCloseFloating} src={telephone} alt="phone" />
       </span>
 
-      {openDialog && !showsuccess && (
+      {openDialog && (
         <ModalRequest
           setOpenDialog={setOpenDialog}
           setOpen={setOpen}

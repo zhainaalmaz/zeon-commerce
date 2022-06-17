@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import { ReactComponent as TelegramSvg } from './../../assets/icons/telegram.svg';
 import { ReactComponent as WhatsappSvg } from './../../assets/icons/whatsapp.svg';
 import { ReactComponent as InstagramSvg } from './../../assets/icons/instagram.svg';

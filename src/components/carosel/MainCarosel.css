@@ -29,6 +29,7 @@
 @media all and (max-width: 320px) {
   .wrapper {
     width: 320px;
+    position: relative;
     /* height: 314px; */
   }
 }

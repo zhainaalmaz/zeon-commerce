@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import CollectionCard from '../../../pages/collections/CollectionCard';
+import CollectionCard from '../../../pages/collections/collectionCard/CollectionCard';
 import Button from '../../../ui/Button';
 import cls from './Collection.module.css';
 
@@ -24,20 +24,22 @@ const Collection = () => {
         </section>
       </div>
 
-      {collection?.length <= count || (
-        <Button
-          sx={{
-            width: '107px',
-            height: '32px',
-            marginTop: '16px',
-            cursor: 'pointer',
-          }}
-          size="small"
-          onClick={countClickHandler}
-        >
-          Еще
-        </Button>
-      )}
+      <div className="hide_button">
+        {collection?.length <= count || (
+          <Button
+            sx={{
+              width: '107px',
+              height: '32px',
+              marginTop: '16px',
+              cursor: 'pointer',
+            }}
+            size="small"
+            onClick={countClickHandler}
+          >
+            Еще
+          </Button>
+        )}
+      </div>
     </div>
   );
 };

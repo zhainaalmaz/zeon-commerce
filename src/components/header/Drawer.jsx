@@ -1,6 +1,8 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ReactComponent as FavoriteLogo } from './../../assets/icons/favorite.svg';
+import { ReactComponent as FavoritedSvg } from './../../assets/icons/favorite2.svg';
 import { ReactComponent as BasketLogo } from './../../assets/icons/basket.svg';
+import { ReactComponent as AddedBasketIcon } from './../../assets/icons/basket2.svg';
 import {
   Drawer,
   Box,
@@ -15,9 +17,15 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import Floating from '../floatingButtons/Floating';
 import './Drawer.css';
 import { ReactComponent as DeleteSvg } from '../../assets/icons/delete.svg';
+import { useSelector } from 'react-redux';
 
 const MuiDrawer = ({ navigate }) => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+  const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
+  const addedItems = useSelector((state) => state.cart.cartItems);
+
+  const [isFavorite, setIsFavorite] = useState([]);
+  const [isAdded, setIsAdded] = useState([]);
 
   const itemList = [
     {
@@ -44,6 +52,10 @@ const MuiDrawer = ({ navigate }) => {
       onClick: () => navigate('/cart'),
     },
   ];
+  useEffect(() => {
+    setIsFavorite(favoriteItems);
+    setIsAdded(addedItems);
+  }, [addedItems, favoriteItems]);
 
   return (
     <div>
@@ -92,9 +104,21 @@ const MuiDrawer = ({ navigate }) => {
                 <ListItem key={text} onClick={onClick} disablePadding>
                   <ListItemButton>
                     {index % 2 === 0 ? (
-                      <FavoriteLogo style={{ marginRight: 5 }} />
+                      <div>
+                        {!isFavorite ? (
+                          <FavoriteLogo style={{ marginRight: 5 }} />
+                        ) : (
+                          <FavoritedSvg style={{ marginRight: 5 }} />
+                        )}
+                      </div>
                     ) : (
-                      <BasketLogo style={{ marginRight: 5 }} />
+                      <div>
+                        {!isAdded ? (
+                          <BasketLogo style={{ marginRight: 5 }} />
+                        ) : (
+                          <AddedBasketIcon style={{ marginRight: 5 }} />
+                        )}
+                      </div>
                     )}
 
                     <ListItemText primary={text} />

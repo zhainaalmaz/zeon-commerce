@@ -2,6 +2,12 @@
   text-align: start;
 }
 
+@media all and (max-width: 320px) {
+  .container {
+    padding: 16px;
+  }
+}
+
 .title {
   font-style: normal;
   font-weight: 500;
@@ -13,11 +19,23 @@
   padding-top: 11px;
 }
 
+@media all and (max-width: 320px) {
+  .title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .text {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 165%;
   color: #5b5b5b;
-  padding-top: 18px;
+  padding: 18px;
+}
+
+.content {
+  background-color: white;
+  margin-top: 15px;
 }

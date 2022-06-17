@@ -46,6 +46,7 @@
     height: auto;
     margin: 16px;
     padding: 12px;
+    text-align: start;
   }
 }
 
@@ -142,6 +143,12 @@
   font-size: 24px;
   line-height: 29px;
   color: #393939;
+}
+
+@media all and (max-width: 320px) {
+  .priceTitle {
+    margin: 8px 0;
+  }
 }
 
 .colors {

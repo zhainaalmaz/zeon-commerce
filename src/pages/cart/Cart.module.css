@@ -8,7 +8,8 @@
 
 @media all and (max-width: 320px) {
   .content {
-    display: none;
+    position: sticky;
+    bottom: 50px;
   }
 }
 

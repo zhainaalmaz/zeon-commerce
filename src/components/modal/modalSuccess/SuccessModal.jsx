@@ -3,10 +3,9 @@ import { ReactComponent as SuccessOrder } from '../../../assets/icons/check.svg'
 import Button from '../../../ui/Button';
 import cls from './SuccessModal.module.css';
 
-const SuccessModal = ({ setOpen, setshowsuccess, showsuccess, ...props }) => {
+const SuccessModal = ({ setOpen, setshowsuccess }) => {
   const divRef = useRef(null);
-
-  const onCloseHandler = () => {
+  const redirect = () => {
     setshowsuccess(false);
     setOpen(false);
   };
@@ -28,9 +27,7 @@ const SuccessModal = ({ setOpen, setshowsuccess, showsuccess, ...props }) => {
             <Button
               className={cls.success_button}
               style={{ width: '100%', background: 'black' }}
-              // onClick={() => setOpen(false)}
-              onClick={onCloseHandler}
-              // {...props}
+              onClick={() => redirect()}
             >
               Продолжить покупки
             </Button>

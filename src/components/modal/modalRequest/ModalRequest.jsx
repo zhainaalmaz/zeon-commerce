@@ -5,12 +5,7 @@ import { ReactComponent as DeleteSvg } from '../../../assets/icons/delete.svg';
 import { useForm } from 'react-hook-form';
 import cls from './ModalRequest.module.css';
 
-const ModalRequest = ({
-  setOpenDialog,
-  setOpen,
-  showsuccess,
-  setshowsuccess,
-}) => {
+const ModalRequest = ({ setOpenDialog, showsuccess, setshowsuccess }) => {
   const divRef = useRef(null);
 
   const {
@@ -24,9 +19,10 @@ const ModalRequest = ({
 
   const submitHandler = () => {
     setshowsuccess(!showsuccess);
+    setOpenDialog(false);
     reset();
-    console.log('work');
   };
+
   useEffect(() => {}, [errors]);
 
   return (
@@ -38,7 +34,6 @@ const ModalRequest = ({
               style={{ position: 'absolute', top: -10, right: 20 }}
               onClick={() => {
                 setOpenDialog(false);
-                setOpen(false);
               }}
             />
             <div className={cls.content}>
@@ -82,8 +77,6 @@ const ModalRequest = ({
                     {...register('tel', {
                       required: true,
                       minLength: 3,
-                      // pattern:
-                      //   /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
                     })}
                   />
                 </label>

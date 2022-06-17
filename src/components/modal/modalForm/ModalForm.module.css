@@ -1,0 +1,130 @@
+.layout {
+  width: 450px;
+  height: 652px;
+}
+
+.form {
+  width: 392px;
+  height: 608px;
+  margin: 32px 24px;
+  padding: 0px;
+  gap: 32px;
+}
+
+@media all and (max-width: 320px) {
+  .form {
+    width: 288px;
+    height: 710px;
+    margin: 0;
+    padding: 18px 12px;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #393939;
+  text-align: start;
+}
+
+@media all and (max-width: 320px) {
+  .title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #808080;
+  margin-top: 12px;
+}
+
+@media all and (max-width: 320px) {
+  .label {
+    width: 288px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.input {
+  padding: 13px 10px 13px 12px;
+  gap: 10px;
+  width: 392px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  margin-top: 4px;
+}
+
+@media all and (max-width: 320px) {
+  .input {
+    width: 264px;
+    height: 41px;
+    margin-top: 2px;
+  }
+
+  /* .input::placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  } */
+}
+
+@media all and (max-width: 320px) {
+  .input::placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.input::placeholder {
+  color: #d0d0d0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.offerta_text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #393939;
+}
+
+@media all and (max-width: 320px) {
+  .offerta_text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.form_section {
+  margin-top: 24px;
+}
+
+.form_title {
+  margin-top: 12px;
+}
+
+.form_checked {
+  height: 24px;
+  margin-top: 16px;
+  text-align: start;
+}
+
+@media all and (max-width: 320px) {
+  .form_checked {
+    margin: 16px 0 32px 0;
+  }
+}
+
+.form_submit {
+  margin-top: 32px;
+}

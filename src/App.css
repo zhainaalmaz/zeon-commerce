@@ -166,3 +166,9 @@ input[disabled] {
 .scale:hover {
   transform: scale(1.2);
 }
+
+@media all and (max-width: 320px) {
+  .hide_button {
+    display: none;
+  }
+}

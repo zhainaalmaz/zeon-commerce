@@ -9,7 +9,9 @@ const Offerts = () => {
     <div className="container">
       <div className={cls.container}>
         <h5 className={cls.title}>Публичная оферта </h5>
-        <h6 className={cls.text}>{commerce.text}</h6>
+        <div className={cls.content}>
+          <h6 className={cls.text}>{commerce.text}</h6>
+        </div>
       </div>
     </div>
   );

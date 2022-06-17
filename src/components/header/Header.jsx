@@ -18,6 +18,7 @@ const Header = () => {
   const [isAdded, setIsAdded] = useState([]);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const addedItems = useSelector((state) => state.cart.cartItems);
+  const [isShowInput, setIsShowInput] = useState(false);
 
   const navigate = useNavigate();
 
@@ -64,7 +65,8 @@ const Header = () => {
             <img alt="logo" src={headerLogo.headerLogo} />
           </Link>
           <div className={cls.search_icon}>
-            <SearchIcon />
+            {isShowInput ? <SearchBar /> : null}
+            <SearchIcon onClick={() => setIsShowInput(!isShowInput)} />
           </div>
           <div className={cls.search_input}>
             <SearchBar />

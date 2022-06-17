@@ -70,24 +70,22 @@ const Product = () => {
         {filteredProduct.map((item) => (
           <div className={cls.main} key={item.id}>
             {item.productImages.map((el) => (
-              <>
-                <div key={el.id} className={cls.section}>
-                  <img className="scale" src={el.image} alt="img" />
-                  <img className="scale" src={el.image} alt="img" />
-                  <img
-                    style={{ marginBottom: 0 }}
-                    className="scale"
-                    src={el.image}
-                    alt="img"
-                  />
-                  <img
-                    style={{ marginBottom: 0 }}
-                    className="scale"
-                    src={el.image}
-                    alt="img"
-                  />
-                </div>
-              </>
+              <div key={el.id} className={cls.section}>
+                <img className="scale" src={el.image} alt="img" />
+                <img className="scale" src={el.image} alt="img" />
+                <img
+                  style={{ marginBottom: 0 }}
+                  className="scale"
+                  src={el.image}
+                  alt="img"
+                />
+                <img
+                  style={{ marginBottom: 0 }}
+                  className="scale"
+                  src={el.image}
+                  alt="img"
+                />
+              </div>
             ))}
 
             <div className={cls.block} key={item.id}>
@@ -97,7 +95,7 @@ const Product = () => {
                   Артикул:<span className={cls.span}> {item.article}</span>
                 </p>
                 <div className={cls.colors}>
-                  <p className={cls.description}>
+                  <div className={cls.description}>
                     Цвет:
                     {item.colors.map((color) => (
                       <div
@@ -124,7 +122,7 @@ const Product = () => {
                         <label htmlFor="radio"></label>
                       </div>
                     ))}
-                  </p>
+                  </div>
                 </div>
                 <div className={cls.priceTitle}>
                   {item.discount ? (

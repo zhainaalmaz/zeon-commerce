@@ -9,8 +9,6 @@
 
 @media all and (max-width: 320px) {
   .container {
-    /* display: flex;
-    flex-direction: column; */
     height: 657px;
   }
 }

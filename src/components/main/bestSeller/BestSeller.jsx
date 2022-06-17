@@ -25,12 +25,13 @@ const BestSeller = () => {
             </div>
           ))}
       </section>
-
-      {filteredItem.length <= count || (
-        <Button className={cls.button} onClick={countClickHandler}>
-          Еще
-        </Button>
-      )}
+      <div className="hide_button">
+        {filteredItem.length <= count || (
+          <Button className={cls.button} onClick={countClickHandler}>
+            Еще
+          </Button>
+        )}
+      </div>
     </>
   );
 };

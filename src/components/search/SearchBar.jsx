@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import { ReactComponent as RemoveSvg } from '../../assets/icons/delete.svg';
 import './SearchBar.css';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +11,7 @@ const SearchBar = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [inputEntered, setInputEntered] = useState('');
   const navigate = useNavigate();
+  const [showIcon, setShowIcon] = useState(false);
 
   const onFilterHandler = (e) => {
     const searchProduct = e.target.value;
@@ -35,6 +37,10 @@ const SearchBar = () => {
     onClearInput();
   };
 
+  const onShowHandler = () => {
+    setShowIcon(!showIcon);
+  };
+
   return (
     <div className="search">
       <>
@@ -45,7 +51,11 @@ const SearchBar = () => {
           onChange={onFilterHandler}
         />
         <div>
-          <SearchIcon className="searchBtn" onClick={searchNavigateHandler} />
+          {showIcon ? (
+            <SearchIcon className="searchBtn" onClick={searchNavigateHandler} />
+          ) : (
+            <RemoveSvg />
+          )}
         </div>
       </>
       {filteredData?.length !== 0 && (

@@ -10,6 +10,7 @@ import deleteSvg from '../../assets/icons/delete.svg';
 import callback from '../../assets/icons/callback.svg';
 import Floating from '../floatingButtons/Floating';
 import cls from './Main.module.css';
+
 const Main = () => {
   const [open, setOpen] = useState(false);
 
@@ -28,7 +29,7 @@ const Main = () => {
     <div className={cls.main}>
       <Divider />
       <div className="container" style={{ paddingTop: 10 }}>
-        {open && <Floating open={open} setOpen={setOpen} />}
+        {open && <Floating setOpen={setOpen} />}
         <MainCarosel />
         <div className={cls.content}>
           {open && (

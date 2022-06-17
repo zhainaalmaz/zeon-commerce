@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import CollectionCard from './CollectionCard';
+import CollectionCard from './collectionCard/CollectionCard';
 import Pagination from '../../ui/pagination/Pagination';
 
 const StyledContainer = styled.div`
