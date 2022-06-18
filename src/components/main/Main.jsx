@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import MainCarosel from '../carosel/MainCarosel';
 import BestSeller from './bestSeller/BestSeller';
 import NewProducts from './newProduct/NewProducts';
@@ -10,9 +10,13 @@ import deleteSvg from '../../assets/icons/delete.svg';
 import callback from '../../assets/icons/callback.svg';
 import Floating from '../floatingButtons/Floating';
 import cls from './Main.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
+import { onChangeOpenValue } from '../../store/floatingSlice';
 
 const Main = () => {
-  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { openValue } = useSelector((state) => state.float);
 
   const upToScroll = () => {
     window.scrollTo({
@@ -21,18 +25,22 @@ const Main = () => {
     });
   };
 
-  const toggle = () => {
-    setOpen((prev) => !prev);
+  const onCloseOpenValue = () => {
+    dispatch(onChangeOpenValue());
   };
+
+  useEffect(() => {
+    dispatch(asyncUpdateBreadcrumb([]));
+  }, []);
 
   return (
     <div className={cls.main}>
       <Divider />
       <div className="container" style={{ paddingTop: 10 }}>
-        {open && <Floating setOpen={setOpen} />}
+        {openValue && <Floating setOpen={onCloseOpenValue} />}
         <MainCarosel />
         <div className={cls.content}>
-          {open && (
+          {openValue && (
             <>
               <img
                 onClick={() => upToScroll()}
@@ -50,13 +58,13 @@ const Main = () => {
                   paddingLeft: 5,
                 }}
                 width="25px"
-                onClick={() => toggle()}
+                onClick={onCloseOpenValue}
                 src={deleteSvg}
                 alt="cancel"
               />
             </>
           )}
-          {!open && (
+          {!openValue && (
             <>
               <img
                 onClick={() => upToScroll()}
@@ -67,7 +75,7 @@ const Main = () => {
               />
               <img
                 className="main-chat"
-                onClick={() => toggle()}
+                onClick={onCloseOpenValue}
                 width="44px"
                 src={callback}
                 alt="chat"

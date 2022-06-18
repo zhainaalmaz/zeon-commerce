@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import telegram from '../../assets/icons/telegram1.svg';
 import whatsapp from '../../assets/icons/whatsapp2.svg';
 import telephone from '../../assets/icons/telephone3.svg';
-import ModalRequest from '../modal/modalRequest/ModalRequest';
-import SuccessModal from '../modal/modalSuccess/SuccessModal';
 import cls from './Floating.module.css';
+import { useDispatch } from 'react-redux';
+import { onChangeOpenDialog } from '../../store/floatingSlice';
 
-const Floating = ({ setOpen }) => {
-  const [openDialog, setOpenDialog] = useState(false);
-  const [showsuccess, setshowsuccess] = useState(false);
+const Floating = () => {
+  const dispatch = useDispatch();
 
   const onCloseFloating = () => {
-    setOpenDialog(true);
-    // setOpen(false);
+    dispatch(onChangeOpenDialog());
   };
 
   return (
@@ -36,23 +34,6 @@ const Floating = ({ setOpen }) => {
       <span className="main-icons" href="">
         <img onClick={onCloseFloating} src={telephone} alt="phone" />
       </span>
-
-      {openDialog && (
-        <ModalRequest
-          setOpenDialog={setOpenDialog}
-          setOpen={setOpen}
-          showsuccess={showsuccess}
-          setshowsuccess={setshowsuccess}
-        />
-      )}
-
-      {showsuccess && (
-        <SuccessModal
-          showsuccess={showsuccess}
-          setshowsuccess={setshowsuccess}
-          setOpen={setOpen}
-        />
-      )}
     </div>
   );
 };

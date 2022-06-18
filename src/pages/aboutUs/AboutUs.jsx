@@ -1,9 +1,28 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 import classes from './AboutUs.module.css';
 
 const AboutUs = () => {
   const aboutUs = useSelector((state) => state.commerce.data.aboutUs);
+  const dispatch = useDispatch();
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'О нас',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
+  useEffect(() => {
+    sendBreadCrumbsHandler();
+  }, []);
 
   return (
     <div className={classes.wrapper}>

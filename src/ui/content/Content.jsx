@@ -10,16 +10,54 @@ import { ReactComponent as DiscounSvg } from '../../assets/icons/discount.svg';
 import { useNavigate, useParams } from 'react-router-dom';
 import { mathPercent } from '../../utils';
 import cls from './Content.module.css';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
-const Content = ({ item }) => {
+const Content = ({ item, title }) => {
   const params = useParams();
   const collectionId = params.collectionList;
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
+  const breadcrumbs = useSelector((state) => state.bread.breadCrumbsData) || [];
   const filteredFev = favoriteItems.find((el) => el.id === item.id);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = collectionId
+      ? [
+          {
+            route_name: 'Главное',
+            route: '/',
+          },
+          {
+            route_name: 'Коллекции',
+            route: '/collections',
+          },
+          {
+            route_name: title,
+            route: `/${collectionId}`,
+          },
+          {
+            route_name: item?.title
+              ? item?.title
+              : item?.collection
+              ? item.collection
+              : '',
+          },
+        ]
+      : [
+          {
+            route_name: 'Главное',
+            route: '/',
+          },
+          {
+            route_name: item.title,
+          },
+        ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
   const navigateHandler = () => {
+    sendBreadCrumbsHandler();
     if (!!collectionId) {
       navigate(`/${collectionId}/${item.id}`);
     } else {
@@ -68,7 +106,7 @@ const Content = ({ item }) => {
               {item.discount ? (
                 <>
                   <span style={{ marginRight: 5 }}>
-                    {item.discount.toLocaleString()} p{' '}
+                    {item.discount.toLocaleString()} p
                   </span>
                   <span className="previousPrice">
                     {item.previousPrice.toLocaleString()} p

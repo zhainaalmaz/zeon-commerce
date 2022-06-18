@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Content from './content/Content';
 import styled from 'styled-components';
-import { pathActions } from '../store/path/pathSlice';
 import InterestedProducts from '../components/interestedProducts/InterestedProducts';
+import Collections from '../pages/collections/Collections';
+import { asyncUpdateBreadcrumb } from '../store/breadCrumbsSlice';
 
 const StyledP = styled.p`
   font-weight: 500;
@@ -38,6 +39,8 @@ const CollectionList = () => {
 
   const product = useSelector((state) => state.products.data);
   const collection = useSelector((state) => state.collections.data);
+  const breadcrumbs = useSelector((state) => state.bread.breadCrumbsData);
+
   const collectionName = collection.filter(
     (element) => element.id === collectionParams
   );
@@ -49,10 +52,31 @@ const CollectionList = () => {
   const filteredNewItems = product.filter((item) => item.newproducts);
   const [count] = useState(5);
 
+  // useEffect(() => {
+  //   const paths = { [+collectionList]: collectionName[0]?.title };
+  //   dispatch(pathActions.setPaths(paths));
+  // }, [collectionName]);
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Коллекции',
+        route: '/collections',
+      },
+      {
+        route_name: `${collectionName[0]?.title}`,
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
   useEffect(() => {
-    const paths = { [+collectionList]: collectionName[0]?.title };
-    dispatch(pathActions.setPaths(paths));
-  }, [collectionName]);
+    sendBreadCrumbsHandler();
+  }, []);
 
   return (
     <div className="container">
@@ -62,7 +86,7 @@ const CollectionList = () => {
         <StyledContent>
           {filteredItem.map((item) => (
             <div key={item.id}>
-              <Content item={item} />
+              <Content title={`${collectionName[0]?.title}`} item={item} />
             </div>
           ))}
         </StyledContent>

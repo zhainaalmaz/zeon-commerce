@@ -12,12 +12,7 @@ import {
 import { addToCart } from '../../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import InterestedProducts from '../interestedProducts/InterestedProducts';
-import { pathActions } from '../../store/path/pathSlice';
 import cls from './Product.module.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import SwiperCore, { Pagination, Autoplay } from 'swiper';
 
 const Product = () => {
   const params = useParams();
@@ -57,36 +52,35 @@ const Product = () => {
     navigate('/cart');
   };
 
-  useEffect(() => {
-    const paths = { [params.productId]: filteredProduct[0]?.title };
-    if (params?.collectionList) paths[params?.collectionList] = 'random';
-
-    dispatch(pathActions.setPaths(paths));
-  }, [filteredProduct]);
-
   return (
     <div style={{ background: '#ECECEC' }}>
       <div className="container">
         {filteredProduct.map((item) => (
           <div className={cls.main} key={item.id}>
-            {item.productImages.map((el) => (
-              <div key={el.id} className={cls.section}>
-                <img className="scale" src={el.image} alt="img" />
-                <img className="scale" src={el.image} alt="img" />
-                <img
-                  style={{ marginBottom: 0 }}
-                  className="scale"
-                  src={el.image}
-                  alt="img"
-                />
-                <img
-                  style={{ marginBottom: 0 }}
-                  className="scale"
-                  src={el.image}
-                  alt="img"
-                />
-              </div>
-            ))}
+            <div className={cls.section}>
+              <img
+                className="scale"
+                src={item.productImages[0].image}
+                alt="img"
+              />
+              <img
+                className="scale"
+                src={item.productImages[1].image}
+                alt="img"
+              />
+              <img
+                style={{ marginBottom: 0 }}
+                className="scale"
+                src={item.productImages[2].image}
+                alt="img"
+              />
+              <img
+                style={{ marginBottom: 0 }}
+                className="scale"
+                src={item.productImages[3].image}
+                alt="img"
+              />
+            </div>
 
             <div className={cls.block} key={item.id}>
               <h5 className={cls.title}>{item.title}</h5>

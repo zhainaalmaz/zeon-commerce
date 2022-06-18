@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { mathPercent } from '../../utils';
@@ -10,6 +10,7 @@ import {
   onRemoveFromFavorite,
 } from '../../store/favoriteSlice';
 import cls from './InterestedProducts.module.css';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
 const InterestedProducts = ({ item }) => {
   const params = useParams();
@@ -26,6 +27,23 @@ const InterestedProducts = ({ item }) => {
   const onRemoveFavorite = (item) => {
     dispatch(onRemoveFromFavorite(item));
   };
+
+  // const sendBreadCrumbsHandler = () => {
+  //   const breadCrumbs = [
+  //     {
+  //       route_name: 'Главное',
+  //       route: '/',
+  //     },
+  //     {
+  //       route_name: `${item.title}`,
+  //     },
+  //   ];
+  //   dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  // };
+
+  // useEffect(() => {
+  //   sendBreadCrumbsHandler();
+  // }, []);
 
   return (
     <div className={cls.container}>

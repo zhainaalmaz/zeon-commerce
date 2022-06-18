@@ -4,7 +4,8 @@ import favoriteSlice from './favoriteSlice';
 import collectionsSlice from './collectionsSlice';
 import commerceSlice from './commerceSlice';
 import cartSlice from './cartSlice';
-import pathSlice from './path/pathSlice';
+import breadCrumbsSlice from './breadCrumbsSlice';
+import floatingSlice from './floatingSlice';
 
 export const store = configureStore({
   reducer: {
@@ -13,7 +14,8 @@ export const store = configureStore({
     collections: collectionsSlice,
     commerce: commerceSlice,
     cart: cartSlice,
-    path: pathSlice.reducer,
+    bread: breadCrumbsSlice,
+    float: floatingSlice,
   },
 });
 

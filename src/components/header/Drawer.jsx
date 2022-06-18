@@ -17,7 +17,8 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import Floating from '../floatingButtons/Floating';
 import './Drawer.css';
 import { ReactComponent as DeleteSvg } from '../../assets/icons/delete.svg';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { onChangeOpenValue } from '../../store/floatingSlice';
 
 const MuiDrawer = ({ navigate }) => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -26,6 +27,7 @@ const MuiDrawer = ({ navigate }) => {
 
   const [isFavorite, setIsFavorite] = useState([]);
   const [isAdded, setIsAdded] = useState([]);
+  const dispatch = useDispatch();
 
   const itemList = [
     {
@@ -57,6 +59,11 @@ const MuiDrawer = ({ navigate }) => {
     setIsAdded(addedItems);
   }, [addedItems, favoriteItems]);
 
+  const closeDrawer = (e) => {
+    setIsDrawerOpen(false);
+    dispatch(onChangeOpenValue());
+  };
+
   return (
     <div>
       <IconButton
@@ -80,7 +87,7 @@ const MuiDrawer = ({ navigate }) => {
         <Box className="drawer_box" p={2} role="presentation">
           <div className="drawer_header">
             <h5 className="drawer_menu">Меню</h5>
-            <DeleteSvg onClick={() => setIsDrawerOpen(false)} />
+            <DeleteSvg onClick={closeDrawer} />
           </div>
           <List className="drawer_list">
             {itemList.map((item) => {
@@ -139,7 +146,7 @@ const MuiDrawer = ({ navigate }) => {
                   </a>
                 </span>
               </div>
-              <Floating />
+              {<Floating />}
             </div>
           </List>
         </Box>

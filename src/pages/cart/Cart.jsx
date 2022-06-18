@@ -8,6 +8,8 @@ import ModalForm from '../../components/modal/modalForm/ModalForm';
 import SuccessModal from '../../components/modal/modalSuccess/SuccessModal';
 import { useNavigate } from 'react-router-dom';
 import { clearItemsFromCart } from '../../store/cartSlice';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
+import Modal from '../../ui/modalWindow/ModalWindow';
 
 const Cart = () => {
   const cartProducts = useSelector((state) => state.cart);
@@ -35,9 +37,27 @@ const Cart = () => {
   const navigate = useNavigate();
 
   const reDirect = () => {
+    showModalHandler();
     navigate('/');
     dispatch(clearItemsFromCart());
   };
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Корзина',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
+  useEffect(() => {
+    sendBreadCrumbsHandler();
+  }, []);
 
   return (
     <div className="container">
@@ -69,13 +89,20 @@ const Cart = () => {
         </div>
       )}
       {isModalOpen && (
-        <ModalForm
-          showModal={showModalHandler}
-          data={productFromCart}
-          successHandler={successHandler}
-        />
+        <Modal onClose={showModalHandler}>
+          <ModalForm
+            showModal={showModalHandler}
+            data={productFromCart}
+            successHandler={successHandler}
+          />
+        </Modal>
       )}
-      {showSuccess && <SuccessModal onClick={reDirect} />}
+
+      {showSuccess && (
+        <Modal onClose={showModalHandler}>
+          <SuccessModal onClose={reDirect} />
+        </Modal>
+      )}
     </div>
   );
 };

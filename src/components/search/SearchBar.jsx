@@ -51,10 +51,10 @@ const SearchBar = () => {
           onChange={onFilterHandler}
         />
         <div>
-          {showIcon ? (
+          {!showIcon ? (
             <SearchIcon className="searchBtn" onClick={searchNavigateHandler} />
           ) : (
-            <RemoveSvg />
+            <RemoveSvg className="removeIcon" />
           )}
         </div>
       </>

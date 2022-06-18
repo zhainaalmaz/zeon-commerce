@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import SearchBar from '../search/SearchBar';
 import cls from './Header.module.css';
 import { ReactComponent as SearchIcon } from '../../assets/icons/search2.svg';
+import HeaderNavLink from './HeaderNavLink';
 
 const Header = () => {
   const headerLogo = useSelector((state) => state.commerce.data);
@@ -27,20 +28,35 @@ const Header = () => {
     setIsAdded(addedItems);
   }, [addedItems, favoriteItems]);
 
+  const headerLinks = [
+    {
+      linkName: 'О нас',
+      linkPath: '/about',
+    },
+    {
+      linkName: 'Коллекции',
+      linkPath: '/collections',
+    },
+    {
+      linkName: 'Новости',
+      linkPath: '/news',
+    },
+  ];
+
   return (
     <div className="divider-line">
       <div className="container">
         <div className={cls.layout}>
           <div className={cls.container}>
-            <NavLink style={{ color: 'black' }} to="/about">
-              О нас
-            </NavLink>
-            <NavLink style={{ color: 'black' }} to="/collections">
-              Коллекции
-            </NavLink>
-            <NavLink style={{ color: 'black' }} to="/news">
-              Новости
-            </NavLink>
+            {headerLinks.map(({ linkName, linkPath }, index) => {
+              return (
+                <HeaderNavLink
+                  key={index}
+                  linkName={linkName}
+                  linkPath={linkPath}
+                />
+              );
+            })}
           </div>
 
           <span>

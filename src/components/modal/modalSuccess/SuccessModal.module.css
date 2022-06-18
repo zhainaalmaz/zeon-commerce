@@ -1,6 +1,11 @@
+.layout {
+  width: 328px;
+}
+
 .content {
   padding: 28px 24px;
 }
+
 @media all and (max-width: 320px) {
   .content {
     padding: 24px 16px;
@@ -13,6 +18,7 @@
   line-height: 100%;
   color: #393939;
   padding-top: 12px;
+  text-align: center;
 }
 
 @media all and (max-width: 320px) {
@@ -28,6 +34,7 @@
   line-height: 150%;
   color: #393939;
   padding-top: 8px;
+  text-align: center;
 }
 
 @media all and (max-width: 320px) {
@@ -49,4 +56,9 @@
     display: flex;
     justify-content: center;
   }
+}
+.success_icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

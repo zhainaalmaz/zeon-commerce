@@ -5,5 +5,5 @@ export const axiosInstance = axios.create({
 });
 
 export const axiosinstance = axios.create({
-  baseURL: 'https://users-order-2ebfc-default-rtdb.firebaseio.com',
+  baseURL: 'https://zeon-commerce-store-default-rtdb.firebaseio.com/',
 });

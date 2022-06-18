@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Content from '../../ui/content/Content';
 import InterestedProducts from '../../components/interestedProducts/InterestedProducts';
 import cls from './Favorite.module.css';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
 const Favorite = () => {
   const product = useSelector((state) => state.products.data);
@@ -12,6 +13,7 @@ const Favorite = () => {
   const [interestPost, setInterestedPost] = useState([]);
   const [count] = useState(5);
   const [limit, setLimit] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setInterestedPost(filteredItem);
@@ -36,6 +38,23 @@ const Favorite = () => {
     return function () {
       document.removeEventListener('scroll', scrollHandler);
     };
+  }, []);
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Избранное',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
+  useEffect(() => {
+    sendBreadCrumbsHandler();
   }, []);
 
   return (

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 import classes from './News.module.css';
 
 const News = () => {
@@ -7,8 +8,24 @@ const News = () => {
   const [limit, setLimit] = useState(0);
   const [hideText, setHideText] = useState(false);
 
+  const dispatch = useDispatch();
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Новости',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
   useEffect(() => {
     changeLimit(2);
+    sendBreadCrumbsHandler();
   }, []);
 
   const changeLimit = (num) => {

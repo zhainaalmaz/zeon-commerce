@@ -97,3 +97,7 @@ input:focus {
 .dataItem p {
   margin-left: 10px;
 }
+
+.removeIcon {
+  display: none;
+}

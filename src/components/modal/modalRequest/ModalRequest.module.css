@@ -1,4 +1,10 @@
+.layout {
+  width: 436px;
+  height: 316px;
+}
+
 .form {
+  padding-top: 5px;
   position: relative;
 }
 

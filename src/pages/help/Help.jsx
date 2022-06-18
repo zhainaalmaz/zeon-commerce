@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HelpCard from '../../components/help/HelpCard';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import helpImage from '../../assets/images/help.png';
 import classes from './Help.module.css';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
 const Help = () => {
   const helpData = useSelector((state) => state.commerce.data.help);
+
+  const dispatch = useDispatch();
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Помощь',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
+  useEffect(() => {
+    sendBreadCrumbsHandler();
+  }, []);
 
   return (
     <div className="container">

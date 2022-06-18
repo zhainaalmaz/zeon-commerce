@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Content from '../../ui/content/Content';
 import InterestedProducts from '../interestedProducts/InterestedProducts';
 import './SearchBar.css';
 import Pagination from '../../ui/pagination/Pagination';
 import cls from './SearchPage.module.css';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
 const SearchPage = () => {
   const products = useSelector((state) => state.products.data);
@@ -16,6 +17,7 @@ const SearchPage = () => {
 
   const params = useParams();
   const searchItemParams = params.inputEntered;
+  const dispatch = useDispatch();
 
   const filterResult = products.filter((value) => {
     return value.title.toLowerCase().includes(searchItemParams.toLowerCase());
@@ -41,6 +43,23 @@ const SearchPage = () => {
     const newOffset = (event.selected * itemsPerPage) % filterResult.length;
     setItemOffset(newOffset);
   };
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Резултаты поиска',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
+  useEffect(() => {
+    sendBreadCrumbsHandler();
+  }, []);
 
   return (
     <div className="container">

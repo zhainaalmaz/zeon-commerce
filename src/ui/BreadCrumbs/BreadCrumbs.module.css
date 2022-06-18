@@ -1,0 +1,29 @@
+.containerForLocations {
+  display: flex;
+  height: 60px;
+  padding: 22px 0px;
+}
+
+.currentLocation {
+  color: #969696;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.previousLocation {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.slash {
+  margin-left: 16px;
+  margin-right: 16px;
+}

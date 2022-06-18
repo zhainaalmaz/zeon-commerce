@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Modal from '../../../ui/modal/Modal';
 import { ReactComponent as CloseSvg } from '../../../assets/icons/delete.svg';
 import { Link } from 'react-router-dom';
 import { axiosinstance } from '../../../api/api';
@@ -20,6 +19,7 @@ const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
     product: data,
     totalPrice: totalFinalPrice,
   };
+  const [modal, setModal] = useState(false);
 
   const onSubmithandler = (data) => {
     axiosinstance
@@ -32,14 +32,14 @@ const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
       });
 
     reset();
-    showModal();
+    setModal((prevState) => !prevState);
     successHandler();
   };
 
   useEffect(() => {}, [errors]);
 
   return (
-    <Modal>
+    <>
       <div className={cls.layout}>
         <form className={cls.form} onSubmit={handleSubmit(onSubmithandler)}>
           <div className={cls.form_title}>
@@ -204,7 +204,7 @@ const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
           />
         </form>
       </div>
-    </Modal>
+    </>
   );
 };
 

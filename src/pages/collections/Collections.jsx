@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CollectionCard from './collectionCard/CollectionCard';
 import Pagination from '../../ui/pagination/Pagination';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -38,11 +39,29 @@ const Collections = () => {
     setCurrentItems(collection.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(collection.length / itemsPerPage));
   }, [itemOffset]);
+  const dispatch = useDispatch();
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % collection.length;
     setItemOffset(newOffset);
   };
+
+  const sendBreadCrumbsHandler = () => {
+    const breadCrumbs = [
+      {
+        route_name: 'Главное',
+        route: '/',
+      },
+      {
+        route_name: 'Коллекции',
+      },
+    ];
+    dispatch(asyncUpdateBreadcrumb(breadCrumbs));
+  };
+
+  useEffect(() => {
+    sendBreadCrumbsHandler();
+  }, []);
 
   return (
     <div className="container">
@@ -50,9 +69,9 @@ const Collections = () => {
         <StyledTitle>Коллекции</StyledTitle>
         <StyledContainer className="container">
           {currentItems.length !== 0 &&
-            currentItems.map((item) => (
-              <CollectionCard key={item.id} item={item} />
-            ))}
+            currentItems.map((item) => {
+              return <CollectionCard key={item.id} item={item} />;
+            })}
         </StyledContainer>
         <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
       </div>
