@@ -1,14 +1,14 @@
 .card {
-  width: 286px;
+  width: 284px;
   border-radius: none;
-  margin: 3px;
+  margin: 4px;
   margin-top: 10px;
   position: relative;
 }
 
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
   .card {
-    margin: 17px;
+    width: 262px;
   }
 }
 
@@ -31,11 +31,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 286px;
+  width: 284px;
   height: 44px;
   cursor: pointer;
   font-size: 14px;
   line-height: 17px;
+}
+
+@media all and (max-width: 320px) {
+  .card_button {
+    width: 262px;
+  }
 }
 
 .card_button:hover {

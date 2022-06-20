@@ -70,3 +70,14 @@
     display: none;
   }
 }
+
+.sign {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  color: black;
+  margin-left: 5px;
+  margin-right: 20px;
+}

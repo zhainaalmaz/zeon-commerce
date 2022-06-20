@@ -42,10 +42,6 @@ export default function MainCarosel() {
             <img className="slider_image" src={item.image} alt="coruselImg" />
           </SwiperSlide>
         ))}
-
-        {/* <SwiperSlide>
-          <img className="slider_image" src={mobSlider} alt="coruselImg" />
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );

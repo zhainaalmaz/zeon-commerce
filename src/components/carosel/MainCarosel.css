@@ -24,13 +24,14 @@
 
 .slider_image {
   height: 488px;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media all and (max-width: 320px) {
   .wrapper {
     width: 320px;
     position: relative;
-    /* height: 314px; */
   }
 }
 
@@ -38,7 +39,6 @@
   .slider_image {
     width: 320px;
     height: 298px;
-    /* height: 314px; */
   }
 }
 
@@ -46,6 +46,5 @@
   .slider_main {
     width: 320px;
     height: 298px;
-    /* height: 314px; */
   }
 }

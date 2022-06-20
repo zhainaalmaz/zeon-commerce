@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchAsyncProducts } from './store/productSlice';
 import { fetchAsyncCollections } from './store/collectionsSlice';
-import CollectionList from './ui/CollectionList';
+import CollectionList from './ui/CollectionList/CollectionList';
 import Product from './components/product/Product';
 import { fetchAsyncCommerce } from './store/commerceSlice';
 import Help from './pages/help/Help';
@@ -29,6 +29,8 @@ import {
 import Modal from './ui/modalWindow/ModalWindow';
 import ModalRequest from './components/modal/modalRequest/ModalRequest';
 import SuccessModal from './components/modal/modalSuccess/SuccessModal';
+import LoginPage from './pages/auth/login/LoginPage';
+import SignUp from './pages/auth/register/RegisterPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -73,15 +75,18 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/offert" element={<Offerts />} />
           <Route path="/searchpage/:inputEntered" element={<SearchPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
+
       {openDialog && (
         <Modal onClose={onCloseFloating}>
           <ModalRequest
             setOpenDialog={onCloseFloating}
-            setOpen={onCloseOpenValue}
             showsuccess={showsuccess}
             setshowsuccess={onCloseSuccessModal}
+            setOpen={onCloseOpenValue}
           />
         </Modal>
       )}

@@ -41,6 +41,18 @@
   }
 }
 
+.mob_text {
+  display: none;
+}
+
+@media all and (max-width: 320px) {
+  .mob_text {
+    color: #b9b9b9;
+    margin-top: 32px;
+    display: block;
+  }
+}
+
 .title {
   font-weight: 400;
   font-size: 14px;
@@ -78,4 +90,17 @@
 
 .footer_link {
   color: white;
+}
+
+.divider {
+  display: none;
+}
+
+@media all and (max-width: 320px) {
+  .divider {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #363635;
+    width: 288px;
+  }
 }

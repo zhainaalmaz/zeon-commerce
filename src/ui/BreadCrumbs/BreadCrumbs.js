@@ -4,13 +4,13 @@ import classes from './BreadCrumbs.module.css';
 
 const BreadCrumbs = () => {
   const breadcrumbs = useSelector((state) => state.bread.breadCrumbsData);
-  // console.log(breadcrumbs);
+  console.log(breadcrumbs);
 
   return (
     <div className="container">
-      <div className={classes.containerForLocations}>
-        {breadcrumbs &&
-          breadcrumbs.map((breadcrumb) => {
+      {breadcrumbs.length > 1 && (
+        <div className={classes.containerForLocations}>
+          {breadcrumbs.map((breadcrumb) => {
             return breadcrumb.route ? (
               <Link
                 className={classes.link}
@@ -18,7 +18,7 @@ const BreadCrumbs = () => {
                 to={breadcrumb.route}
               >
                 <p className={classes.previousLocation}>
-                  {breadcrumb.route_name}{' '}
+                  {breadcrumb.route_name}
                   <span className={classes.slash}>/</span>
                 </p>
               </Link>
@@ -31,7 +31,8 @@ const BreadCrumbs = () => {
               </p>
             );
           })}
-      </div>
+        </div>
+      )}{' '}
     </div>
   );
 };

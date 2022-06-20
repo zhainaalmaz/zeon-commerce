@@ -83,10 +83,12 @@ const Main = () => {
             </>
           )}
         </div>
-        <BestSeller />
-        <NewProducts />
-        <Collection />
-        <Advantages />
+        <div className={cls.section}>
+          <BestSeller />
+          <NewProducts />
+          <Collection />
+          <Advantages />
+        </div>
       </div>
     </div>
   );

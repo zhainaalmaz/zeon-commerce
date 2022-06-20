@@ -14,11 +14,16 @@ import {
   Divider,
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
-import Floating from '../floatingButtons/Floating';
 import './Drawer.css';
 import { ReactComponent as DeleteSvg } from '../../assets/icons/delete.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { onChangeOpenValue } from '../../store/floatingSlice';
+import {
+  onChangeOpenDialog,
+  onChangeOpenValue,
+} from '../../store/floatingSlice';
+import telegram from '../../assets/icons/telegram1.svg';
+import whatsapp from '../../assets/icons/whatsapp2.svg';
+import telephone from '../../assets/icons/telephone3.svg';
 
 const MuiDrawer = ({ navigate }) => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -62,6 +67,10 @@ const MuiDrawer = ({ navigate }) => {
   const closeDrawer = (e) => {
     setIsDrawerOpen(false);
     dispatch(onChangeOpenValue());
+  };
+
+  const onCloseFloating = () => {
+    dispatch(onChangeOpenDialog());
   };
 
   return (
@@ -112,7 +121,7 @@ const MuiDrawer = ({ navigate }) => {
                   <ListItemButton>
                     {index % 2 === 0 ? (
                       <div>
-                        {!isFavorite ? (
+                        {!isFavorite.length > 0 ? (
                           <FavoriteLogo style={{ marginRight: 5 }} />
                         ) : (
                           <FavoritedSvg style={{ marginRight: 5 }} />
@@ -120,7 +129,7 @@ const MuiDrawer = ({ navigate }) => {
                       </div>
                     ) : (
                       <div>
-                        {!isAdded ? (
+                        {!isAdded.length > 0 ? (
                           <BasketLogo style={{ marginRight: 5 }} />
                         ) : (
                           <AddedBasketIcon style={{ marginRight: 5 }} />
@@ -146,7 +155,27 @@ const MuiDrawer = ({ navigate }) => {
                   </a>
                 </span>
               </div>
-              {<Floating />}
+              <div>
+                <a
+                  style={{ marginRight: 6 }}
+                  target="_blank"
+                  href="https://web.telegram.org/"
+                  rel="noreferrer"
+                >
+                  <img src={telegram} alt="telegram" />
+                </a>
+                <a
+                  style={{ marginRight: 6 }}
+                  target="_blank"
+                  href="https://web.whatsapp.com/"
+                  rel="noreferrer"
+                >
+                  <img src={whatsapp} alt="wa" />
+                </a>
+                <span className="main-icons" href="">
+                  <img onClick={onCloseFloating} src={telephone} alt="phone" />
+                </span>
+              </div>
             </div>
           </List>
         </Box>

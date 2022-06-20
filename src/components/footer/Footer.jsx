@@ -87,6 +87,11 @@ const Footer = () => {
               {footerData.socialMedia?.whatsappTitle}
             </p>
           </a>
+          <hr
+            className={cls.divider}
+            style={{ color: 'grey', marginTop: 32 }}
+          />
+          <p className={cls.mob_text}>Developed by Zeon 2022</p>
         </div>
       </div>
     </div>

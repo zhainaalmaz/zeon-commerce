@@ -4,13 +4,17 @@ import whatsapp from '../../assets/icons/whatsapp2.svg';
 import telephone from '../../assets/icons/telephone3.svg';
 import cls from './Floating.module.css';
 import { useDispatch } from 'react-redux';
-import { onChangeOpenDialog } from '../../store/floatingSlice';
+import {
+  onChangeOpenDialog,
+  onChangeOpenValue,
+} from '../../store/floatingSlice';
 
 const Floating = () => {
   const dispatch = useDispatch();
 
   const onCloseFloating = () => {
     dispatch(onChangeOpenDialog());
+    dispatch(onChangeOpenValue());
   };
 
   return (

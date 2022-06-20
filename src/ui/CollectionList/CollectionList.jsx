@@ -1,36 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import Content from './content/Content';
-import styled from 'styled-components';
-import InterestedProducts from '../components/interestedProducts/InterestedProducts';
-import Collections from '../pages/collections/Collections';
-import { asyncUpdateBreadcrumb } from '../store/breadCrumbsSlice';
-
-const StyledP = styled.p`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  text-align: start;
-  padding-top: 36px;
-`;
-const StyledContent = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 16px;
-`;
-
-const StyledTitle = styled.p`
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  text-align: center;
-`;
+import Content from '../content/Content';
+import InterestedProducts from '../../components/interestedProducts/InterestedProducts';
+import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
+import cls from './CollectionList.module.css';
 
 const CollectionList = () => {
   const dispatch = useDispatch();
@@ -39,7 +13,6 @@ const CollectionList = () => {
 
   const product = useSelector((state) => state.products.data);
   const collection = useSelector((state) => state.collections.data);
-  const breadcrumbs = useSelector((state) => state.bread.breadCrumbsData);
 
   const collectionName = collection.filter(
     (element) => element.id === collectionParams
@@ -51,11 +24,6 @@ const CollectionList = () => {
 
   const filteredNewItems = product.filter((item) => item.newproducts);
   const [count] = useState(5);
-
-  // useEffect(() => {
-  //   const paths = { [+collectionList]: collectionName[0]?.title };
-  //   dispatch(pathActions.setPaths(paths));
-  // }, [collectionName]);
 
   const sendBreadCrumbsHandler = () => {
     const breadCrumbs = [
@@ -80,23 +48,24 @@ const CollectionList = () => {
 
   return (
     <div className="container">
-      <StyledP>{`${collectionName[0]?.title}`}</StyledP>
+      <div className={cls.container}>
+        <h5 className={cls.title}>{`${collectionName[0]?.title}`}</h5>
 
-      <div>
-        <StyledContent>
+        <div className={cls.content}>
           {filteredItem.map((item) => (
             <div key={item.id}>
               <Content title={`${collectionName[0]?.title}`} item={item} />
             </div>
           ))}
-        </StyledContent>
-      </div>
-      <div style={{ marginTop: 64 }}>
-        <StyledTitle>Новинки</StyledTitle>
-        <div style={{ display: 'flex' }}>
-          {filteredNewItems.slice(0, count).map((item) => (
-            <InterestedProducts key={item.id} item={item} />
-          ))}
+        </div>
+
+        <div style={{ marginTop: 64 }}>
+          <h5 className={cls.interested_title}>Новинки</h5>
+          <div className={cls.interestedProducts}>
+            {filteredNewItems.slice(0, count).map((item) => (
+              <InterestedProducts key={item.id} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

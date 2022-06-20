@@ -17,6 +17,7 @@
   cursor: pointer;
   top: 1%;
   right: 3%;
+  z-index: 3;
 }
 
 .hearted {
@@ -25,6 +26,10 @@
   top: 1%;
   right: 3%;
   z-index: -1;
+}
+
+.container:hover .hearted {
+  z-index: 3;
 }
 
 .percentText {
@@ -47,7 +52,6 @@
 }
 
 .title {
-  margin-top: 5px;
   font-size: 14px;
   line-height: 17px;
   color: #393939;
@@ -86,4 +90,46 @@
   margin-right: 12px;
   margin-top: 6px;
   opacity: 47%;
+}
+
+.images {
+  width: 100%;
+  height: 332px;
+  display: inline-block;
+}
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 286px;
+  position: relative;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: 500ms;
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  transition: right 1.5s;
+  width: 48px;
+  height: 2px;
+  background: #fff;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.line_layout {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 90px;
+  display: none;
+  padding: 0 8px;
+}
+
+.container:hover .line_layout {
+  display: block;
 }

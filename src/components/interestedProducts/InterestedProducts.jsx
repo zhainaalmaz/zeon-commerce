@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { mathPercent } from '../../utils';
@@ -10,9 +10,11 @@ import {
   onRemoveFromFavorite,
 } from '../../store/favoriteSlice';
 import cls from './InterestedProducts.module.css';
-import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 
 const InterestedProducts = ({ item }) => {
+  const [index, setIndex] = useState(0);
+  const [marginRightState, setMarginRightState] = useState(30);
+
   const params = useParams();
   const collectionId = params.collectionList;
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
@@ -28,22 +30,29 @@ const InterestedProducts = ({ item }) => {
     dispatch(onRemoveFromFavorite(item));
   };
 
-  // const sendBreadCrumbsHandler = () => {
-  //   const breadCrumbs = [
-  //     {
-  //       route_name: 'Главное',
-  //       route: '/',
-  //     },
-  //     {
-  //       route_name: `${item.title}`,
-  //     },
-  //   ];
-  //   dispatch(asyncUpdateBreadcrumb(breadCrumbs));
-  // };
+  const onMouseLeaveHandler = () => {
+    setMarginRightState(30);
+    setIndex(0);
+  };
 
-  // useEffect(() => {
-  //   sendBreadCrumbsHandler();
-  // }, []);
+  const onMouseMoveHandler = (event) => {
+    const movementX = event.movementX;
+    console.log(movementX);
+    if (marginRightState > 0 && marginRightState < 50) {
+      setIndex(0);
+    } else if (marginRightState > 50 && marginRightState < 100) {
+      setIndex(1);
+    } else if (marginRightState > 100 && marginRightState < 150) {
+      setIndex(2);
+    } else if (marginRightState > 150 && marginRightState < 210) {
+      setIndex(3);
+    }
+    if (marginRightState < 0) {
+      setMarginRightState(220);
+    } else {
+      setMarginRightState(marginRightState + movementX);
+    }
+  };
 
   return (
     <div className={cls.container}>
@@ -69,16 +78,40 @@ const InterestedProducts = ({ item }) => {
         )}
       </>
       <Link to={`/${collectionId}/${item.id}`}>
-        <img
-          className={cls.images}
-          src={item.productImages.map((el) => {
-            return el.image;
-          })}
-          alt="/"
-        />
+        <div
+          className={cls.slideShow}
+          style={{ overflow: 'hidden' }}
+          onMouseLeave={onMouseLeaveHandler}
+          onMouseMove={onMouseMoveHandler}
+        >
+          <div
+            className={cls.slideshowSlider}
+            style={{ transform: `translateX(${-index * 100}%)` }}
+          >
+            {item.productImages.map((elem, index) => {
+              return (
+                <div
+                  key={index}
+                  className={cls.images}
+                  style={{
+                    backgroundImage: `url(${elem.image})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                  }}
+                />
+              );
+            })}
+          </div>
+          <div className={cls.line_layout}>
+            <div
+              className={cls.line}
+              style={{ marginLeft: 25 * index + '%' }}
+            ></div>
+          </div>
+        </div>
 
-        <div style={{ margin: '8px' }}>
-          <p className={cls.priceTitle} style={{ marginTop: '5px' }}>
+        <div style={{ margin: '0 8px' }}>
+          <p className={cls.priceTitle}>
             <span>
               {item.discount ? (
                 <>

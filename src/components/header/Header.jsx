@@ -12,6 +12,9 @@ import SearchBar from '../search/SearchBar';
 import cls from './Header.module.css';
 import { ReactComponent as SearchIcon } from '../../assets/icons/search2.svg';
 import HeaderNavLink from './HeaderNavLink';
+import { ReactComponent as RemoveSvg } from '../../assets/icons/delete.svg';
+import LoginIcon from '@mui/icons-material/Login';
+import { Login } from '../auth/Login';
 
 const Header = () => {
   const headerLogo = useSelector((state) => state.commerce.data);
@@ -43,6 +46,10 @@ const Header = () => {
     },
   ];
 
+  const showInputHandler = () => {
+    setIsShowInput(!isShowInput);
+  };
+
   return (
     <div className="divider-line">
       <div className="container">
@@ -59,14 +66,14 @@ const Header = () => {
             })}
           </div>
 
-          <span>
+          <span className={cls.sign}>
             Тел:
-            <a
-              href="tel:+996 000 00 00 00"
-              style={{ color: 'black', marginLeft: 5 }}
-            >
+            <a href="tel:+996 000 00 00 00" className={cls.phone}>
               +996 000 00 00 00
             </a>
+            <Link to="/login" element={<Login />}>
+              <LoginIcon />
+            </Link>
           </span>
         </div>
       </div>
@@ -81,8 +88,14 @@ const Header = () => {
             <img alt="logo" src={headerLogo.headerLogo} />
           </Link>
           <div className={cls.search_icon}>
-            {isShowInput ? <SearchBar /> : null}
-            <SearchIcon onClick={() => setIsShowInput(!isShowInput)} />
+            {isShowInput ? (
+              <SearchBar showInputHandler={showInputHandler} />
+            ) : null}
+            {isShowInput ? (
+              <RemoveSvg style={{ width: 36 }} onClick={showInputHandler} />
+            ) : (
+              <SearchIcon onClick={showInputHandler} />
+            )}
           </div>
           <div className={cls.search_input}>
             <SearchBar />

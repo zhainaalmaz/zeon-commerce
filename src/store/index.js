@@ -6,6 +6,7 @@ import commerceSlice from './commerceSlice';
 import cartSlice from './cartSlice';
 import breadCrumbsSlice from './breadCrumbsSlice';
 import floatingSlice from './floatingSlice';
+import userSlice from './userSlice';
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     cart: cartSlice,
     bread: breadCrumbsSlice,
     float: floatingSlice,
+    user: userSlice,
   },
 });
 

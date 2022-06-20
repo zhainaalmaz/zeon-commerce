@@ -1,0 +1,29 @@
+.layout {
+  width: 392px;
+  height: 316px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_input {
+  margin: 5px;
+}
+
+.form_input::placeholder {
+  color: #d0d0d0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form_input input {
+  border: none;
+  margin: 5px;
+  padding: 10px 12px;
+  width: 392px;
+  height: 44px;
+  background: #ffffff;
+}

@@ -1,0 +1,50 @@
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  text-align: start;
+  padding-top: 36px;
+}
+
+@media (max-width: 320px) {
+  .title {
+    padding: 16px 0 0 16px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 16px;
+}
+
+@media (max-width: 320px) {
+  .content {
+    padding: 16px;
+  }
+}
+
+.interested_title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  text-align: center;
+}
+
+.interestedProducts {
+  display: flex;
+}
+
+@media all and (max-width: 320px) {
+  .interestedProducts {
+    padding-left: 16px;
+    overflow-y: auto;
+  }
+}

@@ -10,7 +10,7 @@
   .content {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    margin-top: 0;
   }
 }
 
@@ -41,7 +41,21 @@
   color: #393939;
 }
 
+@media (max-width: 320px) {
+  .description {
+    font-size: 16px;
+    line-height: 20px;
+    color: #393939;
+  }
+}
+
 .section {
   text-align: start;
   padding-top: 11px;
+}
+
+@media (max-width: 320px) {
+  .section {
+    padding: 16px;
+  }
 }

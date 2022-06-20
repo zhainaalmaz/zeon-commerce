@@ -1,13 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { saveToLocalStorage, getFromLocalStorage } from '../utils/helpers';
-// import { EBOOK_BREADCRUMBS } from '../utils/constants/constants'
 
-const EBOOK_BREADCRUMBS = 'breadCrumbsStorage';
+const ZEON_BREADCRUMBS = 'breadCrumbsStorage';
 
 export const asyncUpdateBreadcrumb = createAsyncThunk(
   'breadCrumb/asyncUpdateBreadcrumb',
   async (breadCrumbs) => {
-    saveToLocalStorage(EBOOK_BREADCRUMBS, breadCrumbs);
+    saveToLocalStorage(ZEON_BREADCRUMBS, breadCrumbs);
     return breadCrumbs;
   }
 );
@@ -15,7 +14,7 @@ export const asyncUpdateBreadcrumb = createAsyncThunk(
 export const asyncAutoUpdateBreadcrumb = createAsyncThunk(
   'breadCrumb/asyncUpdateBreadcrumb',
   async () => {
-    const breadcrumbs = getFromLocalStorage(EBOOK_BREADCRUMBS);
+    const breadcrumbs = getFromLocalStorage(ZEON_BREADCRUMBS);
     return breadcrumbs;
   }
 );

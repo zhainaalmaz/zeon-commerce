@@ -3,13 +3,9 @@ import { ReactComponent as SuccessOrder } from '../../../assets/icons/check.svg'
 import Button from '../../../ui/Button';
 import cls from './SuccessModal.module.css';
 
-const SuccessModal = ({ onClose, setOpen }) => {
-  const screenWidth = window.innerWidth;
-  const redirect = () => {
+const SuccessModal = ({ onClose }) => {
+  const onCloseModal = () => {
     onClose();
-    if (screenWidth > 320) {
-      setOpen();
-    }
   };
 
   return (
@@ -27,7 +23,7 @@ const SuccessModal = ({ onClose, setOpen }) => {
         <Button
           className={cls.success_button}
           style={{ width: '100%', background: 'black' }}
-          onClick={redirect}
+          onClick={onCloseModal}
         >
           Продолжить покупки
         </Button>

@@ -73,21 +73,20 @@ const Cart = () => {
           </div>
         </>
       ) : (
-        <div>
-          <div className={cls.container}>
-            <div>
-              {cartProducts?.cartItems?.map((item) => (
-                <div key={item?.id + item?.selectColor}>
-                  <CartItem item={item} />
-                </div>
-              ))}
-            </div>
-            <div className={cls.content}>
-              <CartTotal setIsModalOpen={setIsModalOpen} />
-            </div>
+        <div className={cls.container}>
+          <div>
+            {cartProducts?.cartItems?.map((item) => (
+              <div key={item?.id + item?.selectColor}>
+                <CartItem item={item} />
+              </div>
+            ))}
+          </div>
+          <div className={cls.content}>
+            <CartTotal setIsModalOpen={setIsModalOpen} />
           </div>
         </div>
       )}
+
       {isModalOpen && (
         <Modal onClose={showModalHandler}>
           <ModalForm

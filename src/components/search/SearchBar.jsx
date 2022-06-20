@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { ReactComponent as RemoveSvg } from '../../assets/icons/delete.svg';
 import './SearchBar.css';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
-const SearchBar = () => {
+const SearchBar = ({ showInputHandler }) => {
   const product = useSelector((state) => state.products.data);
   const [filteredData, setFilteredData] = useState([]);
   const [inputEntered, setInputEntered] = useState('');
   const navigate = useNavigate();
-  const [showIcon, setShowIcon] = useState(false);
 
   const onFilterHandler = (e) => {
     const searchProduct = e.target.value;
@@ -30,15 +28,14 @@ const SearchBar = () => {
   const onClearInput = () => {
     setFilteredData([]);
     setInputEntered('');
+    showInputHandler();
   };
 
   const searchNavigateHandler = () => {
-    navigate(`/searchpage/${inputEntered}`);
-    onClearInput();
-  };
-
-  const onShowHandler = () => {
-    setShowIcon(!showIcon);
+    if (inputEntered.length > 0) {
+      navigate(`/searchpage/${inputEntered}`);
+      onClearInput();
+    }
   };
 
   return (
@@ -51,11 +48,7 @@ const SearchBar = () => {
           onChange={onFilterHandler}
         />
         <div>
-          {!showIcon ? (
-            <SearchIcon className="searchBtn" onClick={searchNavigateHandler} />
-          ) : (
-            <RemoveSvg className="removeIcon" />
-          )}
+          <SearchIcon className="searchBtn" onClick={searchNavigateHandler} />
         </div>
       </>
       {filteredData?.length !== 0 && (
@@ -77,7 +70,8 @@ const SearchBar = () => {
                   fontSize: 14,
                   lineHeight: '150%',
                 }}
-                to={`/searchpage/${value.title}`}
+                to={`/products/${value.id}`}
+                // to={`/searchpage/${value.title}`}
                 onClick={onClearInput}
                 key={key}
               >

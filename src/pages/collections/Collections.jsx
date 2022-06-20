@@ -23,6 +23,9 @@ const StyledTitle = styled.p`
   color: #393939;
   padding-top: 32px;
   text-align: start;
+  @media all and (max-width: 320px) {
+    padding-left: 16px;
+  }
 `;
 
 const Collections = () => {

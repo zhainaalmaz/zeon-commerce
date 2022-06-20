@@ -22,7 +22,7 @@ const Product = () => {
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
   const sameProduct = product.filter((element) => element.title);
   const [selectedColor, setSelectedColor] = useState('#73A39D');
-  const [isSelectedProduct, setIsSelectedProduct] = useState(true);
+  const [isSelectedProduct, setIsSelectedProduct] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -112,6 +112,7 @@ const Product = () => {
                           name="radio"
                           id="radio"
                           type="radio"
+                          defaultChecked={color.color === '#73A39D'}
                         />
                         <label htmlFor="radio"></label>
                       </div>
