@@ -13,6 +13,7 @@ import { addToCart } from '../../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import InterestedProducts from '../interestedProducts/InterestedProducts';
 import cls from './Product.module.css';
+import { useAuth } from '../../hooks/use-auth';
 
 const Product = () => {
   const params = useParams();
@@ -20,14 +21,25 @@ const Product = () => {
   const product = useSelector((state) => state.products.data);
   const filteredProduct = product.filter((item) => item.id === products);
   const favoriteItems = useSelector((state) => state.favorite.favoriteItems);
+  console.log(favoriteItems, 'fav');
   const sameProduct = product.filter((element) => element.title);
   const [selectedColor, setSelectedColor] = useState('#73A39D');
-  const [isSelectedProduct, setIsSelectedProduct] = useState(false);
+  const [isSelectedProduct, setIsSelectedProduct] = useState(true);
+
+  console.log(favoriteItems);
+  console.log(filteredProduct);
+
+  const isFavorite = favoriteItems.some(
+    (elem) => elem.id === filteredProduct[0].id
+  );
+  console.log(isFavorite, 'is');
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [count] = useState(5);
+
+  const { isAuth } = useAuth();
 
   const onAddFavorite = (item) => {
     dispatch(onAddToFavorite(item));
@@ -38,19 +50,27 @@ const Product = () => {
   };
 
   const addToCartHandler = (item) => {
-    const newItem = { ...item, selectColor: selectedColor };
-    newItem.quantity = 1;
-    dispatch(addToCart(newItem));
-    setIsSelectedProduct((prev) => !prev);
+    if (isAuth) {
+      const newItem = { ...item, selectColor: selectedColor };
+      newItem.quantity = 1;
+      dispatch(addToCart(newItem));
+      setIsSelectedProduct((prev) => !prev);
+    } else {
+      navigate('/login');
+    }
   };
 
-  const changeMood = () => {
+  const changeMode = () => {
     setIsSelectedProduct(selectedColor);
   };
 
   const handleToGoCart = () => {
     navigate('/cart');
   };
+
+  // const isFavProduct = (item) => {
+  //   favoriteItems.id === item.id;
+  // };
 
   return (
     <div style={{ background: '#ECECEC' }}>
@@ -102,7 +122,7 @@ const Product = () => {
                         }}
                       >
                         <input
-                          onClick={changeMood}
+                          onClick={changeMode}
                           style={{
                             opacity: 0,
                             overflow: 'hidden',
@@ -197,8 +217,9 @@ const Product = () => {
                         </span>
                       </Button>
                     )}
+
                     <div>
-                      {favoriteItems.length ? (
+                      {isFavorite ? (
                         <Button
                           style={{
                             height: '44px',
@@ -207,7 +228,7 @@ const Product = () => {
                           }}
                         >
                           <HeartSvg
-                            fill="white"
+                            fill="will"
                             onClick={() => onRemoveFavorite(item)}
                           />
                         </Button>

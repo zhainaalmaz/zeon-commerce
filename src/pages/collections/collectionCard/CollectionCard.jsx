@@ -28,7 +28,14 @@ export default function CollectionCard({ item }) {
   return (
     <>
       <div className={cls.card} key={item.id}>
-        <CardMedia component="img" height="374" image={item.image} alt="hhhh" />
+        <div className={cls.cardmedia}>
+          <CardMedia
+            component="img"
+            height="374"
+            image={item.image}
+            alt="hhhh"
+          />
+        </div>
         <h5 className={cls.card_title}>{item.title}</h5>
 
         <NavLink

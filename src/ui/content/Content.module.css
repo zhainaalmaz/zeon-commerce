@@ -10,7 +10,7 @@
 
 @media all and (max-width: 320px) {
   .container {
-    width: 262px;
+    width: 286px;
   }
 }
 
@@ -78,6 +78,7 @@
   margin-right: 12px;
   margin-top: 6px;
   opacity: 47%;
+  padding-bottom: 6px;
 }
 
 .sizeTitle {

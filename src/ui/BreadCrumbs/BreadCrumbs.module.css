@@ -4,6 +4,12 @@
   padding: 22px 0px;
 }
 
+@media all and (max-width: 320px) {
+  .containerForLocations {
+    padding-left: 16px;
+  }
+}
+
 .currentLocation {
   color: #969696;
   font-size: 14px;
@@ -17,6 +23,12 @@
   cursor: pointer;
   margin-left: 10px;
   color: black;
+}
+
+@media all and (max-width: 320px) {
+  .previousLocation {
+    margin-left: 0px;
+  }
 }
 
 .link {

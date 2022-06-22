@@ -4,6 +4,7 @@ import Content from '../../ui/content/Content';
 import InterestedProducts from '../../components/interestedProducts/InterestedProducts';
 import cls from './Favorite.module.css';
 import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
+import { axiosinstance } from '../../api/api';
 
 const Favorite = () => {
   const product = useSelector((state) => state.products.data);
@@ -77,7 +78,7 @@ const Favorite = () => {
         <>
           <h6 className={cls.text}>У Вас пока нет избранных товаров</h6>
           <p className={cls.title2}>Возможно Вас заинтересует</p>
-          <div style={{ display: 'flex' }}>
+          <div className={cls.interestedProducts}>
             {interestPost.slice(0, count).map((item) => (
               <InterestedProducts key={item.id} item={item} />
             ))}

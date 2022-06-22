@@ -1,6 +1,6 @@
 .section {
   width: 624px;
-  background: white;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -19,6 +19,7 @@
     flex-wrap: nowrap;
     overflow-y: auto;
     width: 100%;
+    padding-left: 16px;
   }
 
   .section img {
@@ -75,7 +76,7 @@
 }
 
 .title {
-  margin-top: 32px;
+  /* margin-top: 32px; */
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
@@ -163,6 +164,7 @@
   margin: 0 6px;
   display: flex;
   align-items: center;
+  border: solid 0.2px rgba(209, 209, 209, 1);
 }
 
 .aboutItem {

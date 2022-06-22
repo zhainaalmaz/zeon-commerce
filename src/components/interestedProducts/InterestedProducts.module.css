@@ -1,15 +1,21 @@
 .container {
   width: 226px;
   height: 420px;
-  background: white;
-  margin: 16px 3px 64px 0;
+  /* background: white; */
+  margin: 16px 4px 64px 0;
   text-align: start;
-  border: 1px solid #f1f1f1;
+  /* border: 1px solid #f1f1f1; */
   position: relative;
 }
 
 .container:hover .hearted {
   z-index: 3;
+}
+
+@media all and (max-width: 320px) {
+  .container .hearted {
+    z-index: 3;
+  }
 }
 
 .heart {
@@ -70,12 +76,6 @@
   height: 320px;
 }
 
-@media (max-width: 320px) {
-  .images {
-    width: 226px;
-  }
-}
-
 .colors {
   display: flex;
   flex-direction: row;
@@ -94,14 +94,14 @@
 
 .images {
   width: 100%;
-  height: 332px;
+  /* height: 332px; */
   display: inline-block;
 }
 
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
-  max-width: 286px;
+  /* max-width: 286px; */
   position: relative;
 }
 

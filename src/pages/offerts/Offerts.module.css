@@ -1,5 +1,6 @@
 .container {
   text-align: start;
+  padding-bottom: 64px;
 }
 
 @media all and (max-width: 320px) {

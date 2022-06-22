@@ -37,7 +37,7 @@ const InterestedProducts = ({ item }) => {
 
   const onMouseMoveHandler = (event) => {
     const movementX = event.movementX;
-    console.log(movementX);
+
     if (marginRightState > 0 && marginRightState < 50) {
       setIndex(0);
     } else if (marginRightState > 50 && marginRightState < 100) {
@@ -80,7 +80,7 @@ const InterestedProducts = ({ item }) => {
       <Link to={`/${collectionId}/${item.id}`}>
         <div
           className={cls.slideShow}
-          style={{ overflow: 'hidden' }}
+          style={{ overflow: 'hidden', width: 226 }}
           onMouseLeave={onMouseLeaveHandler}
           onMouseMove={onMouseMoveHandler}
         >

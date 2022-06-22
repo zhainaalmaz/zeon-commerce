@@ -9,6 +9,8 @@
 }
 
 .pagination .page-num {
+  width: 44px;
+  height: 44px;
   padding: 8px 15px;
   cursor: pointer;
   font-weight: 400;
@@ -16,6 +18,7 @@
   background-color: white;
   text-align: center;
   color: #979797;
+  margin: 3px;
 }
 
 .pagination .page-link {
@@ -37,4 +40,8 @@
 .pagination .active {
   background-color: black;
   color: #f8f8f8;
+}
+
+.pagination_container {
+  padding-bottom: 64px;
 }

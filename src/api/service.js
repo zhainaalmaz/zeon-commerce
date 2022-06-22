@@ -1,4 +1,5 @@
 import { axiosInstance } from './api';
+import { axiosinstance } from './api';
 
 export const getCoruselImageRequest = () => {
   return axiosInstance.get('corusel.json');
@@ -14,4 +15,8 @@ export const getCollectionsRequest = () => {
 
 export const getCommerceRequest = () => {
   return axiosInstance.get('commerce.json');
+};
+
+export const getUsersOrderRequest = () => {
+  return axiosinstance.get('name.json?orderBy="userId"');
 };

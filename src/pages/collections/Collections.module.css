@@ -1,0 +1,37 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  padding-bottom: 16px;
+}
+
+@media all and (max-width: 320px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.wrapper {
+  padding-bottom: 49px;
+}
+
+@media all and (max-width: 320px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+  padding-top: 32px;
+  text-align: start;
+}
+@media all and (max-width: 320px) {
+  .title {
+    padding-left: 16px;
+  }
+}

@@ -11,6 +11,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { mathPercent } from '../../utils';
 import cls from './Content.module.css';
 import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
+import { useAuth } from '../../hooks/use-auth';
 
 const Content = ({ item, title }) => {
   const [index, setIndex] = useState(0);
@@ -22,6 +23,7 @@ const Content = ({ item, title }) => {
   const filteredFev = favoriteItems.find((el) => el.id === item.id);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { isAuth } = useAuth();
 
   const sendBreadCrumbsHandler = () => {
     const breadCrumbs = collectionId
@@ -67,7 +69,9 @@ const Content = ({ item, title }) => {
     }
   };
 
-  const onAddFavorite = (item) => dispatch(onAddToFavorite(item));
+  const onAddFavorite = (item) => {
+    dispatch(onAddToFavorite(item));
+  };
   const onRemoveFavorite = (item) => dispatch(onRemoveFromFavorite(item));
 
   const onMouseLeaveHandler = () => {
@@ -77,7 +81,7 @@ const Content = ({ item, title }) => {
 
   const onMouseMoveHandler = (event) => {
     const movementX = event.movementX;
-    console.log(movementX);
+
     if (marginRightState > 0 && marginRightState < 70) {
       setIndex(0);
     } else if (marginRightState > 70 && marginRightState < 140) {
@@ -109,14 +113,14 @@ const Content = ({ item, title }) => {
         {!!item.discount && <DiscounSvg />}
       </div>
 
-      {!filteredFev && (
+      {isAuth && !filteredFev && (
         <Hearted
           className={cls.hearted}
           role="presentation"
           onClick={() => onAddFavorite(item)}
         />
       )}
-      {!!filteredFev && (
+      {isAuth && !!filteredFev && (
         <Heart className={cls.heart} onClick={() => onRemoveFavorite(item)} />
       )}
 

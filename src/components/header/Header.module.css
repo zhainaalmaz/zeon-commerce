@@ -81,3 +81,16 @@
   margin-left: 5px;
   margin-right: 20px;
 }
+
+.horizontal_divider {
+  border: 1px solid #d3d3d3;
+  transform: rotate(90deg);
+  width: 24px;
+  padding: 0 20px;
+}
+
+@media all and (max-width: 320px) {
+  .horizontal_divider {
+    display: none;
+  }
+}

@@ -4,6 +4,7 @@ import { ReactComponent as CloseSvg } from '../../../assets/icons/delete.svg';
 import { Link } from 'react-router-dom';
 import { axiosinstance } from '../../../api/api';
 import cls from './ModalForm.module.css';
+import { useSelector } from 'react-redux';
 
 const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
   const {
@@ -19,13 +20,23 @@ const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
     product: data,
     totalPrice: totalFinalPrice,
   };
+
   const [modal, setModal] = useState(false);
+  const userId = useSelector((state) => state.user.id);
+  const favProducts = useSelector((state) => state.favorite);
+  const cart = useSelector((state) => state.cart);
+
+  console.log(favProducts, 'fav');
+
+  console.log(userId, 'id');
 
   const onSubmithandler = (data) => {
     axiosinstance
       .post('/orders.json', {
         ...data,
         order,
+        userId,
+        favProducts,
       })
       .then((res) => {
         console.log(res.data, 'dsta');
@@ -71,7 +82,6 @@ const ModalForm = ({ showModal, totalFinalPrice, data, successHandler }) => {
                 })}
               />
             </>
-
             <>
               <label
                 className={cls.label}

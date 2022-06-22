@@ -1,6 +1,6 @@
 .block {
   width: 384px;
-  height: 311px;
+  /* height: 311px; */
   background: white;
   padding: 20px;
   margin-top: 11px;
@@ -10,6 +10,7 @@
   .block {
     width: 320px;
     padding: 16px;
+    margin-bottom: 18px;
   }
 }
 

@@ -29,8 +29,9 @@ import {
 import Modal from './ui/modalWindow/ModalWindow';
 import ModalRequest from './components/modal/modalRequest/ModalRequest';
 import SuccessModal from './components/modal/modalSuccess/SuccessModal';
-import LoginPage from './pages/auth/login/LoginPage';
-import SignUp from './pages/auth/register/RegisterPage';
+import Login from './components/auth/login/Login';
+import SignUp from './components/auth/signup/SignUp';
+import { Divider } from '@mui/material';
 
 function App() {
   const dispatch = useDispatch();
@@ -59,7 +60,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Divider />
       <BreadCrumbs />
+
       <div className="main">
         <Routes>
           <Route path="/" element={<Main />} />
@@ -75,7 +78,7 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/offert" element={<Offerts />} />
           <Route path="/searchpage/:inputEntered" element={<SearchPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>

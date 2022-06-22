@@ -25,6 +25,7 @@ const Cart = () => {
   useEffect(() => {
     setInterestedPost(filteredItem);
   }, []);
+
   const showModalHandler = () => {
     setIsModalOpen((prev) => !prev);
   };

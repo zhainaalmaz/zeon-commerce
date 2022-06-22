@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 50px;
+  border: 1px solid rgb(234, 231, 231);
+  padding: 30px;
+  background-color: white;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #393939;
+}
+
+.signup_link {
+  margin-top: 10px;
+}
+
+.linkTo {
+  margin-left: 5px;
+  font-size: 16px;
+  line-height: 20px;
+}

@@ -4,7 +4,7 @@ import './Pagination.css';
 
 const Pagination = ({ pageCount, handlePageClick }) => {
   return (
-    <div>
+    <div className="pagination_container">
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"

@@ -17,7 +17,7 @@
   color: #1d1d1b;
   z-index: 3;
   position: relative;
-  margin-left: 35px;
+  margin: 0 34px;
 }
 
 @media all and (max-width: 320px) {
@@ -25,14 +25,14 @@
     position: absolute !important;
     width: 288px;
     top: 80px;
-    right: 7px;
+    right: -30px;
   }
 }
 
 .searchBtn {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 42px;
   cursor: pointer;
   z-index: 20;
 }
@@ -41,6 +41,7 @@
   .searchBtn {
     position: absolute !important;
     top: 90px;
+    left: 5px;
   }
 }
 

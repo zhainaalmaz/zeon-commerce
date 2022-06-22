@@ -8,7 +8,9 @@
 }
 @media (max-width: 320px) {
   .title {
-    padding: 24px 16px 0 18px;
+    padding: 24px 16px 0 16px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -20,6 +22,12 @@
   color: #979797;
   text-align: start;
   margin-top: 12px;
+}
+
+@media all and (max-width: 320px) {
+  .count_text {
+    padding-left: 16px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -37,6 +45,14 @@
   margin-top: 16px;
 }
 
+@media all and (max-width: 320px) {
+  .text {
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
 .title2 {
   font-weight: 500;
   font-size: 24px;
@@ -44,6 +60,14 @@
   color: #393939;
   text-align: start;
   margin-top: 48px;
+}
+
+@media all and (max-width: 320px) {
+  .title2 {
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .content {
@@ -57,5 +81,16 @@
     display: flex;
     flex-direction: column;
     padding: 0 16px;
+  }
+}
+
+.interestedProducts {
+  display: flex;
+}
+
+@media all and (max-width: 320px) {
+  .interestedProducts {
+    padding-left: 16px;
+    overflow-y: auto;
   }
 }

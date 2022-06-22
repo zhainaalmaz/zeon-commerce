@@ -4,7 +4,6 @@ import classes from './BreadCrumbs.module.css';
 
 const BreadCrumbs = () => {
   const breadcrumbs = useSelector((state) => state.bread.breadCrumbsData);
-  console.log(breadcrumbs);
 
   return (
     <div className="container">

@@ -24,7 +24,7 @@ const News = () => {
   };
 
   useEffect(() => {
-    changeLimit(2);
+    changeLimit(4);
     sendBreadCrumbsHandler();
   }, []);
 

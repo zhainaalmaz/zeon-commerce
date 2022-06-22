@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from '../../ui/Button';
+import Button from '../../../ui/Button';
 import cls from './Form.module.css';
 
 const Form = ({ title, handleClick }) => {
@@ -26,7 +26,7 @@ const Form = ({ title, handleClick }) => {
           />
         </div>
         <Button
-          style={{ width: '392px', height: '44px' }}
+          style={{ height: '44px', marginTop: 70 }}
           onClick={() => handleClick(email, pass)}
         >
           {title}

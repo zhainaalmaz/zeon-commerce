@@ -1,32 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import CollectionCard from './collectionCard/CollectionCard';
 import Pagination from '../../ui/pagination/Pagination';
 import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
-
-const StyledContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 18px;
-  padding-bottom: 16px;
-  @media (max-width: 320px) {
-    display: flex;
-    flex-direction: column;
-  } ;
-`;
-
-const StyledTitle = styled.p`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #393939;
-  padding-top: 32px;
-  text-align: start;
-  @media all and (max-width: 320px) {
-    padding-left: 16px;
-  }
-`;
+import cls from './Collections.module.css';
 
 const Collections = () => {
   const collection = useSelector((state) => state.collections.data);
@@ -68,14 +45,16 @@ const Collections = () => {
 
   return (
     <div className="container">
-      <div style={{ paddingBottom: 49 }}>
-        <StyledTitle>Коллекции</StyledTitle>
-        <StyledContainer className="container">
-          {currentItems.length !== 0 &&
-            currentItems.map((item) => {
-              return <CollectionCard key={item.id} item={item} />;
-            })}
-        </StyledContainer>
+      <div className={cls.wrapper}>
+        <h5 className={cls.title}>Коллекции</h5>
+        <div className="container">
+          <div className={cls.content}>
+            {currentItems.length !== 0 &&
+              currentItems.map((item) => {
+                return <CollectionCard key={item.id} item={item} />;
+              })}
+          </div>
+        </div>
         <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
       </div>
     </div>

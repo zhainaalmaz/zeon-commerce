@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import MainCarosel from '../carosel/MainCarosel';
 import BestSeller from './bestSeller/BestSeller';
 import NewProducts from './newProduct/NewProducts';
-import { Divider } from '@mui/material';
 import Collection from './collection/Collection';
 import Advantages from './advantage/Advantages';
 import arrow from '../../assets/icons/up.svg';
@@ -35,7 +34,6 @@ const Main = () => {
 
   return (
     <div className={cls.main}>
-      <Divider />
       <div className="container" style={{ paddingTop: 10 }}>
         {openValue && <Floating setOpen={onCloseOpenValue} />}
         <MainCarosel />

@@ -111,7 +111,7 @@ const MuiDrawer = ({ navigate }) => {
             })}
           </List>
 
-          <Divider />
+          <Divider style={{ width: 150, marginLeft: 16 }} />
 
           <List>
             {itemList2.map((item, index) => {

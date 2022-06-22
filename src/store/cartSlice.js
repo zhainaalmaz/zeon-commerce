@@ -38,14 +38,18 @@ const cartSlice = createSlice({
       localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
     },
     decreaseItem: (state, action) => {
-      state?.cartItems?.map((item) => {
-        if (
-          item?.selectColor === action.payload.selectColor &&
-          item?.id === action.payload.id
-        )
-          item.quantity = item.quantity - 1;
-      });
-      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+      if (action.payload.quantity <= 1) {
+        return state;
+      } else {
+        state?.cartItems?.map((item) => {
+          if (
+            item?.selectColor === action.payload.selectColor &&
+            item?.id === action.payload.id
+          )
+            item.quantity = item.quantity - 1;
+        });
+        localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+      }
     },
     clearItemsFromCart: (state) => {
       state.cartItems = [];

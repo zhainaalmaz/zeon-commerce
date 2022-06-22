@@ -6,6 +6,7 @@
 @media all and (max-width: 320px) {
   .layout {
     width: 288px;
+    height: 626px;
   }
 }
 

@@ -6,21 +6,14 @@
   position: relative;
 }
 
-@media all and (max-width: 320px) {
-  .card {
-    width: 262px;
-  }
-}
-
 .card_title {
   position: absolute;
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 18px;
-  text-align: center;
   color: #ffffff;
 }
 
@@ -40,7 +33,7 @@
 
 @media all and (max-width: 320px) {
   .card_button {
-    width: 262px;
+    width: 100%;
   }
 }
 
@@ -49,4 +42,8 @@
   color: black;
   font-size: 14px;
   line-height: 17px;
+}
+
+.cardmedia img {
+  width: 284px;
 }

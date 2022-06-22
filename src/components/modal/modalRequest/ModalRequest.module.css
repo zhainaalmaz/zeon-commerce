@@ -91,6 +91,7 @@
 .request_submit {
   width: 360px;
   margin-top: 12px;
+  border: none;
 }
 
 @media all and (max-width: 320px) {
