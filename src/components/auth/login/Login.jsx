@@ -4,6 +4,7 @@ import { Form } from '../authForm/Form';
 import { setUser } from '../../../store/userSlice';
 import { NavLink, useNavigate } from 'react-router-dom';
 import cls from './Login.module.css';
+
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

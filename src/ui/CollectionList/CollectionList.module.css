@@ -41,6 +41,8 @@
 @media all and (max-width: 320px) {
   .interested_title {
     padding-left: 16px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -52,5 +54,12 @@
   .interestedProducts {
     padding-left: 16px;
     overflow-y: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .pagination_container {
+    display: flex;
+    justify-content: end;
   }
 }

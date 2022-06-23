@@ -8,6 +8,12 @@
   gap: 5px;
 }
 
+@media (max-width: 320px) {
+  .pagination {
+    justify-content: space-between;
+  }
+}
+
 .pagination .page-num {
   width: 44px;
   height: 44px;
@@ -18,7 +24,13 @@
   background-color: white;
   text-align: center;
   color: #979797;
-  margin: 3px;
+  margin: 2px;
+}
+
+@media (max-width: 320px) {
+  .pagination .page-num {
+    margin: 0;
+  }
 }
 
 .pagination .page-link {
@@ -44,4 +56,10 @@
 
 .pagination_container {
   padding-bottom: 64px;
+}
+
+@media (max-width: 320px) {
+  .pagination_container {
+    padding: 16px 16px 64px 16px;
+  }
 }

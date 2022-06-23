@@ -69,8 +69,8 @@ input:focus {
   .dataResult {
     position: absolute !important;
     top: 130px;
-    width: 288px;
-    right: 7px;
+    width: 287px;
+    right: 5px;
   }
 }
 

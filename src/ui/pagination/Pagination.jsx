@@ -8,7 +8,9 @@ const Pagination = ({ pageCount, handlePageClick }) => {
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"
+        pageRangeDisplayed={2}
         onPageChange={handlePageClick}
+        marginPagesDisplayed={2}
         pageCount={pageCount}
         previousLabel="<"
         renderOnZeroPageCount={null}

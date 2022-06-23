@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Button from '../../ui/Button';
@@ -255,7 +255,7 @@ const Product = () => {
         ))}
 
         <div>
-          <h6 className={cls.title}>Похожие товары</h6>
+          <h6 className={cls.sameProductTitle}>Похожие товары</h6>
           <div className={cls.interestedProducts}>
             {sameProduct.slice(0, count).map((item) => (
               <InterestedProducts key={item.id} item={item} />

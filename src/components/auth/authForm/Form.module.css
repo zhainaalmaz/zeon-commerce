@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+@media all and (max-width: 320px) {
+  .layout {
+    width: 262px;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;

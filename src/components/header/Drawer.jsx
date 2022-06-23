@@ -37,26 +37,41 @@ const MuiDrawer = ({ navigate }) => {
   const itemList = [
     {
       text: 'О нас',
-      onClick: () => navigate('/about'),
+      onClick: () => {
+        navigate('/about');
+        setIsDrawerOpen(false);
+      },
     },
     {
       text: 'Новости',
-      onClick: () => navigate('/news'),
+      onClick: () => {
+        navigate('/news');
+        setIsDrawerOpen(false);
+      },
     },
     {
       text: 'Коллекция',
-      onClick: () => navigate('/collections'),
+      onClick: () => {
+        navigate('/collections');
+        setIsDrawerOpen(false);
+      },
     },
   ];
 
   const itemList2 = [
     {
       text: 'Избранное',
-      onClick: () => navigate('/favorite'),
+      onClick: () => {
+        navigate('/favorite');
+        setIsDrawerOpen(false);
+      },
     },
     {
       text: 'Корзина',
-      onClick: () => navigate('/cart'),
+      onClick: () => {
+        navigate('/cart');
+        setIsDrawerOpen(false);
+      },
     },
   ];
   useEffect(() => {
@@ -71,6 +86,7 @@ const MuiDrawer = ({ navigate }) => {
 
   const onCloseFloating = () => {
     dispatch(onChangeOpenDialog());
+    setIsDrawerOpen(false);
   };
 
   return (

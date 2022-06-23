@@ -41,7 +41,7 @@ function App() {
     dispatch(fetchAsyncCollections());
     dispatch(fetchAsyncCommerce());
     dispatch(asyncAutoUpdateBreadcrumb());
-  }, [dispatch]);
+  }, []);
 
   const { openDialog, showsuccess } = useSelector((state) => state.float);
 

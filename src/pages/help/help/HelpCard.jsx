@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ReactComponent as NextSvg } from '../../assets/icons/next .svg';
-import { ReactComponent as PrevSvg } from '../../assets/icons/prev.svg';
+import { ReactComponent as NextSvg } from '../../../assets/icons/next .svg';
+import { ReactComponent as PrevSvg } from '../../../assets/icons/prev.svg';
 import classes from './HelpCard.module.css';
 
 const HelpCard = ({ item }) => {

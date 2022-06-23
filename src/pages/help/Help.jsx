@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import HelpCard from '../../components/help/HelpCard';
+import HelpCard from './help/HelpCard';
 import { useDispatch, useSelector } from 'react-redux';
 import helpImage from '../../assets/images/help.png';
 import classes from './Help.module.css';

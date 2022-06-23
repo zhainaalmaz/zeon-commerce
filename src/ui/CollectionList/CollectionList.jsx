@@ -5,6 +5,7 @@ import Content from '../content/Content';
 import InterestedProducts from '../../components/interestedProducts/InterestedProducts';
 import { asyncUpdateBreadcrumb } from '../../store/breadCrumbsSlice';
 import cls from './CollectionList.module.css';
+import Pagination from '../pagination/Pagination';
 
 const CollectionList = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,23 @@ const CollectionList = () => {
 
   const filteredNewItems = product.filter((item) => item.newproducts);
   const [count] = useState(5);
+
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const itemsPerPage = 8;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(filteredItem.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(collection.length / itemsPerPage));
+  }, [itemOffset]);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % collection.length;
+    setItemOffset(newOffset);
+  };
 
   const sendBreadCrumbsHandler = () => {
     const breadCrumbs = [
@@ -52,11 +70,14 @@ const CollectionList = () => {
         <h5 className={cls.title}>{`${collectionName[0]?.title}`}</h5>
 
         <div className={cls.content}>
-          {filteredItem.map((item) => (
+          {currentItems.map((item) => (
             <div key={item.id}>
               <Content title={`${collectionName[0]?.title}`} item={item} />
             </div>
           ))}
+        </div>
+        <div className={cls.pagination_container}>
+          <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
         </div>
 
         <div style={{ marginTop: 64 }}>

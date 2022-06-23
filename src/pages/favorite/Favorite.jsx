@@ -21,7 +21,11 @@ const Favorite = () => {
   }, []);
 
   useEffect(() => {
-    changeLimit(6);
+    if (window.innerWidth < 321) {
+      setLimit(4);
+    } else {
+      setLimit(8);
+    }
   }, []);
 
   const changeLimit = (num) => {

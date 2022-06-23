@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { Form } from '../authForm/Form';
 import { setUser } from '../../../store/userSlice';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import cls from './SignUp.module.css';
 
 const SignUp = () => {
@@ -13,7 +13,6 @@ const SignUp = () => {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
         dispatch(
           setUser({
             email: user.email,

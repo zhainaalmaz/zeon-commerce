@@ -28,19 +28,26 @@ const SearchPage = () => {
   }, []);
 
   const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
+  const [pageCount, setPageCount] = useState(1);
   const [itemOffset, setItemOffset] = useState(0);
-
-  const itemsPerPage = 8;
+  const [limit, setLimit] = useState(8);
 
   useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
+    if (window.innerWidth < 321) {
+      setLimit(4);
+    } else {
+      setLimit(8);
+    }
+  }, []);
+
+  useEffect(() => {
+    const endOffset = itemOffset + limit;
     setCurrentItems(filterResult.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(filterResult.length / itemsPerPage));
-  }, [itemOffset]);
+    setPageCount(Math.ceil(filterResult.length / limit));
+  }, [itemOffset, limit]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % filterResult.length;
+    const newOffset = (event.selected * limit) % filterResult.length;
     setItemOffset(newOffset);
   };
 
@@ -70,7 +77,7 @@ const SearchPage = () => {
           </h6>
           <p className={cls.text}>По Вашему запросу ничего не найдено.</p>
           <p className={cls.title}>Возможно Вас заинтересует</p>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex' }} className={cls.interestPost}>
             {interestPost.slice(0, count).map((item) => (
               <InterestedProducts key={item.id} item={item} />
             ))}
@@ -90,7 +97,12 @@ const SearchPage = () => {
               </div>
             ))}
           </div>
-          <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
+          <div className={cls.pagination_container}>
+            <Pagination
+              handlePageClick={handlePageClick}
+              pageCount={pageCount}
+            />
+          </div>
         </>
       )}
     </div>

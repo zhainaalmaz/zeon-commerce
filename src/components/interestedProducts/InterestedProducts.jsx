@@ -57,7 +57,7 @@ const InterestedProducts = ({ item }) => {
   return (
     <div className={cls.container}>
       <>
-        <div style={{ position: 'absolute' }}>
+        <div className={cls.discount}>
           {!!item.discount && (
             <span className={cls.percentText}>
               {`${mathPercent(item.previousPrice, item.discount)}`}%
@@ -97,6 +97,7 @@ const InterestedProducts = ({ item }) => {
                     backgroundImage: `url(${elem.image})`,
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
+                    margin: '0 4px',
                   }}
                 />
               );
@@ -110,7 +111,7 @@ const InterestedProducts = ({ item }) => {
           </div>
         </div>
 
-        <div style={{ margin: '0 8px' }}>
+        <div style={{ margin: '0 1px' }}>
           <p className={cls.priceTitle}>
             <span>
               {item.discount ? (

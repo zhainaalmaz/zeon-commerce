@@ -3,19 +3,20 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: rgb(5, 5, 5);
+  /* background-color: rgb(5, 5, 5); */
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
 }
 
-.swiper-pagination-bullet-active-next,
-.swiper-pagination-bullet-active-next-next {
-  background-color: white;
+.swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background: #ffffff;
+  border: 1px solid rgba(29, 29, 27, 0.3);
+  border-radius: 4px;
 }
-
-.swiper-pagination-bullet-active-prev {
-  background-color: white;
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: rgb(6, 6, 6);
 }
 
 .wrapper {

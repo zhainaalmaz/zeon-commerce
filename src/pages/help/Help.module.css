@@ -45,3 +45,10 @@
   color: #393939;
   padding-bottom: 15px;
 }
+
+@media all and (max-width: 320px) {
+  .section p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
