@@ -1,0 +1,2035 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "title": "Повседневная одежда",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection1.png?alt=media&token=54c8abb6-a8d0-4cd6-afb1-477cb3ce7f7e"
+    },
+    {
+      "id": 2,
+      "title": "Одежда на пляж",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection2.png?alt=media&token=f96f7e37-9e28-4a1a-a77f-c838dbc2c5e3"
+    },
+    {
+      "id": 3,
+      "title": "Юбки",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection3.png?alt=media&token=744d5725-b074-4187-91ce-f9ccb19b5902"
+    },
+    {
+      "id": 4,
+      "title": "Джинсы",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection4.png?alt=media&token=c50b0586-009e-42b3-a324-dbbb26ab5296"
+    },
+    {
+      "id": 5,
+      "title": "Коллекция осень 2021",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+    },
+    {
+      "id": 6,
+      "title": "Коллекция зима 2020",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+    },
+    {
+      "id": 7,
+      "title": "Коллекция весна 2020",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+    },
+    {
+      "id": 8,
+      "title": "Коллекция осень 2020",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+    },
+    {
+      "id": 9,
+      "title": "Коллекция лето 2023",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection1.png?alt=media&token=54c8abb6-a8d0-4cd6-afb1-477cb3ce7f7e"
+    },
+    {
+      "id": 10,
+      "title": "Коллекция осень 2023",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection2.png?alt=media&token=f96f7e37-9e28-4a1a-a77f-c838dbc2c5e3"
+    },
+    {
+      "id": 11,
+      "title": "Коллекция весна 2019",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection3.png?alt=media&token=744d5725-b074-4187-91ce-f9ccb19b5902"
+    },
+    {
+      "id": 12,
+      "title": "Коллекция осень 2019",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection4.png?alt=media&token=c50b0586-009e-42b3-a324-dbbb26ab5296"
+    },
+    {
+      "id": 13,
+      "title": "Костюмы",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/collection4.png?alt=media&token=c50b0586-009e-42b3-a324-dbbb26ab5296"
+    },
+    {
+      "id": 14,
+      "title": "Коллекция осень 2024",
+      "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/collection1.png?alt=media&token=911958b1-e879-4705-acd7-04b659dd27db"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "collection": "Коллекция лето 2020",
+      "collectionId": 1,
+      "title": "Вечернее платье",
+      "article": "платье01",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491.png?alt=media&token=43982d2b-dbd0-46f9-b29f-df583950a336"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "sale": true,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-45",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 2,
+      "collection": "Коллекция лето 2020",
+      "collectionId": 1,
+      "title": "Летнее платье",
+      "article": "платье02",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct3.png?alt=media&token=e79bab60-112c-44b4-9228-dac84d677add"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 3300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 3,
+      "collection": "Коллекция лето 2020",
+      "collectionId": 1,
+      "title": "Летнее платье ",
+      "article": "платье03",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 599,
+
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 4,
+      "collection": "Коллекция лето 2020",
+      "collectionId": 1,
+      "title": "Вечернее платье",
+      "article": "платье04",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/BestSelller3.png?alt=media&token=1afd6dac-39fe-4158-8210-0e46080dcea3"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 4300,
+      "discount": 1000,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 5,
+      "collection": "Коллекция лето 2020",
+      "collectionId": 2,
+      "title": "Весеннее платье ",
+      "article": "платье05",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct2.png?alt=media&token=b90c3baf-baf3-4dd6-8fb2-94d5f297ecb0"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2000,
+      "discount": 799,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-45",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 6,
+      "collection": "Коллекция весна 2021",
+      "collectionId": 2,
+      "title": "Весеннее платье ",
+      "article": "платьe06",
+      "bestseller": false,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct3.png?alt=media&token=e79bab60-112c-44b4-9228-dac84d677add"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 7,
+      "collection": "Коллекция весна 2021",
+      "collectionId": 2,
+      "title": "Весеннее платье ",
+      "article": "платье07",
+      "bestseller": false,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct4.png?alt=media&token=ed76f53e-1a6f-42fe-9bc8-bf6e4f0e0c47"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 5400,
+      "discount": 3400,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 8,
+      "collection": "Коллекция весна 2021",
+      "collectionId": 2,
+      "title": "Вечернее платье",
+      "article": "платье08",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681.png?alt=media&token=b3ab804b-6513-4ff0-8802-ffb31de70e30"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 3300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 9,
+      "collection": "Коллекция весна 2021",
+      "collectionId": 3,
+      "title": "Осеннее платье",
+      "article": "платье09",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct4.png?alt=media&token=ed76f53e-1a6f-42fe-9bc8-bf6e4f0e0c47"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2100,
+      "discount": 900,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-45",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 10,
+      "collection": "Коллекция осень 2020",
+      "collectionId": 3,
+      "title": "Вечернее платье",
+      "article": "платье10",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/bestSelller1.png?alt=media&token=e1ccd5a3-ab73-4538-a6c8-3756eacf6676"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 3300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 11,
+      "collection": "Коллекция осень 2020",
+      "collectionId": 3,
+      "title": "Осеннее платье ",
+      "article": "платье11",
+      "bestseller": false,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct3.png?alt=media&token=e79bab60-112c-44b4-9228-dac84d677add"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 4000,
+      "discount": 2000,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 12,
+      "collection": "Коллекция осень 2020",
+      "collectionId": 3,
+      "title": "Вечернее платье",
+      "article": "платье12",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=c9d9dec9-b07a-4ecb-b019-b045892a813d"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 13,
+      "collection": "Коллекция осень 2020",
+      "collectionId": 4,
+      "title": "Зимнее платье ",
+      "article": "платье13",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 6500,
+      "discount": 3300,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-45",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 14,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 4,
+      "title": "Вечернее платье",
+      "article": "платье14",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681.png?alt=media&token=df0788d0-fab5-4461-9cec-1bedd4ed8424"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 15,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 4,
+      "title": "Вечернее платье",
+      "article": "платье15",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 4200,
+      "discount": 1100,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 16,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 4,
+      "title": "Вечернее платье",
+      "article": "платье16",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F%202.png?alt=media&token=83a9b668-5138-4abe-92e0-ba15dec4fe4b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 17,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 5,
+      "title": "Вечернее платье",
+      "article": "платье17",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 18,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 5,
+      "title": "Вечернее платье",
+      "article": "платье18",
+      "bestseller": true,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Frame%202681.png?alt=media&token=df0788d0-fab5-4461-9cec-1bedd4ed8424"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 19,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 6,
+      "title": "Вечернее платье",
+      "article": "платье19",
+      "bestseller": false,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/newproduct1.png?alt=media&token=28fcbe68-9a0b-4bb8-a8c7-58b3c2e8a490"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 20,
+      "collection": "Коллекция осень 2021",
+      "collectionId": 6,
+      "title": "Летнее платье",
+      "article": "платье21",
+      "bestseller": false,
+      "newproducts": true,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 6,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 21,
+      "collection": "Коллекция осень 2021",
+      "collectionId": 5,
+      "title": "Осеннее платье",
+      "article": "платье21",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 22,
+      "collection": "Коллекция зима 2021",
+      "collectionId": 6,
+      "title": "Осеннее платье",
+      "article": "платье22",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 23,
+      "collection": "Коллекция осень 2021",
+      "collectionId": 6,
+      "title": "Вечернее платье",
+      "article": "платье23",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 24,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 7,
+      "title": "Вечернее платье",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 25,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 7,
+      "title": "Вечернее платье",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 26,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 4,
+      "title": "Вечернее платье",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 27,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 7,
+      "title": "Вечернее платье",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 28,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 8,
+      "title": "Вечернее платье",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 29,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 8,
+      "title": "Летнее платье",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    },
+    {
+      "id": 30,
+      "collection": "Коллекция зима 2020",
+      "collectionId": 8,
+      "title": "Вечерний наряд",
+      "article": "платье20",
+      "bestseller": true,
+      "newproducts": false,
+      "productImages": [
+        {
+          "id": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/Rectangle%20491%20(1).png?alt=media&token=ce63779d-08ce-456c-b871-d38e1697f18b"
+        }
+      ],
+      "colors": [
+        {
+          "id": 1,
+          "color": "#73A39D"
+        },
+        {
+          "id": 2,
+          "color": "#84CC4C"
+        },
+        {
+          "id": 3,
+          "color": "#B5A8A1"
+        },
+        {
+          "id": 4,
+          "color": "#AB844A"
+        },
+        {
+          "id": 5,
+          "color": "#6977F0"
+        },
+        {
+          "id": 6,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": 7,
+          "color": "#141414"
+        },
+        {
+          "id": 8,
+          "color": "#FF0000"
+        }
+      ],
+      "previousPrice": 2300,
+      "discount": 0,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!",
+      "sizeRage": "42-50",
+      "amountOfLines": 5,
+      "structure": "Полиэстер",
+      "material": "Полиэстер"
+    }
+  ],
+  "commerce": {
+    "headerLogo": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/zeonLogo.svg?alt=media&token=f2c63bd0-b996-4910-ba9c-f4fe50e93b77",
+    "footerLogo": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/footerLogo.svg?alt=media&token=f6a10d93-31d7-46f0-9714-48d2172e7055",
+
+    "mobile": [
+      {
+        "id": 1,
+        "href": "phoneNumber",
+        "title": "tel:+996 123 123 123",
+        "data": "+996 123 123 123",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202.svg?alt=media&token=9b39ddeb-1e47-4e57-b304-736debb8bbd7"
+      },
+      {
+        "id": 2,
+        "href": "officeNumber",
+        "title": "tel:+996 123 133 123",
+        "data": "+996 123 133 123",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202.svg?alt=media&token=9b39ddeb-1e47-4e57-b304-736debb8bbd7"
+      },
+      {
+        "id": 3,
+        "href": "email",
+        "title": "mailto:email@gmail.com",
+        "data": "email@gmail.com",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/call%202%20(1).svg?alt=media&token=3451ee98-3457-41b0-b388-b29861b0d3a8"
+      }
+    ],
+
+    "socialMedia": {
+      "instagram": "https://www.instagram.com",
+      "instagramTitle": "Instagram",
+
+      "telegram": "https://web.telegram.org",
+      "telegramTitle": "Telegram",
+
+      "whatsapp": "https://www.whatsapp.com",
+      "whatsappTitle": "Whatsapp"
+    },
+    "advantages": [
+      {
+        "id": 1,
+        "title": "Удобные способы оплаты",
+        "text": "Мы предлагаем возможность безналичной оплаты",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/money.svg?alt=media&token=f800800d-fc9a-4440-84f2-fd591587a023"
+      },
+      {
+        "id": 2,
+        "title": "Cвоевремнная доставка",
+        "text": "100% гарантия возврата товара - 14 дней на возврат, без скандалов и истерик.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/truck%201.svg?alt=media&token=0c7928f8-04f8-4e41-90d4-98ad3f99c9bb"
+      },
+      {
+        "id": 3,
+        "title": "Профессиональная консультация",
+        "text": "Мы проконсультируем и индивидуально подойдем к Вашему заказу",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/support.svg?alt=media&token=314f93e5-99bb-4a3a-bf00-2171e7484b6d"
+      },
+      {
+        "id": 4,
+        "title": "Акции и бонусы для покупателей",
+        "text": "Промокоды со скидками для постоянных клиентов, акции на новые позиции",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/shop.svg?alt=media&token=7cbac53b-f77a-40ea-ba26-5373d85b7b68"
+      }
+    ],
+    "aboutUs": {
+      "image1": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/AboutUs1.png?alt=media&token=6fea15ff-e4de-4d25-9c07-1f164dc6f825",
+      "image2": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/AboutUs2.png?alt=media&token=34b50f91-ebf5-425a-bff8-27ff2c46fc4a",
+      "image3": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/AboutUs3.png?alt=media&token=f1bae9d6-aac8-40bd-b1a1-b5307efba348",
+      "title": "О нас",
+      "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой."
+    },
+    "news": [
+      {
+        "id": 1,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+      },
+      {
+        "id": 2,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+      },
+      {
+        "id": 3,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+      },
+      {
+        "id": 4,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+      },
+      {
+        "id": 5,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+      },
+      {
+        "id": 6,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+      },
+      {
+        "id": 7,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+      },
+      {
+        "id": 8,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+      },
+      {
+        "id": 9,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+      },
+      {
+        "id": 10,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+      },
+      {
+        "id": 11,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+      },
+      {
+        "id": 12,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+      },
+      {
+        "id": 13,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+      },
+      {
+        "id": 14,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+      },
+      {
+        "id": 15,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+      },
+      {
+        "id": 16,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news1.png?alt=media&token=fe03d4e0-10a9-4d3d-9413-831130b4b28e"
+      },
+      {
+        "id": 17,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+      },
+      {
+        "id": 18,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+      },
+      {
+        "id": 19,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+      },
+      {
+        "id": 20,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+      },
+      {
+        "id": 21,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news2.png?alt=media&token=64350cd2-cc11-402b-b93c-b57d280cb410"
+      },
+      {
+        "id": 22,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news3.png?alt=media&token=958a57f8-21a6-4efc-b05c-273c17afc7b9"
+      },
+      {
+        "id": 23,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news4.png?alt=media&token=f6ee4636-bde7-4465-9698-9e79ab12ed72"
+      },
+      {
+        "id": 24,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, commodi nesciunt delectus corrupti quos necessitatibus ratione placeat doloremque illum unde ut eum, porro facilis ex at. Consectetur veniam ipsum quisquam!Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zeon-commerce.appspot.com/o/news5.png?alt=media&token=5d3a9720-3c8b-449e-9fd4-56d83f56e593"
+      }
+    ],
+    "publicOffert": {
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis"
+    },
+    "help": [
+      {
+        "id": 1,
+        "title": "Как я могу заказать одежду?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      },
+      {
+        "id": 2,
+        "title": "Как осуществляется доставка?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      },
+      {
+        "id": 3,
+        "title": "Где производятся вещи?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      },
+      {
+        "id": 4,
+        "title": "Как будет упакован заказ?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      },
+      {
+        "id": 5,
+        "title": "Lorem ipsum dolor sit amet?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      },
+      {
+        "id": 6,
+        "title": "Есть ли возврат, при условии если одежда пришла не того размера?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      },
+      {
+        "id": 7,
+        "title": "Как я могу оставить заявку на обратную связь",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
+      }
+    ]
+  },
+  "corusel": [
+    {
+      "id": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+    },
+    {
+      "id": 2,
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+    },
+    {
+      "id": 3,
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+    },
+    {
+      "id": 4,
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-5824b.appspot.com/o/maincorusel.png?alt=media&token=416b99d1-a360-4e19-8d47-43b30c0ffb67"
+    }
+  ]
+}

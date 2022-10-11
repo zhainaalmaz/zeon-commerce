@@ -1,22 +1,21 @@
 import { axiosInstance } from './api';
-import { axiosinstance } from './api';
 
 export const getCoruselImageRequest = () => {
-  return axiosInstance.get('corusel.json');
+  return axiosInstance.get('corusel');
 };
 
 export const getProductsRequest = () => {
-  return axiosInstance.get('products.json');
+  return axiosInstance.get('products');
 };
 
 export const getCollectionsRequest = () => {
-  return axiosInstance.get('collections.json');
+  return axiosInstance.get('collections');
 };
 
 export const getCommerceRequest = () => {
-  return axiosInstance.get('commerce.json');
+  return axiosInstance.get('commerce');
 };
 
-export const getUsersOrderRequest = () => {
-  return axiosinstance.get('name.json?orderBy="userId"');
-};
+// export const getUsersOrderRequest = () => {
+//   return axiosinstance.get('name.json?orderBy="userId"');
+// };
